@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+		<script>
+			function paopao(z){
+				var dep = new Array("not going out anymore", "not getting things done at work/school", 
+				"withdrawing from close family and friends", "relying on alcohol and sedatives", "not doing usual enjoyable activities",
+				"unable to concentrate","overwhelmed", "guilty", "irritable", "frustrated", "lacking in confidence", "unhappy",
+				"indecisive", "disappointed", "miserable", "sad", "tired all the time", "sick and run down", 
+				"headaches and muscle pains", "churning gut", "sleep problems", "loss or change of appetite", 
+				"significant weight loss or gain");
+				
+				var anxiety = new Array("avoidance of situations that make you feel anxious which can impact on study, work or social life",
+				"excessive fear", "worry", "catastrophizing", "obsessive thinking", "panic attacks", "hot and cold flushes", "racing heart",
+				"tightening of the chest quick breathing", "restlessness", "feeling tense", "wound up and edgy");
+				
+				var ed = new Array("Unexplained weight fluctuations (especially weight loss)", "Anemia and muscle weakness/wasting",
+				"Increase in falls", "Memory deficits", "Cognitive decline", "Loss of appetite", "Slow healing", 
+				"Chronic dizziness", "Unopened or uneaten food in the fridge or cupboards",
+				"Decrease in food intake or rejection of meals","Use of laxatives");
+				
+				var bipola = new Array("Confusion", "Agitation", "Irritability", "Hyperactivity", "Psychosis", "Cognitive issues");
+				
+				var a = 0;
+				var b = 0;
+				var e = 0;
+				var d = 0;
+				console.log(z);
+				
+				for (var i = 0; i < z.length; i++){
+					for (var j = 0; j < dep.length; j++){
+						if (z[i] == dep[j]){
+						d++;
+						}
+					}
+				}
+				
+				for (var i = 0; i < z.length; i++){
+					for (var j = 0; j < anxiety.length; j++){
+						if (z[i] == anxiety[j]){
+						a++;
+						}
+					}
+				}
+				
+				for (var i = 0; i < z.length; i++){
+					for (var j = 0; j < bipola.length; j++){
+						if (z[i] == bipola[j]){
+						b++;
+						}
+					}
+				}
+				
+				for (var i = 0; i < z.length; i++){
+					for (var j = 0; j < ed.length; j++){
+						if (z[i] == ed[j]){
+						e++;
+						}
+					}
+				}
+				
+				var scoree = e/ed.length*100;
+				var scoreb = b/bipola.length*100;
+				var scored = d/dep.length*100;
+				var scorea = a/anxiety.length*100;
+				alert("The possibility of Depression is " + scored.toFixed(2) + " %");
+				alert("The possibility of Anxiety is " + scorea.toFixed(2) + " %");
+				alert("The possibility of score is " + scoreb.toFixed(2) + " %");
+				alert("The possibility of Eating disorder is " + scoree.toFixed(2) + " %");
+				
+			}
+			
+			var arr = ["churning gut", "sleep problems", "loss or change of appetite", "significant weight loss or gain",
+			"obsessive thinking", "panic attacks", "hot and cold flushes", "racing heart",
+			"tightening of the chest quick breathing", "restlessness", "feeling tense", "wound up and edgy",
+			"Confusion", "Agitation", "Irritability", "Hyperactivity", "Psychosis", "Cognitive issues",
+			"Use of laxatives"];
+			
+			paopao(arr);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
