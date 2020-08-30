@@ -26,5 +26,11 @@ namespace ME14.Controllers
 
             return View();
         }
+        public ActionResult Info()
+        {
+            ViewBag.Message = "Your Info page.";
+
+            return View();
+        }
     }
 }
