@@ -1,6 +1,259 @@
 ﻿<html>
 <head>
     <title>Know You Better</title>
+    <script>
+        function paopao(z) {
+            var dep = new Array("not going out anymore", "not getting things done at work/school",
+                "withdrawing from close family and friends", "relying on alcohol and sedatives", "not doing usual enjoyable activities",
+                "unable to concentrate", "overwhelmed", "guilty", "irritable", "frustrated", "lacking in confidence", "unhappy",
+                "indecisive", "disappointed", "miserable", "sad", "tired all the time", "sick and run down",
+                "headaches and muscle pains", "churning gut", "sleep problems", "loss or change of appetite",
+                "significant weight loss or gain");
+
+            var anxiety = new Array("avoidance of situations that make you feel anxious which can impact on study, work or social life",
+                "excessive fear", "worry", "catastrophizing", "obsessive thinking", "panic attacks", "hot and cold flushes", "racing heart",
+                "tightening of the chest quick breathing", "restlessness", "feeling tense", "wound up and edgy");
+
+            var ed = new Array("Unexplained weight fluctuations", "Anemia and muscle weakness/wasting",
+                "Increase in falls", "Memory deficits", "Cognitive decline", "Loss of appetite", "Slow healing",
+                "Chronic dizziness", "Unopened or uneaten food in the fridge or cupboards",
+                "Decrease in food intake or rejection of meals", "Use of laxatives");
+
+            var bipola = new Array("Confusion", "Agitation", "Irritability", "Hyperactivity", "Psychosis", "Cognitive issues");
+
+            var a = 0;
+            var b = 0;
+            var e = 0;
+            var d = 0;
+            console.log(z);
+
+            for (var i = 0; i < z.length; i++) {
+                for (var j = 0; j < dep.length; j++) {
+                    if (z[i] == dep[j]) {
+                        d++;
+                    }
+                }
+            }
+
+            for (var i = 0; i < z.length; i++) {
+                for (var j = 0; j < anxiety.length; j++) {
+                    if (z[i] == anxiety[j]) {
+                        a++;
+                    }
+                }
+            }
+
+            for (var i = 0; i < z.length; i++) {
+                for (var j = 0; j < bipola.length; j++) {
+                    if (z[i] == bipola[j]) {
+                        b++;
+                    }
+                }
+            }
+
+            for (var i = 0; i < z.length; i++) {
+                for (var j = 0; j < ed.length; j++) {
+                    if (z[i] == ed[j]) {
+                        e++;
+                    }
+                }
+            }
+
+            var scoree = e / ed.length * 100;
+            var scoreb = b / bipola.length * 100;
+            var scored = d / dep.length * 100;
+            var scorea = a / anxiety.length * 100;
+            document.write("The possibility of Depression is " + scored.toFixed(2) + " %");
+            document.write("The possibility of Anxiety is " + scorea.toFixed(2) + " %");
+            document.write("The possibility of Bipolar score is " + scoreb.toFixed(2) + " %");
+            document.write("The possibility of Eating disorder is " + scoree.toFixed(2) + " %");
+        }
+        window.onload = function () {
+            var array = new Array();
+            var index = 0;
+            var btn1 = document.getElementById('overwhelmed');
+            var btn2 = document.getElementById('guilty');
+            var btn3 = document.getElementById('irritable');
+            var btn4 = document.getElementById('frustrated');
+            var btn5 = document.getElementById('lacking in confidence');
+            var btn6 = document.getElementById('unhappy');
+            var btn7 = document.getElementById('indecisive');
+            var btn8 = document.getElementById('disappointed');
+            var btn9 = document.getElementById('miserable');
+            var btn10 = document.getElementById('sad');
+            var btn11 = document.getElementById('excessive fear');
+            var btn12 = document.getElementById('worry');
+            var btn13 = document.getElementById('catastrophizing');
+            var btn14 = document.getElementById('obsessive thinking');
+            var btn15 = document.getElementById('Unexplained weight fluctuations');
+            var btn16 = document.getElementById('Anemia and muscle weakness');
+            var btn17 = document.getElementById('Increase in falls');
+            var btn18 = document.getElementById('Memory deficits');
+            var btn19 = document.getElementById('Cognitive decline');
+            var btn20 = document.getElementById('Loss of appetite');
+            var btn21 = document.getElementById('Slow healing');
+            var btn22 = document.getElementById('Chronic dizziness');
+            var btn23 = document.getElementById('Unopened or uneaten food in the fridge or cupboards');
+            var btn24 = document.getElementById('Decrease in food intake or rejection of meals');
+            var btn25 = document.getElementById('Use of laxatives');
+            var btn26 = document.getElementById('Confusion');
+            var btn27 = document.getElementById('Agitation');
+            var btn28 = document.getElementById('Irritability');
+            var btn29 = document.getElementById('Hyperactivity');
+            var btn30 = document.getElementById('Psychosis');
+            var btn31 = document.getElementById('Cognitive issues');
+            var btnS = document.getElementById('submit');
+
+
+            btn1.onclick = function () {
+                array[index] = btn1.innerHTML;
+                index++;
+            }
+
+            btn2.onclick = function () {
+                array[index] = btn2.innerHTML;
+                index++;
+            }
+
+            btn3.onclick = function () {
+                array[index] = btn3.innerHTML;
+                index++;
+            }
+
+            btn4.onclick = function () {
+                array[index] = btn4.innerHTML;
+                index++;
+            }
+
+            btn5.onclick = function () {
+                array[index] = btn5.innerHTML;
+                index++;
+            }
+
+            btn6.onclick = function () {
+                array[index] = btn6.innerHTML;
+                index++;
+            }
+
+            btn7.onclick = function () {
+                array[index] = btn7.innerHTML;
+                index++;
+            }
+
+            btn8.onclick = function () {
+
+                array[index] = btn8.innerHTML;
+                index++;
+            }
+
+            btn9.onclick = function () {
+                array[index] = btn9.innerHTML;
+                index++;
+            }
+
+            btn10.onclick = function () {
+                array[index] = btn10.innerHTML;
+                index++;
+            }
+
+            btn11.onclick = function () {
+                array[index] = btn11.innerHTML;
+                index++;
+            }
+            btn12.onclick = function () {
+                array[index] = btn12.innerHTML;
+                index++;
+            }
+
+            btn13.onclick = function () {
+                array[index] = btn13.innerHTML;
+                index++;
+            }
+
+            btn14.onclick = function () {
+                array[index] = btn14.innerHTML;
+                index++;
+            }
+
+            btn15.onclick = function () {
+                array[index] = btn15.innerHTML;
+                index++;
+            }
+
+            btn16.onclick = function () {
+                array[index] = btn16.innerHTML;
+                index++;
+            }
+            btn17.onclick = function () {
+                array[index] = btn17.innerHTML;
+                index++;
+            }
+            btn18.onclick = function () {
+                array[index] = btn18.innerHTML;
+                index++;
+            }
+            btn19.onclick = function () {
+                array[index] = btn19.innerHTML;
+                index++;
+            }
+            btn20.onclick = function () {
+                array[index] = btn20.innerHTML;
+                index++;
+            }
+            btn21.onclick = function () {
+                array[index] = btn21.innerHTML;
+                index++;
+            }
+
+
+            btn22.onclick = function () {
+                array[index] = btn22.innerHTML;
+                index++;
+            }
+            btn23.onclick = function () {
+                array[index] = btn23.innerHTML;
+                index++;
+            }
+            btn24.onclick = function () {
+                array[index] = btn24.innerHTML;
+                index++;
+            }
+            btn25.onclick = function () {
+                array[index] = btn25.innerHTML;
+                index++;
+            }
+            btn26.onclick = function () {
+                array[index] = btn26.innerHTML;
+                index++;
+            }
+            btn27.onclick = function () {
+                array[index] = btn27.innerHTML;
+                index++;
+            }
+            btn28.onclick = function () {
+                array[index] = btn28.innerHTML;
+                index++;
+            }
+            btn29.onclick = function () {
+                array[index] = btn29.innerHTML;
+                index++;
+            }
+            btn30.onclick = function () {
+                array[index] = btn30.innerHTML;
+                index++;
+            }
+            btn31.onclick = function () {
+                array[index] = btn31.innerHTML;
+                index++;
+            }
+
+            btnS.onclick = function () {
+                console.log(array);
+                paopao(array);
+            }
+        }
+
+    </script>
 </head>
 <body>
     <br />
@@ -20,7 +273,7 @@
     <button id="catastrophizing">catastrophizing</button>
     <button id="obsessive thinking">obsessive thinking</button>
     <br />
-    <button id="Unexplained weight fluctuations(especially weight loss)">Unexplained weight fluctuations(especially weight loss)</button>
+    <button id="Unexplained weight fluctuations">Unexplained weight fluctuations</button>
     <button id="Anemia and muscle weakness">Anemia and muscle weakness</button>
     <button id="Increase in falls">Increase in falls</button>
     <button id="Memory deficits">Memory deficits</button>
@@ -38,5 +291,8 @@
     <button id="Hyperactivity">Hyperactivity</button>
     <button id="Psychosis">Psychosis</button>
     <button id="Cognitive issues">Cognitive issues</button>
+    <br />
+    <br />
+    <button id="submit">submit</button>
 </body>
 </html>
