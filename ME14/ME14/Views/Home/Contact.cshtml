@@ -63,10 +63,18 @@
             var scoreb = b / bipola.length * 100;
             var scored = d / dep.length * 100;
             var scorea = a / anxiety.length * 100;
-            document.write("The possibility of Depression is " + scored.toFixed(2) + " %");
-            document.write("The possibility of Anxiety is " + scorea.toFixed(2) + " %");
-            document.write("The possibility of Bipolar score is " + scoreb.toFixed(2) + " %");
-            document.write("The possibility of Eating disorder is " + scoree.toFixed(2) + " %");
+
+            var ddd = "The possibility of Depression is " + scored.toFixed(2) + " %";
+            var aaa = "The possibility of Anxiety is " + scorea.toFixed(2) + " %";
+            var bbb = "The possibility of Bipolar score is " + scoreb.toFixed(2) + " %";
+            var eee = "The possibility of Eating disorder is " + scoree.toFixed(2) + " %";
+
+            document.getElementById('ddd').innerHTML = ddd;
+            document.getElementById('aaa').innerHTML = aaa;
+            document.getElementById('eee').innerHTML = eee;
+            document.getElementById('bbb').innerHTML = bbb;
+
+
         }
         window.onload = function () {
             var array = new Array();
@@ -103,6 +111,10 @@
             var btn30 = document.getElementById('Psychosis');
             var btn31 = document.getElementById('Cognitive issues');
             var btnS = document.getElementById('submit');
+            var ddd = document.getElementById('ddd');
+            var aaa = document.getElementById('aaa');
+            var eee = document.getElementById('eee');
+            var bbb = document.getElementById('bbb');
 
 
             btn1.onclick = function () {
@@ -294,5 +306,13 @@
     <br />
     <br />
     <button id="submit">submit</button>
+    <br />
+    <br />
+
+    <p id="ddd"></p>
+    <p id="aaa"></p>
+    <p id="eee"></p>
+    <p id="bbb"></p>
+
 </body>
 </html>
