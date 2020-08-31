@@ -156,6 +156,9 @@
     <None Include="Resources\barChart.png" />
     <None Include="Resources\Visual 2.JPG" />
     <None Include="Resources\Visual1.JPG" />
+    <None Include="Resources\you_are_not_alone.PNG" />
+    <None Include="Resources\know_you_better.PNG" />
+    <None Include="Resources\mental_illness.PNG" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />

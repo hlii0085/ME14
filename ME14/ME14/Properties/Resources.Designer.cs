@@ -73,6 +73,26 @@ namespace ME14.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap know_you_better {
+            get {
+                object obj = ResourceManager.GetObject("know_you_better", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mental_illness {
+            get {
+                object obj = ResourceManager.GetObject("mental_illness", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Visual_2 {
             get {
                 object obj = ResourceManager.GetObject("Visual_2", resourceCulture);
@@ -86,6 +106,16 @@ namespace ME14.Properties {
         internal static System.Drawing.Bitmap Visual1 {
             get {
                 object obj = ResourceManager.GetObject("Visual1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap you_are_not_alone {
+            get {
+                object obj = ResourceManager.GetObject("you_are_not_alone", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
