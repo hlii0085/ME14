@@ -90,7 +90,8 @@
             document.getElementById('eee').innerHTML = eee;
             document.getElementById('bbb').innerHTML = bbb;
 
-            document.getElementById('suggestion').innerHTML = "Suggestions:";            document.getElementById('content').innerHTML = "Having good relationships with other people is the most important factor contributing to a sense of wellbeing. This can include family, friends, workmates and others in the community. Investing time and energy in your relationships can lead to great benefits for all involved.Exercise has been shown to increase wellbeing as well as reduce symptoms of depression and anxiety. Good physical health is related to better mental health so a healthy diet, avoiding excess alcohol or drugs, getting a good night's sleep, and regular checkups with the doctor can all help.Count your blessings. Try keeping a gratitude journal and write down 3 positive things each day. This can lead to increased wellbeing.";
+            document.getElementById('suggestion').innerHTML = "Suggestions:";
+            document.getElementById('content').innerHTML = "Having good relationships with other people is the most important factor contributing to a sense of wellbeing. This can include family, friends, workmates and others in the community. Investing time and energy in your relationships can lead to great benefits for all involved.Exercise has been shown to increase wellbeing as well as reduce symptoms of depression and anxiety. Good physical health is related to better mental health so a healthy diet, avoiding excess alcohol or drugs, getting a good night's sleep, and regular checkups with the doctor can all help.Count your blessings. Try keeping a gratitude journal and write down 3 positive things each day. This can lead to increased wellbeing.";
 
 
 
@@ -98,6 +99,7 @@
         window.onload = function () {
             var array = new Array();
             var index = 0;
+
             var btn1 = document.getElementById('overwhelmed');
             var btn2 = document.getElementById('guilty');
             var btn3 = document.getElementById('irritable');
@@ -129,6 +131,29 @@
             var btn29 = document.getElementById('Hyperactivity');
             var btn30 = document.getElementById('Psychosis');
             var btn31 = document.getElementById('Cognitive issues');
+            var btn32 = document.getElementById('not going out anymore');
+            var btn33 = document.getElementById('not getting things done at work/school');
+            var btn34 = document.getElementById('withdrawing from close family and friends');
+            var btn35 = document.getElementById('relying on alcohol and sedatives');
+            var btn36 = document.getElementById('not doing usual enjoyable activities');
+            var btn37 = document.getElementById('unable to concentrate');
+            var btn38 = document.getElementById('tired all the time');
+            var btn39 = document.getElementById('sick and run down');
+            var btn40 = document.getElementById('headaches and muscle pains');
+            var btn41 = document.getElementById('churning gut');
+            var btn42 = document.getElementById('sleep problems');
+            var btn43 = document.getElementById('loss or change of appetite');
+            var btn44 = document.getElementById('significant weight loss or gain');
+            var btn45 = document.getElementById('avoidance of situations that make you feel anxious which can impact on study, work or social life');
+            var btn46 = document.getElementById('panic attacks');
+            var btn47 = document.getElementById('hot and cold flushes');
+            var btn48 = document.getElementById('racing heart');
+            var btn49 = document.getElementById('tightening of the chest quick breathing');
+            var btn50 = document.getElementById('restlessness');
+            var btn51 = document.getElementById('feeling tense');
+            var btn52 = document.getElementById('wound up and edgy');
+
+            var btnc = document.getElementById('clear');
             var btnS = document.getElementById('submit');
             var ddd = document.getElementById('ddd');
             var aaa = document.getElementById('aaa');
@@ -139,148 +164,310 @@
             btn1.onclick = function () {
                 array[index] = btn1.innerHTML;
                 index++;
+                document.getElementById('overwhelmed').style.visibility = 'hidden';
             }
 
             btn2.onclick = function () {
                 array[index] = btn2.innerHTML;
                 index++;
+                document.getElementById('guilty').style.visibility = 'hidden';
             }
 
             btn3.onclick = function () {
                 array[index] = btn3.innerHTML;
                 index++;
+                document.getElementById('irritable').style.visibility = 'hidden';
             }
 
             btn4.onclick = function () {
                 array[index] = btn4.innerHTML;
                 index++;
+                document.getElementById('frustrated').style.visibility = 'hidden';
             }
 
             btn5.onclick = function () {
                 array[index] = btn5.innerHTML;
                 index++;
+                document.getElementById('lacking in confidence').style.visibility = 'hidden';
             }
 
             btn6.onclick = function () {
                 array[index] = btn6.innerHTML;
                 index++;
+                document.getElementById('unhappy').style.visibility = 'hidden';
             }
 
             btn7.onclick = function () {
                 array[index] = btn7.innerHTML;
                 index++;
+                document.getElementById('indecisive').style.visibility = 'hidden';
             }
 
             btn8.onclick = function () {
 
                 array[index] = btn8.innerHTML;
                 index++;
+                document.getElementById('disappointed').style.visibility = 'hidden';
             }
 
             btn9.onclick = function () {
                 array[index] = btn9.innerHTML;
                 index++;
+                document.getElementById('miserable').style.visibility = 'hidden';
             }
 
             btn10.onclick = function () {
                 array[index] = btn10.innerHTML;
                 index++;
+                document.getElementById('sad').style.visibility = 'hidden';
             }
 
             btn11.onclick = function () {
                 array[index] = btn11.innerHTML;
                 index++;
+                document.getElementById('excessive fear').style.visibility = 'hidden';
             }
             btn12.onclick = function () {
                 array[index] = btn12.innerHTML;
                 index++;
+                document.getElementById('worry').style.visibility = 'hidden';
             }
 
             btn13.onclick = function () {
                 array[index] = btn13.innerHTML;
                 index++;
+                document.getElementById('catastrophizing').style.visibility = 'hidden';
             }
 
             btn14.onclick = function () {
                 array[index] = btn14.innerHTML;
                 index++;
+                document.getElementById('obsessive thinking').style.visibility = 'hidden';
             }
 
             btn15.onclick = function () {
                 array[index] = btn15.innerHTML;
                 index++;
+                document.getElementById('Unexplained weight fluctuations').style.visibility = 'hidden';
             }
 
             btn16.onclick = function () {
                 array[index] = btn16.innerHTML;
                 index++;
+                document.getElementById('Anemia and muscle weakness').style.visibility = 'hidden';
             }
             btn17.onclick = function () {
                 array[index] = btn17.innerHTML;
                 index++;
+                document.getElementById('Increase in falls').style.visibility = 'hidden';
             }
             btn18.onclick = function () {
                 array[index] = btn18.innerHTML;
                 index++;
+                document.getElementById('Memory deficits').style.visibility = 'hidden';
             }
             btn19.onclick = function () {
                 array[index] = btn19.innerHTML;
                 index++;
+                document.getElementById('Cognitive decline').style.visibility = 'hidden';
             }
             btn20.onclick = function () {
                 array[index] = btn20.innerHTML;
                 index++;
+                document.getElementById('Loss of appetite').style.visibility = 'hidden';
             }
             btn21.onclick = function () {
                 array[index] = btn21.innerHTML;
                 index++;
+                document.getElementById('Slow healing').style.visibility = 'hidden';
             }
 
 
             btn22.onclick = function () {
                 array[index] = btn22.innerHTML;
                 index++;
+                document.getElementById('Chronic dizziness').style.visibility = 'hidden';
             }
             btn23.onclick = function () {
                 array[index] = btn23.innerHTML;
                 index++;
+                document.getElementById('Unopened or uneaten food in the fridge or cupboards').style.visibility = 'hidden';
             }
             btn24.onclick = function () {
                 array[index] = btn24.innerHTML;
                 index++;
+                document.getElementById('Decrease in food intake or rejection of meals').style.visibility = 'hidden';
             }
             btn25.onclick = function () {
                 array[index] = btn25.innerHTML;
                 index++;
+                document.getElementById('Use of laxatives').style.visibility = 'hidden';
             }
             btn26.onclick = function () {
                 array[index] = btn26.innerHTML;
                 index++;
+                document.getElementById('Confusion').style.visibility = 'hidden';
             }
             btn27.onclick = function () {
                 array[index] = btn27.innerHTML;
                 index++;
+                document.getElementById('Agitation').style.visibility = 'hidden';
             }
             btn28.onclick = function () {
                 array[index] = btn28.innerHTML;
                 index++;
+                document.getElementById('Irritability').style.visibility = 'hidden';
             }
             btn29.onclick = function () {
                 array[index] = btn29.innerHTML;
                 index++;
+                document.getElementById('Hyperactivity').style.visibility = 'hidden';
             }
             btn30.onclick = function () {
                 array[index] = btn30.innerHTML;
                 index++;
+                document.getElementById('Psychosis').style.visibility = 'hidden';
             }
             btn31.onclick = function () {
                 array[index] = btn31.innerHTML;
                 index++;
+                document.getElementById('Cognitive issues').style.visibility = 'hidden';
             }
+            btn32.onclick = function () {
+                array[index] = btn32.innerHTML;
+                index++;
+                document.getElementById('not going out anymore').style.visibility = 'hidden';
+            }
+
+            btn33.onclick = function () {
+                array[index] = btn33.innerHTML;
+                index++;
+                document.getElementById('not getting things done at work/school').style.visibility = 'hidden';
+            }
+
+            btn34.onclick = function () {
+                array[index] = btn34.innerHTML;
+                index++;
+                document.getElementById('withdrawing from close family and friends').style.visibility = 'hidden';
+            }
+
+            btn35.onclick = function () {
+                array[index] = btn35.innerHTML;
+                index++;
+                document.getElementById('relying on alcohol and sedatives').style.visibility = 'hidden';
+            }
+
+            btn36.onclick = function () {
+                array[index] = btn36.innerHTML;
+                index++;
+                document.getElementById('not doing usual enjoyable activities').style.visibility = 'hidden';
+            }
+
+            btn37.onclick = function () {
+                array[index] = btn37.innerHTML;
+                index++;
+                document.getElementById('unable to concentrate').style.visibility = 'hidden';
+            }
+
+            btn38.onclick = function () {
+                array[index] = btn38.innerHTML;
+                index++;
+                document.getElementById('tired all the time').style.visibility = 'hidden';
+            }
+
+            btn39.onclick = function () {
+                array[index] = btn39.innerHTML;
+                index++;
+                document.getElementById('sick and run down').style.visibility = 'hidden';
+            }
+
+            btn40.onclick = function () {
+                array[index] = btn40.innerHTML;
+                index++;
+                document.getElementById('headaches and muscle pains').style.visibility = 'hidden';
+            }
+
+            btn41.onclick = function () {
+                array[index] = btn41.innerHTML;
+                index++;
+                document.getElementById('churning gut').style.visibility = 'hidden';
+            }
+
+            btn42.onclick = function () {
+                array[index] = btn42.innerHTML;
+                index++;
+                document.getElementById('sleep problems').style.visibility = 'hidden';
+            }
+
+            btn43.onclick = function () {
+                array[index] = btn43.innerHTML;
+                index++;
+                document.getElementById('loss or change of appetite').style.visibility = 'hidden';
+            }
+
+            btn44.onclick = function () {
+                array[index] = btn44.innerHTML;
+                index++;
+                document.getElementById('significant weight loss or gain').style.visibility = 'hidden';
+            }
+
+            btn45.onclick = function () {
+                array[index] = btn45.innerHTML;
+                index++;
+                document.getElementById('avoidance of situations that make you feel anxious which can impact on study, work or social life').style.visibility = 'hidden';
+            }
+
+            btn46.onclick = function () {
+                array[index] = btn46.innerHTML;
+                index++;
+                document.getElementById('panic attacks').style.visibility = 'hidden';
+            }
+
+            btn47.onclick = function () {
+                array[index] = btn47.innerHTML;
+                index++;
+                document.getElementById('hot and cold flushes').style.visibility = 'hidden';
+            }
+
+            btn48.onclick = function () {
+                array[index] = btn48.innerHTML;
+                index++;
+                document.getElementById('racing heart').style.visibility = 'hidden';
+            }
+
+            btn49.onclick = function () {
+                array[index] = btn49.innerHTML;
+                index++;
+                document.getElementById('tightening of the chest quick breathing').style.visibility = 'hidden';
+            }
+
+            btn50.onclick = function () {
+                array[index] = btn50.innerHTML;
+                index++;
+                document.getElementById('restlessness').style.visibility = 'hidden';
+            }
+
+            btn51.onclick = function () {
+                array[index] = btn51.innerHTML;
+                index++;
+                document.getElementById('feeling tense').style.visibility = 'hidden';
+            }
+
+            btn52.onclick = function () {
+                array[index] = btn52.innerHTML;
+                index++;
+                document.getElementById('wound up and edgy').style.visibility = 'hidden';
+            }
+
+
 
             btnS.onclick = function () {
                 console.log(array);
                 paopao(array);
+            }
+
+            btnc.onclick = function () {
+                window.location.reload();
             }
         }
 
@@ -289,52 +476,76 @@
 <body style="background-color:cornsilk">
     <br />
     <h2 style="color:darkred">Choose symptoms you may have</h2>
-    <button id="overwhelmed">overwhelmed</button>
-    <button id="guilty">guilty</button>
-    <button id="irritable">irritable</button>
-    <button id="frustrated">frustrated</button>
-    <button id="lacking in confidence">lacking in confidence</button>
-    <button id="unhappy">unhappy</button>
-    <button id="indecisive">indecisive</button>
-    <button id="disappointed">disappointed</button>
-    <button id="miserable">miserable</button>
-    <button id="sad">sad</button>
+    <button id="overwhelmed" style="font-size: large">overwhelmed</button>
+    <button id="guilty" style="font-size: large">guilty</button>
+    <button id="irritable" style="font-size: large">irritable</button>
+    <button id="frustrated" style="font-size: large">frustrated</button>
+    <button id="lacking in confidence" style="font-size: large">lacking in confidence</button>
+    <button id="unhappy" style="font-size: large">unhappy</button>
+    <button id="indecisive" style="font-size: large">indecisive</button>
+    <button id="disappointed" style="font-size: large">disappointed</button>
+    <button id="miserable" style="font-size: large">miserable</button>
+    <button id="sad" style="font-size: large">sad</button>
+
+    <button id="excessive fear" style="font-size: large">excessive fear</button>
+    <button id="worry" style="font-size: large">worry</button>
+    <button id="catastrophizing" style="font-size: large">catastrophizing</button>
+    <button id="obsessive thinking" style="font-size: large">obsessive thinking</button>
+    <button id="Unexplained weight fluctuations" style="font-size: large">Unexplained weight fluctuations</button>
+    <button id="Anemia and muscle weakness" style="font-size: large">Anemia and muscle weakness</button>
+    <button id="Increase in falls" style="font-size: large">Increase in falls</button>
+    <button id="Memory deficits" style="font-size: large">Memory deficits</button>
+    <button id="Cognitive decline" style="font-size: large">Cognitive decline</button>
+    <button id="Loss of appetite" style="font-size: large">Loss of appetite</button>
+    <button id="Slow healing" style="font-size: large">Slow healing</button>
+    <button id="Chronic dizziness" style="font-size: large">Chronic dizziness</button>
+    <button id="not getting things done at work/school" style="font-size: large">not getting things done at work/school</button>
+    <button id="Unopened or uneaten food in the fridge or cupboards" style="font-size: large">Unopened or uneaten food in the fridge or cupboards</button>
+    <button id="Decrease in food intake or rejection of meals" style="font-size: large">Decrease in food intake or rejection of meals</button>
+    <button id="Use of laxatives" style="font-size: large">Use of laxatives</button>
+    <button id="Confusion" style="font-size: large">Confusion</button>
+    <button id="Agitation" style="font-size: large">Agitation</button>
+    <button id="Irritability" style="font-size: large">Irritability</button>
+    <button id="Hyperactivity" style="font-size: large">Hyperactivity</button>
+    <button id="Psychosis" style="font-size: large">Psychosis</button>
+    <button id="Cognitive issues" style="font-size: large">Cognitive issues</button>
+    <button id="not going out anymore" style="font-size: large">not going out anymore</button>
+    <button id="withdrawing from close family and friends" style="font-size: large">withdrawing from close family and friends</button>
+    <button id="relying on alcohol and sedatives" style="font-size: large">relying on alcohol and sedatives</button>
+    <button id="not doing usual enjoyable activities" style="font-size: large">not doing usual enjoyable activities</button>
+    <button id="unable to concentrate" style="font-size: large">unable to concentrate</button>
+    <button id="tired all the time" style="font-size: large">tired all the time</button>
+    <button id="sick and run down" style="font-size: large">sick and run down</button>
+    <button id="headaches and muscle pains" style="font-size: large">headaches and muscle pains</button>
+    <button id="churning gut" style="font-size: large">churning gut</button>
+    <button id="sleep problems" style="font-size: large">sleep problems</button>
+    <button id="loss or change of appetite" style="font-size: large">loss or change of appetite</button>
+    <button id="wound up and edgy" style="font-size: large">wound up and edgy</button>
+    <button id="avoidance of situations that make you feel anxious which can impact on study, work or social life" style="font-size: large">avoidance of situations that make you feel anxious which can impact on study, work or social life</button>
+    <button id="significant weight loss or gain" style="font-size: large">significant weight loss or gain</button>
+    <button id="panic attacks" style="font-size: large">panic attacks</button>
+    <button id="hot and cold flushes" style="font-size: large">hot and cold flushes</button>
+    <button id="racing heart" style="font-size: large">racing heart</button>
+    <button id="tightening of the chest quick breathing" style="font-size: large">tightening of the chest quick breathing</button>
+    <button id="restlessness" style="font-size: large">restlessness</button>
+    <button id="feeling tense" style="font-size: large">feeling tense</button>
+
+
     <br />
-    <button id="excessive fear">excessive fear</button>
-    <button id="worry">worry</button>
-    <button id="catastrophizing">catastrophizing</button>
-    <button id="obsessive thinking">obsessive thinking</button>
-    <br />
-    <button id="Unexplained weight fluctuations">Unexplained weight fluctuations</button>
-    <button id="Anemia and muscle weakness">Anemia and muscle weakness</button>
-    <button id="Increase in falls">Increase in falls</button>
-    <button id="Memory deficits">Memory deficits</button>
-    <button id="Cognitive decline">Cognitive decline</button>
-    <button id="Loss of appetite">Loss of appetite</button>
-    <button id="Slow healing">Slow healing</button>
-    <button id="Chronic dizziness">Chronic dizziness</button>
-    <button id="Unopened or uneaten food in the fridge or cupboards">Unopened or uneaten food in the fridge or cupboards</button>
-    <button id="Decrease in food intake or rejection of meals">Decrease in food intake or rejection of meals</button>
-    <button id="Use of laxatives">Use of laxatives</button>
-    <br />
-    <button id="Confusion">Confusion</button>
-    <button id="Agitation">Agitation</button>
-    <button id="Irritability">Irritability</button>
-    <button id="Hyperactivity">Hyperactivity</button>
-    <button id="Psychosis">Psychosis</button>
-    <button id="Cognitive issues">Cognitive issues</button>
     <br />
     <br />
-    <button id="submit">submit</button>
+    <br />
+    <button id="submit" style="font-size: large">Submit</button>
+    <button id="clear" style="font-size: large">Reset</button>
     <br />
     <br />
 
-    <p id="ddd"></p>
-    <p id="aaa"></p>
-    <p id="eee"></p>
-    <p id="bbb"></p>
-    <h3 id="suggestion" style="color:darkred"></h3>
-    <p id="content"></p>
+    <p id="ddd" style="font-size: large"></p>
+    <p id="aaa" style="font-size: large"></p>
+    <p id="eee" style="font-size: large"></p>
+    <p id="bbb" style="font-size: large"></p>
+    <h3 id="suggestion" style="color:darkred; font-size: large"></h3>
+    <p id="content" style="font-size: large"></p>
 
 </body>
 </html>
