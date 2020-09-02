@@ -2,7 +2,23 @@
 <head>
     <title>Know You Better</title>
     <script>
-        function paopao(z) {
+        function paopao(o) {
+            var z = new Array();
+            var index = 0;
+            for (var i = 0; i < o.length; i++) {
+                var chongfu = false;
+                for (var j = 0; j < z.length; j++) {
+                    if (o[i] == z[j]) {
+                        chongfu = true;
+                        break;
+                    }
+                }
+                if (!chongfu) {
+                    z[index] = o[i];
+                    index++;
+                }
+            }
+
             var dep = new Array("not going out anymore", "not getting things done at work/school",
                 "withdrawing from close family and friends", "relying on alcohol and sedatives", "not doing usual enjoyable activities",
                 "unable to concentrate", "overwhelmed", "guilty", "irritable", "frustrated", "lacking in confidence", "unhappy",
