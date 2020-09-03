@@ -1,7 +1,7 @@
 # ME14
 
 1. High-level system architecture diagram
-
+![Image text]img-folder/system structure.png
 
 2. Codebase structure document
 
