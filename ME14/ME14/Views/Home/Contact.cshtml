@@ -1,6 +1,15 @@
 ﻿<html>
 <head>
     <title>Know You Better</title>
+    <style>
+        button {
+            border-radius: 12px;
+            margin: 10px;
+            background-color: plum;
+            color: white;
+        }
+    </style>
+
     <script>
         function paopao(o) {
             var z = new Array();
@@ -160,305 +169,1002 @@
             var eee = document.getElementById('eee');
             var bbb = document.getElementById('bbb');
 
+            var panduan = new Array();
+            for (var i = 0; i < 52; i++) {
+                panduan[i] = false;
+            }
+
 
             btn1.onclick = function () {
-                array[index] = btn1.innerHTML;
-                index++;
-                document.getElementById('overwhelmed').style.visibility = 'hidden';
+                if (panduan[0]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'overwhelmed') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('overwhelmed').style.backgroundColor = "plum";
+                    index--;
+                    panduan[0] = false;
+                } else {
+                    document.getElementById('overwhelmed').style.backgroundColor = "red";
+                    array[index] = btn1.innerHTML;
+                    index++;
+                    panduan[0] = true;
+                }
             }
 
             btn2.onclick = function () {
-                array[index] = btn2.innerHTML;
-                index++;
-                document.getElementById('guilty').style.visibility = 'hidden';
+                if (panduan[1]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'guilty') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('guilty').style.backgroundColor = "plum";
+                    index--;
+                    panduan[1] = false;
+                } else {
+                    document.getElementById('guilty').style.backgroundColor = "red";
+                    array[index] = btn2.innerHTML;
+                    index++;
+                    panduan[1] = true;
+                }
             }
 
+
             btn3.onclick = function () {
-                array[index] = btn3.innerHTML;
-                index++;
-                document.getElementById('irritable').style.visibility = 'hidden';
+                if (panduan[2]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'irritable') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('irritable').style.backgroundColor = "plum";
+                    index--;
+                    panduan[2] = false;
+                } else {
+                    document.getElementById('irritable').style.backgroundColor = "red";
+                    array[index] = btn3.innerHTML;
+                    index++;
+                    panduan[2] = true;
+                }
             }
 
             btn4.onclick = function () {
-                array[index] = btn4.innerHTML;
-                index++;
-                document.getElementById('frustrated').style.visibility = 'hidden';
+                if (panduan[3]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'frustrated') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('frustrated').style.backgroundColor = "plum";
+                    index--;
+                    panduan[3] = false;
+                } else {
+                    document.getElementById('frustrated').style.backgroundColor = "red";
+                    array[index] = btn4.innerHTML;
+                    index++;
+                    panduan[3] = true;
+                }
             }
 
             btn5.onclick = function () {
-                array[index] = btn5.innerHTML;
-                index++;
-                document.getElementById('lacking in confidence').style.visibility = 'hidden';
+                if (panduan[4]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'lacking in confidence') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('lacking in confidence').style.backgroundColor = "plum";
+                    index--;
+                    panduan[4] = false;
+                } else {
+                    document.getElementById('lacking in confidence').style.backgroundColor = "red";
+                    array[index] = btn5.innerHTML;
+                    index++;
+                    panduan[4] = true;
+                }
             }
 
             btn6.onclick = function () {
-                array[index] = btn6.innerHTML;
-                index++;
-                document.getElementById('unhappy').style.visibility = 'hidden';
+                if (panduan[5]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'unhappy') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('unhappy').style.backgroundColor = "plum";
+                    index--;
+                    panduan[5] = false;
+                } else {
+                    document.getElementById('unhappy').style.backgroundColor = "red";
+                    array[index] = btn6.innerHTML;
+                    index++;
+                    panduan[5] = true;
+                }
             }
 
+
             btn7.onclick = function () {
-                array[index] = btn7.innerHTML;
-                index++;
-                document.getElementById('indecisive').style.visibility = 'hidden';
+                if (panduan[6]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'indecisive') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('indecisive').style.backgroundColor = "plum";
+                    index--;
+                    panduan[6] = false;
+                } else {
+                    document.getElementById('indecisive').style.backgroundColor = "red";
+                    array[index] = btn7.innerHTML;
+                    index++;
+                    panduan[6] = true;
+                }
             }
 
             btn8.onclick = function () {
-
-                array[index] = btn8.innerHTML;
-                index++;
-                document.getElementById('disappointed').style.visibility = 'hidden';
+                if (panduan[7]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'disappointed') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('disappointed').style.backgroundColor = "plum";
+                    index--;
+                    panduan[7] = false;
+                } else {
+                    document.getElementById('disappointed').style.backgroundColor = "red";
+                    array[index] = btn8.innerHTML;
+                    index++;
+                    panduan[7] = true;
+                }
             }
 
             btn9.onclick = function () {
-                array[index] = btn9.innerHTML;
-                index++;
-                document.getElementById('miserable').style.visibility = 'hidden';
+                if (panduan[8]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'miserable') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('miserable').style.backgroundColor = "plum";
+                    index--;
+                    panduan[8] = false;
+                } else {
+                    document.getElementById('miserable').style.backgroundColor = "red";
+                    array[index] = btn9.innerHTML;
+                    index++;
+                    panduan[8] = true;
+                }
             }
 
             btn10.onclick = function () {
-                array[index] = btn10.innerHTML;
-                index++;
-                document.getElementById('sad').style.visibility = 'hidden';
+                if (panduan[9]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'sad') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('sad').style.backgroundColor = "plum";
+                    index--;
+                    panduan[9] = false;
+                } else {
+                    document.getElementById('sad').style.backgroundColor = "red";
+                    array[index] = btn10.innerHTML;
+                    index++;
+                    panduan[9] = true;
+                }
             }
 
             btn11.onclick = function () {
-                array[index] = btn11.innerHTML;
-                index++;
-                document.getElementById('excessive fear').style.visibility = 'hidden';
+                if (panduan[10]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'excessive fear') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('excessive fear').style.backgroundColor = "plum";
+                    index--;
+                    panduan[10] = false;
+                } else {
+                    document.getElementById('excessive fear').style.backgroundColor = "red";
+                    array[index] = btn11.innerHTML;
+                    index++;
+                    panduan[10] = true;
+                }
             }
+
             btn12.onclick = function () {
-                array[index] = btn12.innerHTML;
-                index++;
-                document.getElementById('worry').style.visibility = 'hidden';
+                if (panduan[11]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'worry') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('worry').style.backgroundColor = "plum";
+                    index--;
+                    panduan[11] = false;
+                } else {
+                    document.getElementById('worry').style.backgroundColor = "red";
+                    array[index] = btn11.innerHTML;
+                    index++;
+                    panduan[11] = true;
+                }
             }
 
             btn13.onclick = function () {
-                array[index] = btn13.innerHTML;
-                index++;
-                document.getElementById('catastrophizing').style.visibility = 'hidden';
+                if (panduan[12]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'catastrophizing') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('catastrophizing').style.backgroundColor = "plum";
+                    index--;
+                    panduan[12] = false;
+                } else {
+                    document.getElementById('catastrophizing').style.backgroundColor = "red";
+                    array[index] = btn13.innerHTML;
+                    index++;
+                    panduan[12] = true;
+                }
             }
 
             btn14.onclick = function () {
-                array[index] = btn14.innerHTML;
-                index++;
-                document.getElementById('obsessive thinking').style.visibility = 'hidden';
+                if (panduan[13]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'obsessive thinking') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('obsessive thinking').style.backgroundColor = "plum";
+                    index--;
+                    panduan[13] = false;
+                } else {
+                    document.getElementById('obsessive thinking').style.backgroundColor = "red";
+                    array[index] = btn14.innerHTML;
+                    index++;
+                    panduan[13] = true;
+                }
             }
 
             btn15.onclick = function () {
-                array[index] = btn15.innerHTML;
-                index++;
-                document.getElementById('Unexplained weight fluctuations').style.visibility = 'hidden';
+                if (panduan[14]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'Unexplained weight fluctuations') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('Unexplained weight fluctuations').style.backgroundColor = "plum";
+                    index--;
+                    panduan[14] = false;
+                } else {
+                    document.getElementById('Unexplained weight fluctuations').style.backgroundColor = "red";
+                    array[index] = btn15.innerHTML;
+                    index++;
+                    panduan[14] = true;
+                }
             }
 
             btn16.onclick = function () {
-                array[index] = btn16.innerHTML;
-                index++;
-                document.getElementById('Anemia and muscle weakness').style.visibility = 'hidden';
-            }
-            btn17.onclick = function () {
-                array[index] = btn17.innerHTML;
-                index++;
-                document.getElementById('Increase in falls').style.visibility = 'hidden';
-            }
-            btn18.onclick = function () {
-                array[index] = btn18.innerHTML;
-                index++;
-                document.getElementById('Memory deficits').style.visibility = 'hidden';
-            }
-            btn19.onclick = function () {
-                array[index] = btn19.innerHTML;
-                index++;
-                document.getElementById('Cognitive decline').style.visibility = 'hidden';
-            }
-            btn20.onclick = function () {
-                array[index] = btn20.innerHTML;
-                index++;
-                document.getElementById('Loss of appetite').style.visibility = 'hidden';
-            }
-            btn21.onclick = function () {
-                array[index] = btn21.innerHTML;
-                index++;
-                document.getElementById('Slow healing').style.visibility = 'hidden';
+                if (panduan[15]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'Anemia and muscle weakness') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('Anemia and muscle weakness').style.backgroundColor = "plum";
+                    index--;
+                    panduan[15] = false;
+                } else {
+                    document.getElementById('Anemia and muscle weakness').style.backgroundColor = "red";
+                    array[index] = btn16.innerHTML;
+                    index++;
+                    panduan[15] = true;
+                }
             }
 
+            btn17.onclick = function () {
+                if (panduan[16]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'Increase in falls') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('Increase in falls').style.backgroundColor = "plum";
+                    index--;
+                    panduan[16] = false;
+                } else {
+                    document.getElementById('Increase in falls').style.backgroundColor = "red";
+                    array[index] = btn17.innerHTML;
+                    index++;
+                    panduan[16] = true;
+                }
+            }
+
+            btn18.onclick = function () {
+                if (panduan[17]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'Memory deficits') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('Memory deficits').style.backgroundColor = "plum";
+                    index--;
+                    panduan[17] = false;
+                } else {
+                    document.getElementById('Memory deficits').style.backgroundColor = "red";
+                    array[index] = btn18.innerHTML;
+                    index++;
+                    panduan[17] = true;
+                }
+            }
+
+            btn19.onclick = function () {
+                if (panduan[18]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'Cognitive decline') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('Cognitive decline').style.backgroundColor = "plum";
+                    index--;
+                    panduan[18] = false;
+                } else {
+                    document.getElementById('Cognitive decline').style.backgroundColor = "red";
+                    array[index] = btn19.innerHTML;
+                    index++;
+                    panduan[18] = true;
+                }
+            }
+
+            btn20.onclick = function () {
+                if (panduan[19]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'Loss of appetite') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('Loss of appetite').style.backgroundColor = "plum";
+                    index--;
+                    panduan[19] = false;
+                } else {
+                    document.getElementById('Loss of appetite').style.backgroundColor = "red";
+                    array[index] = btn20.innerHTML;
+                    index++;
+                    panduan[19] = true;
+                }
+            }
+
+            btn21.onclick = function () {
+                if (panduan[20]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'Slow healing') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('Slow healing').style.backgroundColor = "plum";
+                    index--;
+                    panduan[20] = false;
+                } else {
+                    document.getElementById('Slow healing').style.backgroundColor = "red";
+                    array[index] = btn21.innerHTML;
+                    index++;
+                    panduan[20] = true;
+                }
+            }
 
             btn22.onclick = function () {
-                array[index] = btn22.innerHTML;
-                index++;
-                document.getElementById('Chronic dizziness').style.visibility = 'hidden';
+                if (panduan[21]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'Slow healing') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('Chronic dizziness').style.backgroundColor = "plum";
+                    index--;
+                    panduan[21] = false;
+                } else {
+                    document.getElementById('Chronic dizziness').style.backgroundColor = "red";
+                    array[index] = btn22.innerHTML;
+                    index++;
+                    panduan[21] = true;
+                }
             }
+
             btn23.onclick = function () {
-                array[index] = btn23.innerHTML;
-                index++;
-                document.getElementById('Unopened or uneaten food in the fridge or cupboards').style.visibility = 'hidden';
+                if (panduan[22]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'Unopened or uneaten food in the fridge or cupboards') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('Unopened or uneaten food in the fridge or cupboards').style.backgroundColor = "plum";
+                    index--;
+                    panduan[22] = false;
+                } else {
+                    document.getElementById('Unopened or uneaten food in the fridge or cupboards').style.backgroundColor = "red";
+                    array[index] = btn23.innerHTML;
+                    index++;
+                    panduan[22] = true;
+                }
             }
+
             btn24.onclick = function () {
-                array[index] = btn24.innerHTML;
-                index++;
-                document.getElementById('Decrease in food intake or rejection of meals').style.visibility = 'hidden';
+                if (panduan[23]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'Decrease in food intake or rejection of meals') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('Decrease in food intake or rejection of meals').style.backgroundColor = "plum";
+                    index--;
+                    panduan[23] = false;
+                } else {
+                    document.getElementById('Decrease in food intake or rejection of meals').style.backgroundColor = "red";
+                    array[index] = btn10.innerHTML;
+                    index++;
+                    panduan[23] = true;
+                }
             }
+
             btn25.onclick = function () {
-                array[index] = btn25.innerHTML;
-                index++;
-                document.getElementById('Use of laxatives').style.visibility = 'hidden';
+                if (panduan[24]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'Use of laxatives') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('Use of laxatives').style.backgroundColor = "plum";
+                    index--;
+                    panduan[24] = false;
+                } else {
+                    document.getElementById('Use of laxatives').style.backgroundColor = "red";
+                    array[index] = btn25.innerHTML;
+                    index++;
+                    panduan[24] = true;
+                }
             }
+
             btn26.onclick = function () {
-                array[index] = btn26.innerHTML;
-                index++;
-                document.getElementById('Confusion').style.visibility = 'hidden';
+                if (panduan[25]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'Confusion') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('Confusion').style.backgroundColor = "plum";
+                    index--;
+                    panduan[25] = false;
+                } else {
+                    document.getElementById('Confusion').style.backgroundColor = "red";
+                    array[index] = btn26.innerHTML;
+                    index++;
+                    panduan[25] = true;
+                }
             }
+
             btn27.onclick = function () {
-                array[index] = btn27.innerHTML;
-                index++;
-                document.getElementById('Agitation').style.visibility = 'hidden';
+                if (panduan[26]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'Agitation') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('Agitation').style.backgroundColor = "plum";
+                    index--;
+                    panduan[26] = false;
+                } else {
+                    document.getElementById('Agitation').style.backgroundColor = "red";
+                    array[index] = btn27.innerHTML;
+                    index++;
+                    panduan[26] = true;
+                }
             }
+
             btn28.onclick = function () {
-                array[index] = btn28.innerHTML;
-                index++;
-                document.getElementById('Irritability').style.visibility = 'hidden';
+                if (panduan[27]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'Irritability') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('Irritability').style.backgroundColor = "plum";
+                    index--;
+                    panduan[27] = false;
+                } else {
+                    document.getElementById('Irritability').style.backgroundColor = "red";
+                    array[index] = btn28.innerHTML;
+                    index++;
+                    panduan[27] = true;
+                }
             }
+
             btn29.onclick = function () {
-                array[index] = btn29.innerHTML;
-                index++;
-                document.getElementById('Hyperactivity').style.visibility = 'hidden';
+                if (panduan[28]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'Hyperactivity') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('Hyperactivity').style.backgroundColor = "plum";
+                    index--;
+                    panduan[28] = false;
+                } else {
+                    document.getElementById('Hyperactivity').style.backgroundColor = "red";
+                    array[index] = btn29.innerHTML;
+                    index++;
+                    panduan[28] = true;
+                }
             }
+
             btn30.onclick = function () {
-                array[index] = btn30.innerHTML;
-                index++;
-                document.getElementById('Psychosis').style.visibility = 'hidden';
+                if (panduan[29]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'Psychosis') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('Psychosis').style.backgroundColor = "plum";
+                    index--;
+                    panduan[29] = false;
+                } else {
+                    document.getElementById('Psychosis').style.backgroundColor = "red";
+                    array[index] = btn30.innerHTML;
+                    index++;
+                    panduan[29] = true;
+                }
             }
+
             btn31.onclick = function () {
-                array[index] = btn31.innerHTML;
-                index++;
-                document.getElementById('Cognitive issues').style.visibility = 'hidden';
+                if (panduan[30]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'Cognitive issues') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('Cognitive issues').style.backgroundColor = "plum";
+                    index--;
+                    panduan[30] = false;
+                } else {
+                    document.getElementById('Cognitive issues').style.backgroundColor = "red";
+                    array[index] = btn31.innerHTML;
+                    index++;
+                    panduan[30] = true;
+                }
             }
+
             btn32.onclick = function () {
-                array[index] = btn32.innerHTML;
-                index++;
-                document.getElementById('not going out anymore').style.visibility = 'hidden';
+                if (panduan[31]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'not going out anymore') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('not going out anymore').style.backgroundColor = "plum";
+                    index--;
+                    panduan[31] = false;
+                } else {
+                    document.getElementById('not going out anymore').style.backgroundColor = "red";
+                    array[index] = btn32.innerHTML;
+                    index++;
+                    panduan[31] = true;
+                }
             }
 
             btn33.onclick = function () {
-                array[index] = btn33.innerHTML;
-                index++;
-                document.getElementById('not getting things done at work/school').style.visibility = 'hidden';
+                if (panduan[32]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'not getting things done at work/school') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('not getting things done at work/school').style.backgroundColor = "plum";
+                    index--;
+                    panduan[32] = false;
+                } else {
+                    document.getElementById('not getting things done at work/school').style.backgroundColor = "red";
+                    array[index] = btn33.innerHTML;
+                    index++;
+                    panduan[32] = true;
+                }
             }
 
             btn34.onclick = function () {
-                array[index] = btn34.innerHTML;
-                index++;
-                document.getElementById('withdrawing from close family and friends').style.visibility = 'hidden';
+                if (panduan[33]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'withdrawing from close family and friends') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('withdrawing from close family and friends').style.backgroundColor = "plum";
+                    index--;
+                    panduan[33] = false;
+                } else {
+                    document.getElementById('withdrawing from close family and friends').style.backgroundColor = "red";
+                    array[index] = btn34.innerHTML;
+                    index++;
+                    panduan[33] = true;
+                }
             }
 
             btn35.onclick = function () {
-                array[index] = btn35.innerHTML;
-                index++;
-                document.getElementById('relying on alcohol and sedatives').style.visibility = 'hidden';
+                if (panduan[34]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'relying on alcohol and sedatives') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('relying on alcohol and sedatives').style.backgroundColor = "plum";
+                    index--;
+                    panduan[34] = false;
+                } else {
+                    document.getElementById('relying on alcohol and sedatives').style.backgroundColor = "red";
+                    array[index] = btn35.innerHTML;
+                    index++;
+                    panduan[34] = true;
+                }
             }
 
             btn36.onclick = function () {
-                array[index] = btn36.innerHTML;
-                index++;
-                document.getElementById('not doing usual enjoyable activities').style.visibility = 'hidden';
+                if (panduan[35]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'not doing usual enjoyable activities') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('not doing usual enjoyable activities').style.backgroundColor = "plum";
+                    index--;
+                    panduan[35] = false;
+                } else {
+                    document.getElementById('not doing usual enjoyable activities').style.backgroundColor = "red";
+                    array[index] = btn36.innerHTML;
+                    index++;
+                    panduan[35] = true;
+                }
             }
 
             btn37.onclick = function () {
-                array[index] = btn37.innerHTML;
-                index++;
-                document.getElementById('unable to concentrate').style.visibility = 'hidden';
+                if (panduan[36]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'unable to concentrate') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('unable to concentrate').style.backgroundColor = "plum";
+                    index--;
+                    panduan[36] = false;
+                } else {
+                    document.getElementById('unable to concentrate').style.backgroundColor = "red";
+                    array[index] = btn37.innerHTML;
+                    index++;
+                    panduan[36] = true;
+                }
             }
 
             btn38.onclick = function () {
-                array[index] = btn38.innerHTML;
-                index++;
-                document.getElementById('tired all the time').style.visibility = 'hidden';
+                if (panduan[37]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'tired all the time') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('tired all the time').style.backgroundColor = "plum";
+                    index--;
+                    panduan[37] = false;
+                } else {
+                    document.getElementById('tired all the time').style.backgroundColor = "red";
+                    array[index] = btn38.innerHTML;
+                    index++;
+                    panduan[37] = true;
+                }
             }
 
             btn39.onclick = function () {
-                array[index] = btn39.innerHTML;
-                index++;
-                document.getElementById('sick and run down').style.visibility = 'hidden';
+                if (panduan[38]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'sick and run down') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('sick and run down').style.backgroundColor = "plum";
+                    index--;
+                    panduan[38] = false;
+                } else {
+                    document.getElementById('sick and run down').style.backgroundColor = "red";
+                    array[index] = btn39.innerHTML;
+                    index++;
+                    panduan[38] = true;
+                }
             }
 
             btn40.onclick = function () {
-                array[index] = btn40.innerHTML;
-                index++;
-                document.getElementById('headaches and muscle pains').style.visibility = 'hidden';
+                if (panduan[39]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'headaches and muscle pains') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('headaches and muscle pains').style.backgroundColor = "plum";
+                    index--;
+                    panduan[39] = false;
+                } else {
+                    document.getElementById('headaches and muscle pains').style.backgroundColor = "red";
+                    array[index] = btn40.innerHTML;
+                    index++;
+                    panduan[39] = true;
+                }
             }
 
+
             btn41.onclick = function () {
-                array[index] = btn41.innerHTML;
-                index++;
-                document.getElementById('churning gut').style.visibility = 'hidden';
+                if (panduan[40]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'churning gut') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('churning gut').style.backgroundColor = "plum";
+                    index--;
+                    panduan[40] = false;
+                } else {
+                    document.getElementById('churning gut').style.backgroundColor = "red";
+                    array[index] = btn41.innerHTML;
+                    index++;
+                    panduan[40] = true;
+                }
             }
 
             btn42.onclick = function () {
-                array[index] = btn42.innerHTML;
-                index++;
-                document.getElementById('sleep problems').style.visibility = 'hidden';
+                if (panduan[41]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'sleep problems') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('sleep problems').style.backgroundColor = "plum";
+                    index--;
+                    panduan[41] = false;
+                } else {
+                    document.getElementById('sleep problems').style.backgroundColor = "red";
+                    array[index] = btn42.innerHTML;
+                    index++;
+                    panduan[41] = true;
+                }
             }
 
             btn43.onclick = function () {
-                array[index] = btn43.innerHTML;
-                index++;
-                document.getElementById('loss or change of appetite').style.visibility = 'hidden';
+                if (panduan[42]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'loss or change of appetite') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('loss or change of appetite').style.backgroundColor = "plum";
+                    index--;
+                    panduan[42] = false;
+                } else {
+                    document.getElementById('loss or change of appetite').style.backgroundColor = "red";
+                    array[index] = btn43.innerHTML;
+                    index++;
+                    panduan[42] = true;
+                }
             }
 
             btn44.onclick = function () {
-                array[index] = btn44.innerHTML;
-                index++;
-                document.getElementById('significant weight loss or gain').style.visibility = 'hidden';
+                if (panduan[43]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'significant weight loss or gain') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('significant weight loss or gain').style.backgroundColor = "plum";
+                    index--;
+                    panduan[43] = false;
+                } else {
+                    document.getElementById('significant weight loss or gain').style.backgroundColor = "red";
+                    array[index] = btn44.innerHTML;
+                    index++;
+                    panduan[43] = true;
+                }
             }
 
             btn45.onclick = function () {
-                array[index] = btn45.innerHTML;
-                index++;
-                document.getElementById('avoidance of situations that make you feel anxious which can impact on study, work or social life').style.visibility = 'hidden';
+                if (panduan[44]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'avoidance of situations that make you feel anxious which can impact on study, work or social life') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('avoidance of situations that make you feel anxious which can impact on study, work or social life').style.backgroundColor = "plum";
+                    index--;
+                    panduan[44] = false;
+                } else {
+                    document.getElementById('avoidance of situations that make you feel anxious which can impact on study, work or social life').style.backgroundColor = "red";
+                    array[index] = btn45.innerHTML;
+                    index++;
+                    panduan[44] = true;
+                }
             }
 
             btn46.onclick = function () {
-                array[index] = btn46.innerHTML;
-                index++;
-                document.getElementById('panic attacks').style.visibility = 'hidden';
+                if (panduan[45]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'panic attacks') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('panic attacks').style.backgroundColor = "plum";
+                    index--;
+                    panduan[45] = false;
+                } else {
+                    document.getElementById('panic attacks').style.backgroundColor = "red";
+                    array[index] = btn46.innerHTML;
+                    index++;
+                    panduan[45] = true;
+                }
             }
 
             btn47.onclick = function () {
-                array[index] = btn47.innerHTML;
-                index++;
-                document.getElementById('hot and cold flushes').style.visibility = 'hidden';
+                if (panduan[46]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'hot and cold flushes') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('hot and cold flushes').style.backgroundColor = "plum";
+                    index--;
+                    panduan[46] = false;
+                } else {
+                    document.getElementById('hot and cold flushes').style.backgroundColor = "red";
+                    array[index] = btn47.innerHTML;
+                    index++;
+                    panduan[46] = true;
+                }
             }
 
             btn48.onclick = function () {
-                array[index] = btn48.innerHTML;
-                index++;
-                document.getElementById('racing heart').style.visibility = 'hidden';
+                if (panduan[47]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'racing heart') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('racing heart').style.backgroundColor = "plum";
+                    index--;
+                    panduan[47] = false;
+                } else {
+                    document.getElementById('racing heart').style.backgroundColor = "red";
+                    array[index] = btn48.innerHTML;
+                    index++;
+                    panduan[47] = true;
+                }
             }
 
             btn49.onclick = function () {
-                array[index] = btn49.innerHTML;
-                index++;
-                document.getElementById('tightening of the chest quick breathing').style.visibility = 'hidden';
+                if (panduan[48]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'tightening of the chest quick breathing') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('tightening of the chest quick breathing').style.backgroundColor = "plum";
+                    index--;
+                    panduan[48] = false;
+                } else {
+                    document.getElementById('tightening of the chest quick breathing').style.backgroundColor = "red";
+                    array[index] = btn49.innerHTML;
+                    index++;
+                    panduan[48] = true;
+                }
             }
 
             btn50.onclick = function () {
-                array[index] = btn50.innerHTML;
-                index++;
-                document.getElementById('restlessness').style.visibility = 'hidden';
+                if (panduan[49]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'restlessness') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('restlessness').style.backgroundColor = "plum";
+                    index--;
+                    panduan[49] = false;
+                } else {
+                    document.getElementById('restlessness').style.backgroundColor = "red";
+                    array[index] = btn50.innerHTML;
+                    index++;
+                    panduan[49] = true;
+                }
             }
 
             btn51.onclick = function () {
-                array[index] = btn51.innerHTML;
-                index++;
-                document.getElementById('feeling tense').style.visibility = 'hidden';
+                if (panduan[50]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'feeling tense') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('feeling tense').style.backgroundColor = "plum";
+                    index--;
+                    panduan[50] = false;
+                } else {
+                    document.getElementById('feeling tense').style.backgroundColor = "red";
+                    array[index] = btn51.innerHTML;
+                    index++;
+                    panduan[50] = true;
+                }
             }
 
             btn52.onclick = function () {
-                array[index] = btn52.innerHTML;
-                index++;
-                document.getElementById('wound up and edgy').style.visibility = 'hidden';
+                if (panduan[51]) {
+                    for (var i = 0; i < array.length; i++) {
+                        if (array[i] == 'wound up and edgy') {
+                            array.splice(i, 1);
+                            break;
+                        }
+                    }
+                    document.getElementById('wound up and edgy').style.backgroundColor = "plum";
+                    index--;
+                    panduan[51] = false;
+                } else {
+                    document.getElementById('wound up and edgy').style.backgroundColor = "red";
+                    array[index] = btn52.innerHTML;
+                    index++;
+                    panduan[51] = true;
+                }
             }
-
 
 
             btnS.onclick = function () {
@@ -473,7 +1179,7 @@
 
     </script>
 </head>
-<body style="background-color:cornsilk">
+<body>
     <br />
     <h2 style="color:darkred">Choose symptoms you may have</h2>
     <button id="overwhelmed" style="font-size: large">overwhelmed</button>
@@ -535,8 +1241,8 @@
     <br />
     <br />
     <br />
-    <button id="submit" style="font-size: large">Submit</button>
-    <button id="clear" style="font-size: large">Reset</button>
+    <button id="submit" style="font-size: xx-large; background-color:steelblue">Submit</button>
+    <button id="clear" style="font-size: xx-large; background-color: saddlebrown">Reset</button>
     <br />
     <br />
 
