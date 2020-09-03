@@ -287,3 +287,7 @@ C:\Users\Haoxing Li\Desktop\ME14\ME14\ME14\obj\Debug\ME14.csproj.CoreCompileInpu
 C:\Users\Haoxing Li\Desktop\ME14\ME14\ME14\obj\Debug\ME14.csproj.CopyComplete
 C:\Users\Haoxing Li\Desktop\ME14\ME14\ME14\obj\Debug\ME14.dll
 C:\Users\Haoxing Li\Desktop\ME14\ME14\ME14\obj\Debug\ME14.pdb
+C:\Users\Haoxing Li\Desktop\ME14\ME14\ME14\bin\EntityFramework.dll
+C:\Users\Haoxing Li\Desktop\ME14\ME14\ME14\bin\EntityFramework.SqlServer.dll
+C:\Users\Haoxing Li\Desktop\ME14\ME14\ME14\bin\EntityFramework.xml
+C:\Users\Haoxing Li\Desktop\ME14\ME14\ME14\bin\EntityFramework.SqlServer.xml

@@ -8,6 +8,10 @@
             background-color: plum;
             color: white;
         }
+
+        .caption {
+            font-weight: bold;
+        }
     </style>
 
     <script>
@@ -88,6 +92,9 @@
             var scoreb = b / bipola.length * 100;
             var scored = d / dep.length * 100;
             var scorea = a / anxiety.length * 100;
+
+            var sss = "The possibility of Depression is " + scored.toFixed(2) + " %\n" + "The possibility of Anxiety is " + scorea.toFixed(2) + " %\n"
+                + "The possibility of Bipolar score is " + scoreb.toFixed(2) + " %\n" + "The possibility of Eating disorder is " + scoree.toFixed(2) + " %";
 
             var ddd = "The possibility of Depression is " + scored.toFixed(2) + " %";
             var aaa = "The possibility of Anxiety is " + scorea.toFixed(2) + " %";
@@ -1181,7 +1188,19 @@
 </head>
 <body>
     <br />
-    <h2 style="color:darkred">Choose symptoms you may have</h2>
+    <h2 style="color:darkred" class="caption">Choose symptoms you may have</h2>
+    <h3>
+        Online screening is one of the quickest and easiest ways to determine whether you are experiencing symptoms of a mental health condition. Our free screening test allow you to take a proactive approach to your wellness and provide you with anonymous and immediate feedback
+    </h3>
+    <br />
+    <h3>
+        Mental health conditions, such as depression or anxiety, are real, common and treatable. And recovery is possible. Please don't hesitate to express your feelings and physical conditions.
+    </h3>
+    <br />
+    <h3>
+        Let's get started on the test!
+    </h3>
+
     <button id="overwhelmed" style="font-size: large">overwhelmed</button>
     <button id="guilty" style="font-size: large">guilty</button>
     <button id="irritable" style="font-size: large">irritable</button>
@@ -1246,12 +1265,21 @@
     <br />
     <br />
 
-    <p id="ddd" style="font-size: large"></p>
-    <p id="aaa" style="font-size: large"></p>
-    <p id="eee" style="font-size: large"></p>
-    <p id="bbb" style="font-size: large"></p>
-    <h3 id="suggestion" style="color:darkred; font-size: large"></h3>
-    <p id="content" style="font-size: large"></p>
+    <font id="ddd" size="5"></font>
+    <br />
+    <br />
+    <font id="aaa" size="5"></font>
+    <br />
+    <br />
+    <font id="eee" size="5"></font>
+    <br />
+    <br />
+    <font id="bbb" size="5"></font>
+    <br />
+    <br />
+    <font id="suggestion" color="darkred" size="6"></font>
+    <br />
+    <font id="content" size="6"></font>
 
 </body>
 </html>
