@@ -2,6 +2,7 @@
 
 1. High-level system architecture diagram
 
+
 2. Codebase structure document
 
 3. Development environment documentation
