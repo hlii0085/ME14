@@ -4,12 +4,16 @@
 <head>
     <script>
         window.onload = function () {
+            // binding button 1
             var btn1 = document.getElementById("btn1");
+            // create onlick event for button 1
             btn1.onclick = function () {
                 document.getElementById('p1').style.color = "burlywood";
                 document.getElementById('p1').style.fontSize = "20px";
                 document.getElementById('p1').style.marginTop = "20px";
+                // change the innerhtml
                 document.getElementById('p1').innerHTML = "Our Mission is to help Elder people from CALD background about the stigma attached with mental health issues by raising awareness about its importance and educate them on how to access mental heath services by overcoming English as their barrier.";
+                // hide button after clicking
                 document.getElementById('btn1').style.visibility = "hidden";
             }
         }
@@ -19,16 +23,16 @@
 </head>
 
 <body>
-    
+    <!--Add project logo on the top of home page-->
     <img src="https://i.loli.net/2020/09/03/Cu53yP9epED8tSm.png" height="50" width="50" />
     <img src="https://i.loli.net/2020/09/03/uAaWorV3MI4OdbT.png" height="50" width="50" />
     <h3 style="display: inline-block;color:darkred;font-size:30px">Happy Thoughts</h3>
 
+    <!--Add a semitransparent image-->
     <div class="row" style="background-image: url(https://www.helpguide.org/wp-content/uploads/older-women-playing-1536.jpg);height:400px;opacity:0.8">
-
     </div>
 
-
+    <!--Create a row div to show message and video-->
     <div class="row" style=" margin-bottom:30px;margin-top:30px">
         <div class="col-md-6">
             <h2 style="color:darkred">Our Mission</h2>
@@ -43,6 +47,7 @@
             </p>
         </div>
         <div class="col-md-5" style="margin:30px 10px 30px 10px">
+            <!--Add a video-->
             <iframe width="500" height="315" src="https://www.youtube.com/embed/Tx-2DKXbV90" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
         </div>
@@ -50,6 +55,7 @@
 
 
     <h2 style="text-align:center;color:darkred">What We Offer</h2>
+    <!-- Create three equivalent div. Each div has an image,and refer to a new page -->
     <div class="row">
         <div class="col-md-4" style="background-color:burlywood; margin:20px 10px 30px 25px; padding-top:20px; text-align: center; height:400px">
             <img src="https://social-tv.co.za/wp-content/uploads/2019/10/b438ca80294986a80c960c712fb06434.jpg" height="200" width="250" />
