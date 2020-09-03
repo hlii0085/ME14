@@ -1,13 +1,35 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<head>
+    <script>
+        window.onload = function () {
+            var btn1 = document.getElementById("btn1");
+            alert("haha");
+            btn1.onclick = function () {
+                alert("haha");
+                document.getElementById('p1').innerHTML = "Our Mission is to help Elder people from CALD background about the stigma attached with mental health issues by raising awareness about its importance and educate them on how to access mental heath services by overcoming English as their barrier.";
 
+            }
+        }
+
+
+    </script>
+</head>
 
 <body>
+    <div class="row">
+        <img src="https://drive.google.com/drive/folders/1jwb-Po8YWIYmPVPXlnuFqIFUo_0gIMWc" />
+    </div>
+
+
+    <div class="row" style="background-image: url(https://www.helpguide.org/wp-content/uploads/older-women-playing-1536.jpg);height:400px">
+
+    </div>
     <div class="row" style=" background: url(https://www.helpguide.org/wp-content/uploads/older-women-playing-1536.jpg);height:500px;position:relative;">
         <div class="col-md-6" style="background: rgba(255,255,255,0.4);height:500px; position: absolute;">
             <h1 style="color:black; font-weight:800; font-size:100px;padding-left:10px">Happy Thoughts</h1>
-            
+
         </div>
     </div>
 
