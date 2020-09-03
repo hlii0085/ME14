@@ -1,6 +1,7 @@
 ﻿<html>
 <head>
     <title>Know You Better</title>
+    <!--style of buttons and captions-->
     <style>
         button {
             border-radius: 12px;
@@ -15,6 +16,7 @@
     </style>
 
     <script>
+        //Method to calculate the possibility of having the mental health issues
         function paopao(o) {
             var z = new Array();
             var index = 0;
@@ -112,6 +114,7 @@
 
 
         }
+        //Get values of the buttons
         window.onload = function () {
             var array = new Array();
             var index = 0;
@@ -181,7 +184,7 @@
                 panduan[i] = false;
             }
 
-
+            //The button will change the color when the user clicks it, red means the button is being selected and yellow means not selected
             btn1.onclick = function () {
                 if (panduan[0]) {
                     for (var i = 0; i < array.length; i++) {
@@ -1173,12 +1176,13 @@
                 }
             }
 
-
+            //Submit button, trigger calculating function
             btnS.onclick = function () {
                 console.log(array);
                 paopao(array);
             }
 
+            //Reset button, refresh when click reset
             btnc.onclick = function () {
                 window.location.reload();
             }
@@ -1187,6 +1191,7 @@
     </script>
 </head>
 <body>
+    <!--User interface-->
     <br />
     <h2 style="color:darkred" class="caption">Choose symptoms you may have</h2>
     <h3>
@@ -1200,7 +1205,7 @@
     <h3>
         Let's get started on the test!
     </h3>
-
+    <!--buttons with symptoms-->
     <button id="overwhelmed" style="font-size: large">overwhelmed</button>
     <button id="guilty" style="font-size: large">guilty</button>
     <button id="irritable" style="font-size: large">irritable</button>
@@ -1264,7 +1269,7 @@
     <button id="clear" style="font-size: xx-large; background-color: saddlebrown">Reset</button>
     <br />
     <br />
-
+    <!--output format of result-->
     <font id="ddd" size="5"></font>
     <br />
     <br />
