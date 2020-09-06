@@ -291,3 +291,7 @@ C:\Users\Haoxing Li\Desktop\ME14\ME14\ME14\bin\EntityFramework.dll
 C:\Users\Haoxing Li\Desktop\ME14\ME14\ME14\bin\EntityFramework.SqlServer.dll
 C:\Users\Haoxing Li\Desktop\ME14\ME14\ME14\bin\EntityFramework.xml
 C:\Users\Haoxing Li\Desktop\ME14\ME14\ME14\bin\EntityFramework.SqlServer.xml
+C:\Users\ig14\Desktop\新建文件夹\ME14\ME14\ME14\bin\EntityFramework.dll
+C:\Users\ig14\Desktop\新建文件夹\ME14\ME14\ME14\bin\EntityFramework.SqlServer.dll
+C:\Users\ig14\Desktop\新建文件夹\ME14\ME14\ME14\bin\EntityFramework.xml
+C:\Users\ig14\Desktop\新建文件夹\ME14\ME14\ME14\bin\EntityFramework.SqlServer.xml
