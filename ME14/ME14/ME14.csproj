@@ -196,6 +196,10 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Info.cshtml" />
+    <Content Include="Views\Home\Cause.cshtml" />
+    <Content Include="Views\Home\Risk.cshtml" />
+    <Content Include="Views\Home\Preventation.cshtml" />
+    <Content Include="Views\Home\Doctor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
