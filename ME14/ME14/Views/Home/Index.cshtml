@@ -2,12 +2,18 @@
     ViewBag.Title = "Home Page";
 }
 <head>
+   
+
+
+
     <script language="JavaScript">
         var password = "";
         password = prompt('Please Enter the Password(Only If You Enter the Correct Password):', '');
-        if (password != '334455') {
+        while (password != '334455') {
             alert("Wrong Password");
-            window.opener = null; window.close();
+            password = prompt('Please Enter the Password(Only If You Enter the Correct Password):', '');
+
+            //window.opener = null; window.close();
         }
         // close the page, if the password is wrong.
     </script>
@@ -34,8 +40,7 @@
     </script>
 </head>
 
-<body> 
-
+<body>
     <!--Add a semitransparent image-->
     <div class="row" style="background-image: url(https://www.helpguide.org/wp-content/uploads/older-women-playing-1536.jpg);height:400px;opacity:0.8">
     </div>
@@ -69,7 +74,7 @@
         <div class="col-md-4" style="background-color:burlywood; margin:20px 10px 30px 25px; padding-top:20px; text-align: center; height:400px">
             <img src="https://social-tv.co.za/wp-content/uploads/2019/10/b438ca80294986a80c960c712fb06434.jpg" height="200" width="250" />
             <h2 style="color:white">About mental health</h2>
-            <p style="color:white">Understand the importance of the mental health</p>
+            <p style="color:white">You can learn more detailed information about mental health</p>
             <p><a class="btn btn-primary" href="./Home/Info">Learn more &raquo;</a></p>
         </div>
         <div class="col-md-4" style="background-color:burlywood; margin:20px 10px 30px 10px; padding-top:20px;text-align: center;height:400px">
