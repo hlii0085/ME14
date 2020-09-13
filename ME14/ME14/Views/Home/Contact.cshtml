@@ -37,21 +37,21 @@
                 }
             }
 
-            var dep = new Array("not going out anymore", "not getting things done at work/school",
+            var dep = new Array("not going out anymore",
                 "withdrawing from close family and friends", "relying on alcohol and sedatives", "not doing usual enjoyable activities",
                 "unable to concentrate", "overwhelmed", "guilty", "irritable", "frustrated", "lacking in confidence", "unhappy",
                 "indecisive", "disappointed", "miserable", "sad", "tired all the time", "sick and run down",
                 "headaches and muscle pains", "churning gut", "sleep problems", "loss or change of appetite",
                 "significant weight loss or gain");
 
-            var anxiety = new Array("avoidance of situations that make you feel anxious which can impact on study, work or social life",
+            var anxiety = new Array("avoidance of situations that make you feel anxious",
                 "excessive fear", "worry", "catastrophizing", "obsessive thinking", "panic attacks", "hot and cold flushes", "racing heart",
                 "tightening of the chest quick breathing", "restlessness", "feeling tense", "wound up and edgy");
 
-          
+
             var d = 0;
             var a = 0;
-          
+
             console.log(z);
 
             for (var i = 0; i < z.length; i++) {
@@ -70,22 +70,21 @@
                 }
             }
 
-            
+
             var scored = d / dep.length * 100;
             var scorea = a / anxiety.length * 100;
 
-            var sss = "The possibility of Depression is " + scored.toFixed(2) + " %\n" + "The possibility of Anxiety is " + scorea.toFixed(2) + " %\n"
+           @*var sss = "The possibility of Depression is " + scored.toFixed(2) + " %\n" + "The possibility of Anxiety is " + scorea.toFixed(2) + " %\n"
                 + "The possibility of Bipolar score is " + scoreb.toFixed(2) + " %\n" + "The possibility of Eating disorder is " + scoree.toFixed(2) + " %";
+           *@
 
             var ddd = "The possibility of Depression is " + scored.toFixed(2) + " %";
             var aaa = "The possibility of Anxiety is " + scorea.toFixed(2) + " %";
-            var bbb = "The possibility of Bipolar score is " + scoreb.toFixed(2) + " %";
-            var eee = "The possibility of Eating disorder is " + scoree.toFixed(2) + " %";
+
 
             document.getElementById('ddd').innerHTML = ddd;
             document.getElementById('aaa').innerHTML = aaa;
-            document.getElementById('eee').innerHTML = eee;
-            document.getElementById('bbb').innerHTML = bbb;
+
 
             document.getElementById('suggestion').innerHTML = "Suggestions:";
             document.getElementById('content').innerHTML = "Having good relationships with other people is the most important factor contributing to a sense of wellbeing. This can include family, friends, workmates and others in the community. Investing time and energy in your relationships can lead to great benefits for all involved.Exercise has been shown to increase wellbeing as well as reduce symptoms of depression and anxiety. Good physical health is related to better mental health so a healthy diet, avoiding excess alcohol or drugs, getting a good night's sleep, and regular checkups with the doctor can all help.Count your blessings. Try keeping a gratitude journal and write down 3 positive things each day. This can lead to increased wellbeing.";
@@ -425,7 +424,7 @@
                 }
             }
 
-            
+
             btn15.onclick = function () {
                 if (panduan[14]) {
                     for (var i = 0; i < array.length; i++) {
@@ -549,7 +548,7 @@
                             break;
                         }
                     }
-                    document.getElementById('tired all the time').style.backgroundColor = "plum";
+                    document.getElementById('tired all the time').style.backgroundColor = "cadetblue";
                     index--;
                     panduan[20] = false;
                 } else {
@@ -568,7 +567,7 @@
                             break;
                         }
                     }
-                    document.getElementById('sick and run down').style.backgroundColor = "plum";
+                    document.getElementById('sick and run down').style.backgroundColor = "cadetblue";
                     index--;
                     panduan[21] = false;
                 } else {
@@ -587,7 +586,7 @@
                             break;
                         }
                     }
-                    document.getElementById('headaches and muscle pains').style.backgroundColor = "plum";
+                    document.getElementById('headaches and muscle pains').style.backgroundColor = "cadetblue";
                     index--;
                     panduan[22] = false;
                 } else {
@@ -607,7 +606,7 @@
                             break;
                         }
                     }
-                    document.getElementById('churning gut').style.backgroundColor = "plum";
+                    document.getElementById('churning gut').style.backgroundColor = "cadetblue";
                     index--;
                     panduan[23] = false;
                 } else {
@@ -626,7 +625,7 @@
                             break;
                         }
                     }
-                    document.getElementById('sleep problems').style.backgroundColor = "plum";
+                    document.getElementById('sleep problems').style.backgroundColor = "cadetblue";
                     index--;
                     panduan[24] = false;
                 } else {
@@ -645,7 +644,7 @@
                             break;
                         }
                     }
-                    document.getElementById('loss or change of appetite').style.backgroundColor = "plum";
+                    document.getElementById('loss or change of appetite').style.backgroundColor = "cadetblue";
                     index--;
                     panduan[25] = false;
                 } else {
@@ -664,7 +663,7 @@
                             break;
                         }
                     }
-                    document.getElementById('significant weight loss or gain').style.backgroundColor = "plum";
+                    document.getElementById('significant weight loss or gain').style.backgroundColor = "cadetblue";
                     index--;
                     panduan[26] = false;
                 } else {
@@ -675,7 +674,7 @@
                 }
             }
 
-            
+
 
             btn28.onclick = function () {
                 if (panduan[27]) {
@@ -685,7 +684,7 @@
                             break;
                         }
                     }
-                    document.getElementById('panic attacks').style.backgroundColor = "plum";
+                    document.getElementById('panic attacks').style.backgroundColor = "cadetblue";
                     index--;
                     panduan[27] = false;
                 } else {
@@ -704,7 +703,7 @@
                             break;
                         }
                     }
-                    document.getElementById('hot and cold flushes').style.backgroundColor = "plum";
+                    document.getElementById('hot and cold flushes').style.backgroundColor = "cadetblue";
                     index--;
                     panduan[28] = false;
                 } else {
@@ -723,7 +722,7 @@
                             break;
                         }
                     }
-                    document.getElementById('racing heart').style.backgroundColor = "plum";
+                    document.getElementById('racing heart').style.backgroundColor = "cadetblue";
                     index--;
                     panduan[29] = false;
                 } else {
@@ -742,7 +741,7 @@
                             break;
                         }
                     }
-                    document.getElementById('tightening of the chest quick breathing').style.backgroundColor = "plum";
+                    document.getElementById('tightening of the chest quick breathing').style.backgroundColor = "cadetblue";
                     index--;
                     panduan[30] = false;
                 } else {
@@ -761,7 +760,7 @@
                             break;
                         }
                     }
-                    document.getElementById('restlessness').style.backgroundColor = "plum";
+                    document.getElementById('restlessness').style.backgroundColor = "cadetblue";
                     index--;
                     panduan[31] = false;
                 } else {
@@ -780,7 +779,7 @@
                             break;
                         }
                     }
-                    document.getElementById('feeling tense').style.backgroundColor = "plum";
+                    document.getElementById('feeling tense').style.backgroundColor = "cadetblue";
                     index--;
                     panduan[32] = false;
                 } else {
@@ -799,7 +798,7 @@
                             break;
                         }
                     }
-                    document.getElementById('wound up and edgy').style.backgroundColor = "plum";
+                    document.getElementById('wound up and edgy').style.backgroundColor = "cadetblue";
                     index--;
                     panduan[33] = false;
                 } else {
@@ -839,7 +838,7 @@
     </h4>
     <!--buttons with symptoms-->
     <br />
-    <h3 style="color:cadetblue">Step 1: Choose the behaviours you have</h3>
+    <h3 style="color:darkred">Step 1: Choose the behaviours you have</h3>
     <button id="not going out anymore" style="font-size: large;background-color:burlywood">not going out anymore</button>
     <button id="withdrawing from close family and friends" style="font-size: large;background-color:burlywood">withdrawing from close family and friends</button>
     <button id="relying on alcohol and sedatives" style="font-size: large;background-color:burlywood">relying on alcohol and sedatives</button>
@@ -847,7 +846,7 @@
     <button id="unable to concentrate" style="font-size: large;background-color:burlywood">unable to concentrate</button>
     <button id="avoidance of situations that make you feel anxious" style="font-size: large;background-color:burlywood">avoidance of situations that make you feel anxious</button>
     <br />
-    <h3 style="color:cadetblue">Step 2: Choose the feelings you have</h3>
+    <h3 style="color:darkred">Step 2: Choose the feelings you have</h3>
     <button id="overwhelmed" style="font-size: large">overwhelmed</button>
     <button id="guilty" style="font-size: large">guilty</button>
     <button id="irritable" style="font-size: large">irritable</button>
@@ -864,22 +863,22 @@
     <button id="catastrophizing" style="font-size: large">catastrophizing</button>
     <button id="obsessive thinking" style="font-size: large">obsessive thinking</button>
     <br />
-    <h3 style="color:cadetblue">Step 3: Choose the physical issues you have</h3>
-    <button id="tired all the time" style="font-size: large">tired all the time</button>
-    <button id="sick and run down" style="font-size: large">sick and run down</button>
-    <button id="headaches and muscle pains" style="font-size: large">headaches and muscle pains</button>
-    <button id="churning gut" style="font-size: large">churning gut</button>
-    <button id="sleep problems" style="font-size: large">sleep problems</button>
-    <button id="loss or change of appetite" style="font-size: large">loss or change of appetite</button>
-    <button id="significant weight loss or gain" style="font-size: large">significant weight loss or gain</button>
+    <h3 style="color:darkred">Step 3: Choose the physical issues you have</h3>
+    <button id="tired all the time" style="font-size: large;background-color:cadetblue">tired all the time</button>
+    <button id="sick and run down" style="font-size: large;background-color:cadetblue">sick and run down</button>
+    <button id="headaches and muscle pains" style="font-size: large;background-color:cadetblue">headaches and muscle pains</button>
+    <button id="churning gut" style="font-size: large;background-color:cadetblue">churning gut</button>
+    <button id="sleep problems" style="font-size: large;background-color:cadetblue">sleep problems</button>
+    <button id="loss or change of appetite" style="font-size: large;background-color:cadetblue">loss or change of appetite</button>
+    <button id="significant weight loss or gain" style="font-size: large;background-color:cadetblue">significant weight loss or gain</button>
 
-    <button id="panic attacks" style="font-size: large">panic attacks</button>
-    <button id="hot and cold flushes" style="font-size: large">hot and cold flushes</button>
-    <button id="racing heart" style="font-size: large">racing heart</button>
-    <button id="tightening of the chest quick breathing" style="font-size: large">tightening of the chest quick breathing</button>
-    <button id="restlessness" style="font-size: large">restlessness</button>
-    <button id="feeling tense" style="font-size: large">feeling tense</button>
-    <button id="wound up and edgy" style="font-size: large">wound up and edgy</button>
+    <button id="panic attacks" style="font-size: large;background-color:cadetblue">panic attacks</button>
+    <button id="hot and cold flushes" style="font-size: large;background-color:cadetblue">hot and cold flushes</button>
+    <button id="racing heart" style="font-size: large;background-color:cadetblue">racing heart</button>
+    <button id="tightening of the chest quick breathing" style="font-size: large;background-color:cadetblue">tightening of the chest quick breathing</button>
+    <button id="restlessness" style="font-size: large;background-color:cadetblue">restlessness</button>
+    <button id="feeling tense" style="font-size: large;background-color:cadetblue">feeling tense</button>
+    <button id="wound up and edgy" style="font-size: large;background-color:cadetblue">wound up and edgy</button>
 
 
     <br />
@@ -900,12 +899,7 @@
     <font id="aaa" size="5"></font>
     <br />
     <br />
-    <font id="eee" size="5"></font>
-    <br />
-    <br />
-    <font id="bbb" size="5"></font>
-    <br />
-    <br />
+    
     <font id="suggestion" color="darkred" size="6"></font>
     <br />
     <font id="content" size="6"></font>
