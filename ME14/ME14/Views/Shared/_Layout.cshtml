@@ -19,6 +19,15 @@
         #google_translate_element {
             float: right;
         }
+
+        #chatbot {
+            width: 250px;
+            height: 400px;
+            margin: 6px;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
     </style>
 
 </head>
@@ -50,6 +59,8 @@
             </div>
         </div>
     </div>
+    <iframe id="chatbot" src='https://webchat.botframework.com/embed/cald-bot?s=u786YXznv4U.aiMr8yOFirfdhr-hWSNZvNq77x6FXot7SxezJygww_w'></iframe>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -61,6 +72,6 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
-    
+
 </body>
 </html>
