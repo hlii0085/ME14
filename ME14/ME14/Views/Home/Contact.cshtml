@@ -48,17 +48,10 @@
                 "excessive fear", "worry", "catastrophizing", "obsessive thinking", "panic attacks", "hot and cold flushes", "racing heart",
                 "tightening of the chest quick breathing", "restlessness", "feeling tense", "wound up and edgy");
 
-            var ed = new Array("Unexplained weight fluctuations", "Anemia and muscle weakness/wasting",
-                "Increase in falls", "Memory deficits", "Cognitive decline", "Loss of appetite", "Slow healing",
-                "Chronic dizziness", "Unopened or uneaten food in the fridge or cupboards",
-                "Decrease in food intake or rejection of meals", "Use of laxatives");
-
-            var bipola = new Array("Confusion", "Agitation", "Irritability", "Hyperactivity", "Psychosis", "Cognitive issues");
-
-            var a = 0;
-            var b = 0;
-            var e = 0;
+          
             var d = 0;
+            var a = 0;
+          
             console.log(z);
 
             for (var i = 0; i < z.length; i++) {
@@ -77,24 +70,7 @@
                 }
             }
 
-            for (var i = 0; i < z.length; i++) {
-                for (var j = 0; j < bipola.length; j++) {
-                    if (z[i] == bipola[j]) {
-                        b++;
-                    }
-                }
-            }
-
-            for (var i = 0; i < z.length; i++) {
-                for (var j = 0; j < ed.length; j++) {
-                    if (z[i] == ed[j]) {
-                        e++;
-                    }
-                }
-            }
-
-            var scoree = e / ed.length * 100;
-            var scoreb = b / bipola.length * 100;
+            
             var scored = d / dep.length * 100;
             var scorea = a / anxiety.length * 100;
 
@@ -122,6 +98,7 @@
             var array = new Array();
             var index = 0;
 
+            // feelings for Depression
             var btn1 = document.getElementById('overwhelmed');
             var btn2 = document.getElementById('guilty');
             var btn3 = document.getElementById('irritable');
@@ -132,48 +109,40 @@
             var btn8 = document.getElementById('disappointed');
             var btn9 = document.getElementById('miserable');
             var btn10 = document.getElementById('sad');
+            // feelings for Anxiety
             var btn11 = document.getElementById('excessive fear');
             var btn12 = document.getElementById('worry');
             var btn13 = document.getElementById('catastrophizing');
             var btn14 = document.getElementById('obsessive thinking');
-            var btn15 = document.getElementById('Unexplained weight fluctuations');
-            var btn16 = document.getElementById('Anemia and muscle weakness');
-            var btn17 = document.getElementById('Increase in falls');
-            var btn18 = document.getElementById('Memory deficits');
-            var btn19 = document.getElementById('Cognitive decline');
-            var btn20 = document.getElementById('Loss of appetite');
-            var btn21 = document.getElementById('Slow healing');
-            var btn22 = document.getElementById('Chronic dizziness');
-            var btn23 = document.getElementById('Unopened or uneaten food in the fridge or cupboards');
-            var btn24 = document.getElementById('Decrease in food intake or rejection of meals');
-            var btn25 = document.getElementById('Use of laxatives');
-            var btn26 = document.getElementById('Confusion');
-            var btn27 = document.getElementById('Agitation');
-            var btn28 = document.getElementById('Irritability');
-            var btn29 = document.getElementById('Hyperactivity');
-            var btn30 = document.getElementById('Psychosis');
-            var btn31 = document.getElementById('Cognitive issues');
-            var btn32 = document.getElementById('not going out anymore');
-            var btn33 = document.getElementById('not getting things done at work/school');
-            var btn34 = document.getElementById('withdrawing from close family and friends');
-            var btn35 = document.getElementById('relying on alcohol and sedatives');
-            var btn36 = document.getElementById('not doing usual enjoyable activities');
-            var btn37 = document.getElementById('unable to concentrate');
-            var btn38 = document.getElementById('tired all the time');
-            var btn39 = document.getElementById('sick and run down');
-            var btn40 = document.getElementById('headaches and muscle pains');
-            var btn41 = document.getElementById('churning gut');
-            var btn42 = document.getElementById('sleep problems');
-            var btn43 = document.getElementById('loss or change of appetite');
-            var btn44 = document.getElementById('significant weight loss or gain');
-            var btn45 = document.getElementById('avoidance of situations that make you feel anxious which can impact on study, work or social life');
-            var btn46 = document.getElementById('panic attacks');
-            var btn47 = document.getElementById('hot and cold flushes');
-            var btn48 = document.getElementById('racing heart');
-            var btn49 = document.getElementById('tightening of the chest quick breathing');
-            var btn50 = document.getElementById('restlessness');
-            var btn51 = document.getElementById('feeling tense');
-            var btn52 = document.getElementById('wound up and edgy');
+
+            // behaviors for depression
+            var btn15 = document.getElementById('not going out anymore');
+            var btn16 = document.getElementById('withdrawing from close family and friends');
+            var btn17 = document.getElementById('relying on alcohol and sedatives');
+            var btn18 = document.getElementById('not doing usual enjoyable activities');
+            var btn19 = document.getElementById('unable to concentrate');
+            // behavoirs for Anxiety
+            var btn20 = document.getElementById('avoidance of situations that make you feel anxious');
+
+
+            // physical issues for depression
+            var btn21 = document.getElementById('tired all the time');
+            var btn22 = document.getElementById('sick and run down');
+            var btn23 = document.getElementById('headaches and muscle pains');
+            var btn24 = document.getElementById('churning gut');
+            var btn25 = document.getElementById('sleep problems');
+            var btn26 = document.getElementById('loss or change of appetite');
+            var btn27 = document.getElementById('significant weight loss or gain');
+             // physical issues for Anxiety
+            var btn28 = document.getElementById('panic attacks');
+            var btn29 = document.getElementById('hot and cold flushes');
+            var btn30 = document.getElementById('racing heart');
+            var btn31 = document.getElementById('tightening of the chest quick breathing');
+            var btn32 = document.getElementById('restlessness');
+            var btn33 = document.getElementById('feeling tense');
+            var btn34 = document.getElementById('wound up and edgy');
+
+
 
             var btnc = document.getElementById('clear');
             var btnS = document.getElementById('submit');
@@ -456,38 +425,40 @@
                 }
             }
 
+            
             btn15.onclick = function () {
                 if (panduan[14]) {
                     for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'Unexplained weight fluctuations') {
+                        if (array[i] == 'not going out anymore') {
                             array.splice(i, 1);
                             break;
                         }
                     }
-                    document.getElementById('Unexplained weight fluctuations').style.backgroundColor = "plum";
+                    document.getElementById('not going out anymore').style.backgroundColor = "burlywood";
                     index--;
                     panduan[14] = false;
                 } else {
-                    document.getElementById('Unexplained weight fluctuations').style.backgroundColor = "grey";
+                    document.getElementById('not going out anymore').style.backgroundColor = "grey";
                     array[index] = btn15.innerHTML;
                     index++;
                     panduan[14] = true;
                 }
             }
 
+
             btn16.onclick = function () {
                 if (panduan[15]) {
                     for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'Anemia and muscle weakness') {
+                        if (array[i] == 'withdrawing from close family and friends') {
                             array.splice(i, 1);
                             break;
                         }
                     }
-                    document.getElementById('Anemia and muscle weakness').style.backgroundColor = "plum";
+                    document.getElementById('withdrawing from close family and friends').style.backgroundColor = "burlywood";
                     index--;
                     panduan[15] = false;
                 } else {
-                    document.getElementById('Anemia and muscle weakness').style.backgroundColor = "grey";
+                    document.getElementById('withdrawing from close family and friends').style.backgroundColor = "grey";
                     array[index] = btn16.innerHTML;
                     index++;
                     panduan[15] = true;
@@ -497,16 +468,16 @@
             btn17.onclick = function () {
                 if (panduan[16]) {
                     for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'Increase in falls') {
+                        if (array[i] == 'relying on alcohol and sedatives') {
                             array.splice(i, 1);
                             break;
                         }
                     }
-                    document.getElementById('Increase in falls').style.backgroundColor = "plum";
+                    document.getElementById('relying on alcohol and sedatives').style.backgroundColor = "burlywood";
                     index--;
                     panduan[16] = false;
                 } else {
-                    document.getElementById('Increase in falls').style.backgroundColor = "grey";
+                    document.getElementById('relying on alcohol and sedatives').style.backgroundColor = "grey";
                     array[index] = btn17.innerHTML;
                     index++;
                     panduan[16] = true;
@@ -516,16 +487,16 @@
             btn18.onclick = function () {
                 if (panduan[17]) {
                     for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'Memory deficits') {
+                        if (array[i] == 'not doing usual enjoyable activities') {
                             array.splice(i, 1);
                             break;
                         }
                     }
-                    document.getElementById('Memory deficits').style.backgroundColor = "plum";
+                    document.getElementById('not doing usual enjoyable activities').style.backgroundColor = "burlywood";
                     index--;
                     panduan[17] = false;
                 } else {
-                    document.getElementById('Memory deficits').style.backgroundColor = "grey";
+                    document.getElementById('not doing usual enjoyable activities').style.backgroundColor = "grey";
                     array[index] = btn18.innerHTML;
                     index++;
                     panduan[17] = true;
@@ -535,16 +506,16 @@
             btn19.onclick = function () {
                 if (panduan[18]) {
                     for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'Cognitive decline') {
+                        if (array[i] == 'unable to concentrate') {
                             array.splice(i, 1);
                             break;
                         }
                     }
-                    document.getElementById('Cognitive decline').style.backgroundColor = "plum";
+                    document.getElementById('unable to concentrate').style.backgroundColor = "plum";
                     index--;
                     panduan[18] = false;
                 } else {
-                    document.getElementById('Cognitive decline').style.backgroundColor = "grey";
+                    document.getElementById('unable to concentrate').style.backgroundColor = "grey";
                     array[index] = btn19.innerHTML;
                     index++;
                     panduan[18] = true;
@@ -554,16 +525,16 @@
             btn20.onclick = function () {
                 if (panduan[19]) {
                     for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'Loss of appetite') {
+                        if (array[i] == 'avoidance of situations that make you feel anxious') {
                             array.splice(i, 1);
                             break;
                         }
                     }
-                    document.getElementById('Loss of appetite').style.backgroundColor = "plum";
+                    document.getElementById('avoidance of situations that make you feel anxious').style.backgroundColor = "plum";
                     index--;
                     panduan[19] = false;
                 } else {
-                    document.getElementById('Loss of appetite').style.backgroundColor = "grey";
+                    document.getElementById('avoidance of situations that make you feel anxious').style.backgroundColor = "grey";
                     array[index] = btn20.innerHTML;
                     index++;
                     panduan[19] = true;
@@ -573,17 +544,17 @@
             btn21.onclick = function () {
                 if (panduan[20]) {
                     for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'Slow healing') {
+                        if (array[i] == 'tired all the time') {
                             array.splice(i, 1);
                             break;
                         }
                     }
-                    document.getElementById('Slow healing').style.backgroundColor = "plum";
+                    document.getElementById('tired all the time').style.backgroundColor = "plum";
                     index--;
                     panduan[20] = false;
                 } else {
-                    document.getElementById('Slow healing').style.backgroundColor = "grey";
-                    array[index] = btn21.innerHTML;
+                    document.getElementById('tired all the time').style.backgroundColor = "grey";
+                    array[index] = btn22.innerHTML;
                     index++;
                     panduan[20] = true;
                 }
@@ -592,16 +563,16 @@
             btn22.onclick = function () {
                 if (panduan[21]) {
                     for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'Slow healing') {
+                        if (array[i] == 'sick and run down') {
                             array.splice(i, 1);
                             break;
                         }
                     }
-                    document.getElementById('Chronic dizziness').style.backgroundColor = "plum";
+                    document.getElementById('sick and run down').style.backgroundColor = "plum";
                     index--;
                     panduan[21] = false;
                 } else {
-                    document.getElementById('Chronic dizziness').style.backgroundColor = "grey";
+                    document.getElementById('sick and run down').style.backgroundColor = "grey";
                     array[index] = btn22.innerHTML;
                     index++;
                     panduan[21] = true;
@@ -611,36 +582,37 @@
             btn23.onclick = function () {
                 if (panduan[22]) {
                     for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'Unopened or uneaten food in the fridge or cupboards') {
+                        if (array[i] == 'headaches and muscle pains') {
                             array.splice(i, 1);
                             break;
                         }
                     }
-                    document.getElementById('Unopened or uneaten food in the fridge or cupboards').style.backgroundColor = "plum";
+                    document.getElementById('headaches and muscle pains').style.backgroundColor = "plum";
                     index--;
                     panduan[22] = false;
                 } else {
-                    document.getElementById('Unopened or uneaten food in the fridge or cupboards').style.backgroundColor = "grey";
+                    document.getElementById('headaches and muscle pains').style.backgroundColor = "grey";
                     array[index] = btn23.innerHTML;
                     index++;
                     panduan[22] = true;
                 }
             }
 
+
             btn24.onclick = function () {
                 if (panduan[23]) {
                     for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'Decrease in food intake or rejection of meals') {
+                        if (array[i] == 'churning gut') {
                             array.splice(i, 1);
                             break;
                         }
                     }
-                    document.getElementById('Decrease in food intake or rejection of meals').style.backgroundColor = "plum";
+                    document.getElementById('churning gut').style.backgroundColor = "plum";
                     index--;
                     panduan[23] = false;
                 } else {
-                    document.getElementById('Decrease in food intake or rejection of meals').style.backgroundColor = "grey";
-                    array[index] = btn10.innerHTML;
+                    document.getElementById('churning gut').style.backgroundColor = "grey";
+                    array[index] = btn24.innerHTML;
                     index++;
                     panduan[23] = true;
                 }
@@ -649,16 +621,16 @@
             btn25.onclick = function () {
                 if (panduan[24]) {
                     for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'Use of laxatives') {
+                        if (array[i] == 'sleep problems') {
                             array.splice(i, 1);
                             break;
                         }
                     }
-                    document.getElementById('Use of laxatives').style.backgroundColor = "plum";
+                    document.getElementById('sleep problems').style.backgroundColor = "plum";
                     index--;
                     panduan[24] = false;
                 } else {
-                    document.getElementById('Use of laxatives').style.backgroundColor = "grey";
+                    document.getElementById('sleep problems').style.backgroundColor = "grey";
                     array[index] = btn25.innerHTML;
                     index++;
                     panduan[24] = true;
@@ -668,16 +640,16 @@
             btn26.onclick = function () {
                 if (panduan[25]) {
                     for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'Confusion') {
+                        if (array[i] == 'loss or change of appetite') {
                             array.splice(i, 1);
                             break;
                         }
                     }
-                    document.getElementById('Confusion').style.backgroundColor = "plum";
+                    document.getElementById('loss or change of appetite').style.backgroundColor = "plum";
                     index--;
                     panduan[25] = false;
                 } else {
-                    document.getElementById('Confusion').style.backgroundColor = "grey";
+                    document.getElementById('loss or change of appetite').style.backgroundColor = "grey";
                     array[index] = btn26.innerHTML;
                     index++;
                     panduan[25] = true;
@@ -687,35 +659,37 @@
             btn27.onclick = function () {
                 if (panduan[26]) {
                     for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'Agitation') {
+                        if (array[i] == 'significant weight loss or gain') {
                             array.splice(i, 1);
                             break;
                         }
                     }
-                    document.getElementById('Agitation').style.backgroundColor = "plum";
+                    document.getElementById('significant weight loss or gain').style.backgroundColor = "plum";
                     index--;
                     panduan[26] = false;
                 } else {
-                    document.getElementById('Agitation').style.backgroundColor = "grey";
+                    document.getElementById('significant weight loss or gain').style.backgroundColor = "grey";
                     array[index] = btn27.innerHTML;
                     index++;
                     panduan[26] = true;
                 }
             }
 
+            
+
             btn28.onclick = function () {
                 if (panduan[27]) {
                     for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'Irritability') {
+                        if (array[i] == 'panic attacks') {
                             array.splice(i, 1);
                             break;
                         }
                     }
-                    document.getElementById('Irritability').style.backgroundColor = "plum";
+                    document.getElementById('panic attacks').style.backgroundColor = "plum";
                     index--;
                     panduan[27] = false;
                 } else {
-                    document.getElementById('Irritability').style.backgroundColor = "grey";
+                    document.getElementById('panic attacks').style.backgroundColor = "grey";
                     array[index] = btn28.innerHTML;
                     index++;
                     panduan[27] = true;
@@ -725,16 +699,16 @@
             btn29.onclick = function () {
                 if (panduan[28]) {
                     for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'Hyperactivity') {
+                        if (array[i] == 'hot and cold flushes') {
                             array.splice(i, 1);
                             break;
                         }
                     }
-                    document.getElementById('Hyperactivity').style.backgroundColor = "plum";
+                    document.getElementById('hot and cold flushes').style.backgroundColor = "plum";
                     index--;
                     panduan[28] = false;
                 } else {
-                    document.getElementById('Hyperactivity').style.backgroundColor = "grey";
+                    document.getElementById('hot and cold flushes').style.backgroundColor = "grey";
                     array[index] = btn29.innerHTML;
                     index++;
                     panduan[28] = true;
@@ -744,16 +718,16 @@
             btn30.onclick = function () {
                 if (panduan[29]) {
                     for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'Psychosis') {
+                        if (array[i] == 'racing heart') {
                             array.splice(i, 1);
                             break;
                         }
                     }
-                    document.getElementById('Psychosis').style.backgroundColor = "plum";
+                    document.getElementById('racing heart').style.backgroundColor = "plum";
                     index--;
                     panduan[29] = false;
                 } else {
-                    document.getElementById('Psychosis').style.backgroundColor = "grey";
+                    document.getElementById('racing heart').style.backgroundColor = "grey";
                     array[index] = btn30.innerHTML;
                     index++;
                     panduan[29] = true;
@@ -763,16 +737,16 @@
             btn31.onclick = function () {
                 if (panduan[30]) {
                     for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'Cognitive issues') {
+                        if (array[i] == 'tightening of the chest quick breathing') {
                             array.splice(i, 1);
                             break;
                         }
                     }
-                    document.getElementById('Cognitive issues').style.backgroundColor = "plum";
+                    document.getElementById('tightening of the chest quick breathing').style.backgroundColor = "plum";
                     index--;
                     panduan[30] = false;
                 } else {
-                    document.getElementById('Cognitive issues').style.backgroundColor = "grey";
+                    document.getElementById('tightening of the chest quick breathing').style.backgroundColor = "grey";
                     array[index] = btn31.innerHTML;
                     index++;
                     panduan[30] = true;
@@ -782,16 +756,16 @@
             btn32.onclick = function () {
                 if (panduan[31]) {
                     for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'not going out anymore') {
+                        if (array[i] == 'restlessness') {
                             array.splice(i, 1);
                             break;
                         }
                     }
-                    document.getElementById('not going out anymore').style.backgroundColor = "plum";
+                    document.getElementById('restlessness').style.backgroundColor = "plum";
                     index--;
                     panduan[31] = false;
                 } else {
-                    document.getElementById('not going out anymore').style.backgroundColor = "grey";
+                    document.getElementById('restlessness').style.backgroundColor = "grey";
                     array[index] = btn32.innerHTML;
                     index++;
                     panduan[31] = true;
@@ -801,16 +775,16 @@
             btn33.onclick = function () {
                 if (panduan[32]) {
                     for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'not getting things done at work/school') {
+                        if (array[i] == 'feeling tense') {
                             array.splice(i, 1);
                             break;
                         }
                     }
-                    document.getElementById('not getting things done at work/school').style.backgroundColor = "plum";
+                    document.getElementById('feeling tense').style.backgroundColor = "plum";
                     index--;
                     panduan[32] = false;
                 } else {
-                    document.getElementById('not getting things done at work/school').style.backgroundColor = "grey";
+                    document.getElementById('feeling tense').style.backgroundColor = "grey";
                     array[index] = btn33.innerHTML;
                     index++;
                     panduan[32] = true;
@@ -820,349 +794,6 @@
             btn34.onclick = function () {
                 if (panduan[33]) {
                     for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'withdrawing from close family and friends') {
-                            array.splice(i, 1);
-                            break;
-                        }
-                    }
-                    document.getElementById('withdrawing from close family and friends').style.backgroundColor = "plum";
-                    index--;
-                    panduan[33] = false;
-                } else {
-                    document.getElementById('withdrawing from close family and friends').style.backgroundColor = "grey";
-                    array[index] = btn34.innerHTML;
-                    index++;
-                    panduan[33] = true;
-                }
-            }
-
-            btn35.onclick = function () {
-                if (panduan[34]) {
-                    for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'relying on alcohol and sedatives') {
-                            array.splice(i, 1);
-                            break;
-                        }
-                    }
-                    document.getElementById('relying on alcohol and sedatives').style.backgroundColor = "plum";
-                    index--;
-                    panduan[34] = false;
-                } else {
-                    document.getElementById('relying on alcohol and sedatives').style.backgroundColor = "grey";
-                    array[index] = btn35.innerHTML;
-                    index++;
-                    panduan[34] = true;
-                }
-            }
-
-            btn36.onclick = function () {
-                if (panduan[35]) {
-                    for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'not doing usual enjoyable activities') {
-                            array.splice(i, 1);
-                            break;
-                        }
-                    }
-                    document.getElementById('not doing usual enjoyable activities').style.backgroundColor = "plum";
-                    index--;
-                    panduan[35] = false;
-                } else {
-                    document.getElementById('not doing usual enjoyable activities').style.backgroundColor = "grey";
-                    array[index] = btn36.innerHTML;
-                    index++;
-                    panduan[35] = true;
-                }
-            }
-
-            btn37.onclick = function () {
-                if (panduan[36]) {
-                    for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'unable to concentrate') {
-                            array.splice(i, 1);
-                            break;
-                        }
-                    }
-                    document.getElementById('unable to concentrate').style.backgroundColor = "plum";
-                    index--;
-                    panduan[36] = false;
-                } else {
-                    document.getElementById('unable to concentrate').style.backgroundColor = "grey";
-                    array[index] = btn37.innerHTML;
-                    index++;
-                    panduan[36] = true;
-                }
-            }
-
-            btn38.onclick = function () {
-                if (panduan[37]) {
-                    for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'tired all the time') {
-                            array.splice(i, 1);
-                            break;
-                        }
-                    }
-                    document.getElementById('tired all the time').style.backgroundColor = "plum";
-                    index--;
-                    panduan[37] = false;
-                } else {
-                    document.getElementById('tired all the time').style.backgroundColor = "grey";
-                    array[index] = btn38.innerHTML;
-                    index++;
-                    panduan[37] = true;
-                }
-            }
-
-            btn39.onclick = function () {
-                if (panduan[38]) {
-                    for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'sick and run down') {
-                            array.splice(i, 1);
-                            break;
-                        }
-                    }
-                    document.getElementById('sick and run down').style.backgroundColor = "plum";
-                    index--;
-                    panduan[38] = false;
-                } else {
-                    document.getElementById('sick and run down').style.backgroundColor = "grey";
-                    array[index] = btn39.innerHTML;
-                    index++;
-                    panduan[38] = true;
-                }
-            }
-
-            btn40.onclick = function () {
-                if (panduan[39]) {
-                    for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'headaches and muscle pains') {
-                            array.splice(i, 1);
-                            break;
-                        }
-                    }
-                    document.getElementById('headaches and muscle pains').style.backgroundColor = "plum";
-                    index--;
-                    panduan[39] = false;
-                } else {
-                    document.getElementById('headaches and muscle pains').style.backgroundColor = "grey";
-                    array[index] = btn40.innerHTML;
-                    index++;
-                    panduan[39] = true;
-                }
-            }
-
-
-            btn41.onclick = function () {
-                if (panduan[40]) {
-                    for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'churning gut') {
-                            array.splice(i, 1);
-                            break;
-                        }
-                    }
-                    document.getElementById('churning gut').style.backgroundColor = "plum";
-                    index--;
-                    panduan[40] = false;
-                } else {
-                    document.getElementById('churning gut').style.backgroundColor = "grey";
-                    array[index] = btn41.innerHTML;
-                    index++;
-                    panduan[40] = true;
-                }
-            }
-
-            btn42.onclick = function () {
-                if (panduan[41]) {
-                    for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'sleep problems') {
-                            array.splice(i, 1);
-                            break;
-                        }
-                    }
-                    document.getElementById('sleep problems').style.backgroundColor = "plum";
-                    index--;
-                    panduan[41] = false;
-                } else {
-                    document.getElementById('sleep problems').style.backgroundColor = "grey";
-                    array[index] = btn42.innerHTML;
-                    index++;
-                    panduan[41] = true;
-                }
-            }
-
-            btn43.onclick = function () {
-                if (panduan[42]) {
-                    for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'loss or change of appetite') {
-                            array.splice(i, 1);
-                            break;
-                        }
-                    }
-                    document.getElementById('loss or change of appetite').style.backgroundColor = "plum";
-                    index--;
-                    panduan[42] = false;
-                } else {
-                    document.getElementById('loss or change of appetite').style.backgroundColor = "grey";
-                    array[index] = btn43.innerHTML;
-                    index++;
-                    panduan[42] = true;
-                }
-            }
-
-            btn44.onclick = function () {
-                if (panduan[43]) {
-                    for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'significant weight loss or gain') {
-                            array.splice(i, 1);
-                            break;
-                        }
-                    }
-                    document.getElementById('significant weight loss or gain').style.backgroundColor = "plum";
-                    index--;
-                    panduan[43] = false;
-                } else {
-                    document.getElementById('significant weight loss or gain').style.backgroundColor = "grey";
-                    array[index] = btn44.innerHTML;
-                    index++;
-                    panduan[43] = true;
-                }
-            }
-
-            btn45.onclick = function () {
-                if (panduan[44]) {
-                    for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'avoidance of situations that make you feel anxious which can impact on study, work or social life') {
-                            array.splice(i, 1);
-                            break;
-                        }
-                    }
-                    document.getElementById('avoidance of situations that make you feel anxious which can impact on study, work or social life').style.backgroundColor = "plum";
-                    index--;
-                    panduan[44] = false;
-                } else {
-                    document.getElementById('avoidance of situations that make you feel anxious which can impact on study, work or social life').style.backgroundColor = "grey";
-                    array[index] = btn45.innerHTML;
-                    index++;
-                    panduan[44] = true;
-                }
-            }
-
-            btn46.onclick = function () {
-                if (panduan[45]) {
-                    for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'panic attacks') {
-                            array.splice(i, 1);
-                            break;
-                        }
-                    }
-                    document.getElementById('panic attacks').style.backgroundColor = "plum";
-                    index--;
-                    panduan[45] = false;
-                } else {
-                    document.getElementById('panic attacks').style.backgroundColor = "grey";
-                    array[index] = btn46.innerHTML;
-                    index++;
-                    panduan[45] = true;
-                }
-            }
-
-            btn47.onclick = function () {
-                if (panduan[46]) {
-                    for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'hot and cold flushes') {
-                            array.splice(i, 1);
-                            break;
-                        }
-                    }
-                    document.getElementById('hot and cold flushes').style.backgroundColor = "plum";
-                    index--;
-                    panduan[46] = false;
-                } else {
-                    document.getElementById('hot and cold flushes').style.backgroundColor = "grey";
-                    array[index] = btn47.innerHTML;
-                    index++;
-                    panduan[46] = true;
-                }
-            }
-
-            btn48.onclick = function () {
-                if (panduan[47]) {
-                    for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'racing heart') {
-                            array.splice(i, 1);
-                            break;
-                        }
-                    }
-                    document.getElementById('racing heart').style.backgroundColor = "plum";
-                    index--;
-                    panduan[47] = false;
-                } else {
-                    document.getElementById('racing heart').style.backgroundColor = "grey";
-                    array[index] = btn48.innerHTML;
-                    index++;
-                    panduan[47] = true;
-                }
-            }
-
-            btn49.onclick = function () {
-                if (panduan[48]) {
-                    for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'tightening of the chest quick breathing') {
-                            array.splice(i, 1);
-                            break;
-                        }
-                    }
-                    document.getElementById('tightening of the chest quick breathing').style.backgroundColor = "plum";
-                    index--;
-                    panduan[48] = false;
-                } else {
-                    document.getElementById('tightening of the chest quick breathing').style.backgroundColor = "grey";
-                    array[index] = btn49.innerHTML;
-                    index++;
-                    panduan[48] = true;
-                }
-            }
-
-            btn50.onclick = function () {
-                if (panduan[49]) {
-                    for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'restlessness') {
-                            array.splice(i, 1);
-                            break;
-                        }
-                    }
-                    document.getElementById('restlessness').style.backgroundColor = "plum";
-                    index--;
-                    panduan[49] = false;
-                } else {
-                    document.getElementById('restlessness').style.backgroundColor = "grey";
-                    array[index] = btn50.innerHTML;
-                    index++;
-                    panduan[49] = true;
-                }
-            }
-
-            btn51.onclick = function () {
-                if (panduan[50]) {
-                    for (var i = 0; i < array.length; i++) {
-                        if (array[i] == 'feeling tense') {
-                            array.splice(i, 1);
-                            break;
-                        }
-                    }
-                    document.getElementById('feeling tense').style.backgroundColor = "plum";
-                    index--;
-                    panduan[50] = false;
-                } else {
-                    document.getElementById('feeling tense').style.backgroundColor = "grey";
-                    array[index] = btn51.innerHTML;
-                    index++;
-                    panduan[50] = true;
-                }
-            }
-
-            btn52.onclick = function () {
-                if (panduan[51]) {
-                    for (var i = 0; i < array.length; i++) {
                         if (array[i] == 'wound up and edgy') {
                             array.splice(i, 1);
                             break;
@@ -1170,12 +801,12 @@
                     }
                     document.getElementById('wound up and edgy').style.backgroundColor = "plum";
                     index--;
-                    panduan[51] = false;
+                    panduan[33] = false;
                 } else {
                     document.getElementById('wound up and edgy').style.backgroundColor = "grey";
-                    array[index] = btn52.innerHTML;
+                    array[index] = btn34.innerHTML;
                     index++;
-                    panduan[51] = true;
+                    panduan[33] = true;
                 }
             }
 
@@ -1196,19 +827,27 @@
 <body>
     <!--User interface-->
     <br />
-    <h2 style="color:darkred" class="caption">Choose symptoms you may have</h2>
-    <h3>
+    <h1 style="color:darkred; text-align:center" class="caption">Mental Issue Test</h1>
+    <h4>
         Online screening is one of the quickest and easiest ways to determine whether you are experiencing symptoms of a mental health condition. Our free screening test allow you to take a proactive approach to your wellness and provide you with anonymous and immediate feedback
-    </h3>
-    <br />
-    <h3>
+        <br />
+        <br />
         Mental health conditions, such as depression or anxiety, are real, common and treatable. And recovery is possible. Please don't hesitate to express your feelings and physical conditions.
-    </h3>
-    <br />
-    <h3>
+        <br />
+        <br />
         Let's get started on the test!
-    </h3>
+    </h4>
     <!--buttons with symptoms-->
+    <br />
+    <h3 style="color:cadetblue">Step 1: Choose the behaviours you have</h3>
+    <button id="not going out anymore" style="font-size: large;background-color:burlywood">not going out anymore</button>
+    <button id="withdrawing from close family and friends" style="font-size: large;background-color:burlywood">withdrawing from close family and friends</button>
+    <button id="relying on alcohol and sedatives" style="font-size: large;background-color:burlywood">relying on alcohol and sedatives</button>
+    <button id="not doing usual enjoyable activities" style="font-size: large;background-color:burlywood">not doing usual enjoyable activities</button>
+    <button id="unable to concentrate" style="font-size: large;background-color:burlywood">unable to concentrate</button>
+    <button id="avoidance of situations that make you feel anxious" style="font-size: large;background-color:burlywood">avoidance of situations that make you feel anxious</button>
+    <br />
+    <h3 style="color:cadetblue">Step 2: Choose the feelings you have</h3>
     <button id="overwhelmed" style="font-size: large">overwhelmed</button>
     <button id="guilty" style="font-size: large">guilty</button>
     <button id="irritable" style="font-size: large">irritable</button>
@@ -1224,29 +863,8 @@
     <button id="worry" style="font-size: large">worry</button>
     <button id="catastrophizing" style="font-size: large">catastrophizing</button>
     <button id="obsessive thinking" style="font-size: large">obsessive thinking</button>
-    <button id="Unexplained weight fluctuations" style="font-size: large">Unexplained weight fluctuations</button>
-    <button id="Anemia and muscle weakness" style="font-size: large">Anemia and muscle weakness</button>
-    <button id="Increase in falls" style="font-size: large">Increase in falls</button>
-    <button id="Memory deficits" style="font-size: large">Memory deficits</button>
-    <button id="Cognitive decline" style="font-size: large">Cognitive decline</button>
-    <button id="Loss of appetite" style="font-size: large">Loss of appetite</button>
-    <button id="Slow healing" style="font-size: large">Slow healing</button>
-    <button id="Chronic dizziness" style="font-size: large">Chronic dizziness</button>
-    <button id="not getting things done at work/school" style="font-size: large">not getting things done at work/school</button>
-    <button id="Unopened or uneaten food in the fridge or cupboards" style="font-size: large">Unopened or uneaten food in the fridge or cupboards</button>
-    <button id="Decrease in food intake or rejection of meals" style="font-size: large">Decrease in food intake or rejection of meals</button>
-    <button id="Use of laxatives" style="font-size: large">Use of laxatives</button>
-    <button id="Confusion" style="font-size: large">Confusion</button>
-    <button id="Agitation" style="font-size: large">Agitation</button>
-    <button id="Irritability" style="font-size: large">Irritability</button>
-    <button id="Hyperactivity" style="font-size: large">Hyperactivity</button>
-    <button id="Psychosis" style="font-size: large">Psychosis</button>
-    <button id="Cognitive issues" style="font-size: large">Cognitive issues</button>
-    <button id="not going out anymore" style="font-size: large">not going out anymore</button>
-    <button id="withdrawing from close family and friends" style="font-size: large">withdrawing from close family and friends</button>
-    <button id="relying on alcohol and sedatives" style="font-size: large">relying on alcohol and sedatives</button>
-    <button id="not doing usual enjoyable activities" style="font-size: large">not doing usual enjoyable activities</button>
-    <button id="unable to concentrate" style="font-size: large">unable to concentrate</button>
+    <br />
+    <h3 style="color:cadetblue">Step 3: Choose the physical issues you have</h3>
     <button id="tired all the time" style="font-size: large">tired all the time</button>
     <button id="sick and run down" style="font-size: large">sick and run down</button>
     <button id="headaches and muscle pains" style="font-size: large">headaches and muscle pains</button>
@@ -1254,19 +872,23 @@
     <button id="sleep problems" style="font-size: large">sleep problems</button>
     <button id="loss or change of appetite" style="font-size: large">loss or change of appetite</button>
     <button id="wound up and edgy" style="font-size: large">wound up and edgy</button>
-    <button id="avoidance of situations that make you feel anxious which can impact on study, work or social life" style="font-size: large">avoidance of situations that make you feel anxious which can impact on study, work or social life</button>
     <button id="significant weight loss or gain" style="font-size: large">significant weight loss or gain</button>
+
     <button id="panic attacks" style="font-size: large">panic attacks</button>
     <button id="hot and cold flushes" style="font-size: large">hot and cold flushes</button>
     <button id="racing heart" style="font-size: large">racing heart</button>
     <button id="tightening of the chest quick breathing" style="font-size: large">tightening of the chest quick breathing</button>
     <button id="restlessness" style="font-size: large">restlessness</button>
     <button id="feeling tense" style="font-size: large">feeling tense</button>
+    <button id="wound up and edgy" style="font-size: large">wound up and edgy</button>
 
 
     <br />
     <br />
-    <br />
+
+
+    <h3 style="color:cadetblue">Step 4: Click submit to get result and suggestions</h3>
+
     <br />
     <button id="submit" style="font-size: xx-large; background-color:steelblue">Submit</button>
     <button id="clear" style="font-size: xx-large; background-color: saddlebrown">Reset</button>
