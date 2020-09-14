@@ -38,37 +38,31 @@ namespace ME14.Controllers
             return View();
         }
 
-        //control the Cause page. Cause is added by me
-        public ActionResult Cause()
+        //control the Suggestion1 page. Suggestion1 is added by me
+        public ActionResult Suggestion1()
         {
-            ViewBag.Message = "Your Cause page.";
+            ViewBag.Message = "Your Suggestion1 page.";
 
             return View();
         }
 
-        //control the Risk page. Risk is added by me
-        public ActionResult Risk()
+        //control the Suggestion2 page. Suggestion2 is added by me
+        public ActionResult Suggestion2()
         {
-            ViewBag.Message = "Your Risk page.";
+            ViewBag.Message = "Your Suggestion2 page.";
 
             return View();
         }
 
-        //control the Preventation page. Preventation is added by me
-        public ActionResult Preventation()
+        //control the Suggestion3 page. Suggestion3 is added by me
+        public ActionResult Suggestion3()
         {
-            ViewBag.Message = "Your Preventation page.";
+            ViewBag.Message = "Your Suggestion3 page.";
 
             return View();
         }
 
-        //control the Doctor page. Doctor is added by me
-        public ActionResult Doctor()
-        {
-            ViewBag.Message = "Your Doctor page.";
-
-            return View();
-        }
+      
 
     }
 }
