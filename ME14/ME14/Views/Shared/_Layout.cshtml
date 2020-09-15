@@ -8,14 +8,19 @@
     <title>@ViewBag.Title - Team Cookie</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <script type="text/javascript"></script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
-        }
-    </script>
     <style>
+        #chatBotTitle{
+            width: 80px;
+            height:80px;
+            display:block;
+            margin-left: 300px;
+            margin-bottom: 100px;
+            border-radius: 50%;
+            background-color: darkred;
+            color: white;
+            font-size: 16px;
+        }
+
         #google_translate_element {
             float: right;
         }
@@ -24,11 +29,12 @@
             position: fixed;
             bottom: 0;
             right: 0;
+            z-index: 100;
         }
 
         #chat {
-            width: 250px;
-            height: 400px;
+            width: 400px;
+            height: 500px;
             margin: 6px;
         }
 
@@ -67,10 +73,10 @@
         </div>
     </div>
     <div id="chatbot">
-        <p style="font-weight:bold; color:brown">CALDBot</p>
-        <iframe id="chat" src='https://webchat.botframework.com/embed/cald-bot?s=u786YXznv4U.aiMr8yOFirfdhr-hWSNZvNq77x6FXot7SxezJygww_w'></iframe>
+        <button id="chatBotTitle">CALDBot</button>
+        <iframe id="chat" style="visibility:hidden" src='https://webchat.botframework.com/embed/cald-bot?s=u786YXznv4U.aiMr8yOFirfdhr-hWSNZvNq77x6FXot7SxezJygww_w'></iframe>
     </div>
-    
+
 
     <div class="container body-content">
         @RenderBody()
@@ -83,6 +89,33 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        //javescript for translate function
+    </script>
+    <script type="text/javascript">
+        //javescript for translate function
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            var btnC = document.getElementById('chatBotTitle');
+            var dk = false;
+            btnC.onclick = function () {
+                if (dk) {
+                    document.getElementById('chat').style.visibility = "hidden";
+                    dk = false;
+                } else {
+                    document.getElementById('chat').style.visibility = "visible";
+                    dk = true;
+                }
+            }
+        }
+
+    </script>
 
 </body>
 </html>
