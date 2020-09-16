@@ -12,9 +12,23 @@
 
         .navPlace {
             position: fixed;
-            width:220px;
             top: 100px;
             left: 20px;
+        }
+
+        .navPlace > a{
+            width:220px;
+            height: 50px;
+            text-align: center;
+            background-color: #6495ED;
+            line-height: 50px;
+            font-size: 18px;
+            display: block;
+            opacity: 0.8;
+            padding: 5px;
+            margin: 5px;
+            color: white;
+            font-weight: bold;
         }
 
         #daohang {
@@ -24,16 +38,6 @@
             opacity:0.8;
             color: white;
             margin: 1px;
-        }
-
-        #background a {
-            font-size: 18px;
-            display: block;
-            background-color: darkred;
-            opacity: 0.8;
-            padding: 5px;
-            margin: 5px;
-            color: white;
         }
 
         div {
@@ -61,7 +65,7 @@
         .btn {
             font-size: large;
             padding: 12px 14px;
-            background-color: #ec0677;
+            background-color: #6495ED;
             border-radius: 40%;
             color: white;
         }
@@ -78,6 +82,12 @@
 
         div > p {
             font-size: 20px;
+            text-align: left;
+        }
+
+        .h2 {
+            color: #6495ED;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -98,14 +108,14 @@
     <!--Create a row div to show message and video-->
     <div class="row" style=" margin-bottom:30px;margin-top:30px">
         <div class="col-md-6">
-            <h2 id="dyk" name="dyk" style="color:darkred;font-weight:bold">Did you know?</h2>
+            <h2 id="dyk" name="dyk" class="h2">Did you know?</h2>
             <p style="color:black; font-size:20px;margin-top:20px">
                 1.34 million Australians aged over 50 were born overseas in a non English speaking country. Older people from Culturally and linguistically diverse (CALD) backgrounds with chronic diseases have a higher risk of mental health issues than those born in Australia.
             </p>
             <button id="btn1" class="btn">
                 Show More
             </button>
-            <h2 id="h2"></h2>
+            <h2 id="h2" class="h2"></h2>
             <p id="p1">
 
             </p>
@@ -118,7 +128,7 @@
     </div>
 
 
-    <h2 style="text-align:center;color:darkred;font-weight:bold">What We Offer</h2>
+    <h2 style="text-align:center;color:#6495ED;font-weight:bold">What We Offer</h2>
     <!-- Create three equivalent div. Each div has an image,and refer to a new page -->
     <div class="tupian">
         <img id="about" name="about" src="https://www.headsup.org.au/sfimages/default-source/default-album/disclosure.jpg?sfvrsn=ad96504d_0">
@@ -180,7 +190,6 @@
             var btn1 = document.getElementById("btn1");
             // create onlick event for button 1
             btn1.onclick = function () {
-                document.getElementById('h2').style.color = "darkred";
                 document.getElementById('h2').innerHTML = "Our Mission";
                 document.getElementById('p1').style.color = "black";
                 document.getElementById('p1').style.fontSize = "20px";
