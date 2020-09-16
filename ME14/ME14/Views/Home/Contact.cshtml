@@ -23,14 +23,16 @@
             padding: 10px
         }
 
+        h3 {
+            color: #6495ED;
+            font-weight: bold;
+        }
+
     </style>
 
     <script>
 
 
-        function show(bubble) {
-            document.getElementById(bubble).style.visibility = "visible";
-        }
 
         //Method to calculate the possibility of having the mental health issues
         function paopao(o) {
@@ -212,6 +214,7 @@
                     panduan[0] = true;
                 }
             }
+
 
             btn2.onclick = function () {
                 if (panduan[1]) {
@@ -423,6 +426,7 @@
                     panduan[11] = true;
                 }
             }
+
 
             btn13.onclick = function () {
                 if (panduan[12]) {
@@ -864,7 +868,7 @@
 <body>
     <!--User interface-->
     <br />
-    <h1 style="color:#00CED1; text-align:center" class="caption">Mental Issue Test</h1>
+    <h1 style="color:#6495ED; text-align:center" class="caption">Mental Issue Test</h1>
     <h4>
         Online screening is one of the quickest and easiest ways to determine whether you are experiencing symptoms of a mental health condition. Our free screening test allow you to take a proactive approach to your wellness and provide you with anonymous and immediate feedback
         <br />
@@ -877,7 +881,7 @@
     <!--buttons with symptoms-->
     <br />
     <div id="bubble1">
-        <h3 style="color:cadetblue">Step 1: Choose the behaviours you have</h3>
+        <h3>Step 1: Choose the behaviours you have</h3>
         <button id="not going out anymore" style="font-size: large;background-color:burlywood">not going out anymore</button>
         <button id="withdrawing from close family and friends" style="font-size: large;background-color:burlywood">withdrawing from close family and friends</button>
         <button id="relying on alcohol and sedatives" style="font-size: large;background-color:burlywood">relying on alcohol and sedatives</button>
@@ -891,7 +895,7 @@
     </div>
 
     <div id="bubble2" style="visibility:hidden">
-        <h3 style="color:cadetblue">Step 2: Choose the feelings you have</h3>
+        <h3>Step 2: Choose the feelings you have</h3>
         <button id="overwhelmed" style="font-size: large">overwhelmed</button>
         <button id="guilty" style="font-size: large">guilty</button>
         <button id="irritable" style="font-size: large">irritable</button>
@@ -900,21 +904,21 @@
         <button id="unhappy" style="font-size: large">unhappy</button>
         <button id="indecisive" style="font-size: large">indecisive</button>
         <button id="disappointed" style="font-size: large">disappointed</button>
-        <button id="miserable" style="font-size: large">miserable</button>
-        <button id="sad" style="font-size: large">sad</button>
 
         <button id="excessive fear" style="font-size: large">excessive fear</button>
         <button id="worry" style="font-size: large">worry</button>
         <button id="catastrophizing" style="font-size: large">catastrophizing</button>
         <button id="obsessive thinking" style="font-size: large">obsessive thinking</button>
+        <button id="miserable" style="font-size: large">miserable</button>
+        <button id="sad" style="font-size: large">sad</button>
         <br />
-        <button class="next" id="next2" >Next Step</button>
+        <button class="next" id="next2">Next Step</button>
         <br />
     </div>
 
     
     <div id="bubble3" style="visibility:hidden">
-        <h3 style="color:cadetblue">Step 3: Choose the physical issues you have</h3>
+        <h3>Step 3: Choose the physical issues you have</h3>
         <button id="tired all the time" style="font-size: large;background-color:cornflowerblue">tired all the time</button>
         <button id="sick and run down" style="font-size: large;background-color:cornflowerblue">sick and run down</button>
         <button id="headaches and muscle pains" style="font-size: large;background-color:cornflowerblue">headaches and muscle pains</button>
@@ -930,7 +934,6 @@
         <button id="tightening of the chest quick breathing" style="font-size: large;background-color:cornflowerblue">tightening of the chest quick breathing</button>
         <button id="restlessness" style="font-size: large;background-color:cornflowerblue">restlessness</button>
         <button id="feeling tense" style="font-size: large;background-color:cornflowerblue">feeling tense</button>
-        <button id="wound up and edgy" style="font-size: large;background-color:cornflowerblue">wound up and edgy</button>
         <br />
         <button class="next" id="next3" >Next Step</button>
     </div>

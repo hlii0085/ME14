@@ -9,16 +9,26 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <style>
-        #chatBotTitle{
-            width: 80px;
-            height:80px;
-            display:block;
+        #chatBotTitle {
+            width: 100px;
+            height: 100px;
             margin-left: 300px;
             margin-bottom: 100px;
+            display: block;
             border-radius: 50%;
-            background-color: darkred;
-            color: white;
-            font-size: 16px;
+            outline:none;
+            border:none;
+            background:white;
+        }
+
+
+        #jiexianyuan{
+            width:100px;
+            height:100px;
+        }
+
+        #jiexianyuan:hover{
+            box-shadow: black 0px 0px 5px;
         }
 
         #google_translate_element {
@@ -73,8 +83,10 @@
         </div>
     </div>
     <div id="chatbot">
-        <button id="chatBotTitle">CALDBot</button>
         <iframe id="chat" style="visibility:hidden" src='https://webchat.botframework.com/embed/cald-bot?s=u786YXznv4U.aiMr8yOFirfdhr-hWSNZvNq77x6FXot7SxezJygww_w'></iframe>
+        <button id="chatBotTitle">
+            <img id="jiexianyuan" src="~/Resources/jiexianyuan.PNG" />
+        </button>
     </div>
 
 

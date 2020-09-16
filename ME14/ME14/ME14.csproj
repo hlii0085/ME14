@@ -170,6 +170,8 @@
     <None Include="Resources\know_you_better.PNG" />
     <None Include="Resources\mental_illness.PNG" />
     <None Include="Resources\homepage.jpg" />
+    <None Include="Resources\young women.png" />
+    <None Include="Resources\jiexianyuan.PNG" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
