@@ -90,7 +90,7 @@
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 
-    
+
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
         //javescript for translate function
     </script>
@@ -100,22 +100,22 @@
             new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
         }
     </script>
+
+    
     <script type="text/javascript">
-        window.onload = function() {
-            var btnC = document.getElementById('chatBotTitle');
-            var dk = false;
-            btnC.onclick = function () {
-                if (dk) {
-                    document.getElementById('chat').style.visibility = "hidden";
-                    dk = false;
-                } else {
-                    document.getElementById('chat').style.visibility = "visible";
-                    dk = true;
-                }
+        var btnC = document.getElementById('chatBotTitle');
+        var dk = false;
+        btnC.onclick = function () {
+            if (dk) {
+                document.getElementById('chat').style.visibility = "hidden";
+                dk = false;
+            } else {
+                document.getElementById('chat').style.visibility = "visible";
+                dk = true;
             }
         }
-
     </script>
+
 
 </body>
 </html>
