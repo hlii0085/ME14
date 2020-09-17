@@ -17,26 +17,26 @@
             z-index: 100;
         }
 
-        .navPlace > a{
-            width:220px;
-            height: 50px;
-            text-align: center;
-            background-color: #6495ED;
-            line-height: 50px;
-            font-size: 18px;
-            display: block;
-            opacity: 0.8;
-            padding: 5px;
-            margin: 5px;
-            color: white;
-            font-weight: bold;
-        }
+            .navPlace > a {
+                width: 220px;
+                height: 50px;
+                text-align: center;
+                background-color: #6495ED;
+                line-height: 50px;
+                font-size: 18px;
+                display: block;
+                opacity: 0.8;
+                padding: 5px;
+                margin: 5px;
+                color: white;
+                font-weight: bold;
+            }
 
         #daohang {
             font-size: 20px;
             text-align: center;
             background-color: darkred;
-            opacity:0.8;
+            opacity: 0.8;
             color: white;
             margin: 1px;
         }
@@ -57,11 +57,11 @@
             position: relative;
         }
 
-        .tupian:hover {
+            .tupian:hover {
                 /*transform: translateY(-50px);*/
-            filter: brightness(110%);
-            opacity: 0.85;
-        }
+                filter: brightness(110%);
+                opacity: 0.85;
+            }
 
         .btn {
             font-size: large;
@@ -91,6 +91,17 @@
             font-weight: bold;
         }
     </style>
+    <script language="JavaScript">
+        var password = "";
+        password = prompt('Please Enter the Password(Only If You Enter the Correct Password):', '');
+        while (password != '334455') {
+            alert("Wrong Password");
+            password = prompt('Please Enter the Password(Only If You Enter the Correct Password):', '');
+
+            //window.opener = null; window.close();
+        }
+        // close the page, if the password is wrong.
+    </script>
 </head>
 
 <body>

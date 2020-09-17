@@ -62,7 +62,15 @@ namespace ME14.Controllers
             return View();
         }
 
-      
+        //control the About us page. 
+        public ActionResult About()
+        {
+            ViewBag.Message = "About us page.";
+
+            return View();
+        }
+
+
 
     }
 }

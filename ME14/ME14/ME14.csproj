@@ -209,6 +209,7 @@
     <Content Include="Views\Home\Suggestion1.cshtml" />
     <Content Include="Views\Home\Suggestion2.cshtml" />
     <Content Include="Views\Home\Suggestion3.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
