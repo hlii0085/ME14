@@ -172,6 +172,11 @@
     <None Include="Resources\homepage.jpg" />
     <None Include="Resources\young women.png" />
     <None Include="Resources\jiexianyuan.PNG" />
+    <None Include="Resources\ningyue.png" />
+    <None Include="Resources\sai.png" />
+    <None Include="Resources\zoya.png" />
+    <None Include="Resources\haoxing.png" />
+    <None Include="Resources\luyi.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
