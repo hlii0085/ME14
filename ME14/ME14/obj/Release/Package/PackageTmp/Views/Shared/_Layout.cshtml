@@ -17,18 +17,18 @@
             margin-bottom: 150px;
             display: block;
             border-radius: 50%;
-            outline:none;
-            border:none;
-            background:white;
+            outline: none;
+            border: none;
+            background: white;
         }
 
 
-        #jiexianyuan{
-            width:100px;
-            height:100px;
+        #jiexianyuan {
+            width: 100px;
+            height: 100px;
         }
 
-        #jiexianyuan:hover{
+        #jiexianyuan:hover {
             box-shadow: black 0px 0px 5px;
         }
 
@@ -49,23 +49,26 @@
             margin: 6px;
         }
 
-        p{
-            text-align: center;
-        }
 
-        #logo{
+        #logo {
             position: absolute;
-            height:100px;
-            width:100px;
-            left:150px;
-            top:0;
+            height: 100px;
+            width: 100px;
+            left: 0;
+            top: 0;
         }
 
-        #tiao{
-            background-color:white;
-            border:none;
+        #tiao {
+            background-color: white;
+            border: none;
+        }
+
+        .navbar-nav > li:hover,
+        .navbar-header:hover {
+            background-color: #6495ED;
         }
     </style>
+    
 
 </head>
 
@@ -75,6 +78,7 @@
     <div class="navbar navbar-inverse navbar-fixed-top" id="tiao">
         <!--Add project logo on the top of home page-->
         <img src="https://i.loli.net/2020/09/03/uAaWorV3MI4OdbT.png" id="logo" height="50" width="50" />
+
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -89,8 +93,9 @@
                 <!--These are elements of navigation-->
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Not Alone", "About", "Home")</li>
-                    <li>@Html.ActionLink("Know You Better", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Not Alone", "NotAlone", "Home")</li>
+                    <li>@Html.ActionLink("Know You Better", "KnowYouBetter", "Home")</li>
+                    <li>@Html.ActionLink("About Us", "About", "Home")</li>
                 </ul>
                 <div id="google_translate_element"></div>
             </div>

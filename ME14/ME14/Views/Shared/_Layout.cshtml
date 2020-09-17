@@ -28,9 +28,9 @@
             height: 100px;
         }
 
-            #jiexianyuan:hover {
-                box-shadow: black 0px 0px 5px;
-            }
+        #jiexianyuan:hover {
+            box-shadow: black 0px 0px 5px;
+        }
 
         #google_translate_element {
             float: right;
@@ -54,13 +54,18 @@
             position: absolute;
             height: 100px;
             width: 100px;
-            left: 100px;
+            left: 0;
             top: 0;
         }
 
         #tiao {
             background-color: white;
             border: none;
+        }
+
+        .navbar-nav > li:hover,
+        .navbar-header:hover {
+            background-color: #6495ED;
         }
     </style>
     
@@ -73,6 +78,7 @@
     <div class="navbar navbar-inverse navbar-fixed-top" id="tiao">
         <!--Add project logo on the top of home page-->
         <img src="https://i.loli.net/2020/09/03/uAaWorV3MI4OdbT.png" id="logo" height="50" width="50" />
+
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">

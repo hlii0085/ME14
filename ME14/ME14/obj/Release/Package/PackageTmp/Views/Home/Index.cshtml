@@ -8,35 +8,36 @@
             height: 600px;
             opacity: 0.8;
             background-size: 100% 100%;
+            position: relative;
         }
 
         .navPlace {
-            position: fixed;
-            top: 130px;
-            left: 20px;
+            position: absolute;
+            bottom:0;
+            left: 0px;
             z-index: 100;
         }
 
-        .navPlace > a{
-            width:220px;
-            height: 50px;
-            text-align: center;
-            background-color: #6495ED;
-            line-height: 50px;
-            font-size: 18px;
-            display: block;
-            opacity: 0.8;
-            padding: 5px;
-            margin: 5px;
-            color: white;
-            font-weight: bold;
-        }
+            .navPlace > a {
+                width: 220px;
+                height: 50px;
+                text-align: center;
+                background-color: #6495ED;
+                line-height: 50px;
+                font-size: 18px;
+                display: block;
+                opacity: 0.8;
+                padding: 5px;
+                margin: 5px;
+                color: white;
+                font-weight: bold;
+            }
 
         #daohang {
             font-size: 20px;
             text-align: center;
             background-color: darkred;
-            opacity:0.8;
+            opacity: 0.8;
             color: white;
             margin: 1px;
         }
@@ -57,11 +58,11 @@
             position: relative;
         }
 
-        .tupian:hover {
+            .tupian:hover {
                 /*transform: translateY(-50px);*/
-            filter: brightness(110%);
-            opacity: 0.85;
-        }
+                filter: brightness(110%);
+                opacity: 0.85;
+            }
 
         .btn {
             font-size: large;
@@ -91,6 +92,17 @@
             font-weight: bold;
         }
     </style>
+    <script language="JavaScript">
+        var password = "";
+        password = prompt('Please Enter the Password(Only If You Enter the Correct Password):', '');
+        while (password != '334455') {
+            alert("Wrong Password");
+            password = prompt('Please Enter the Password(Only If You Enter the Correct Password):', '');
+
+            //window.opener = null; window.close();
+        }
+        // close the page, if the password is wrong.
+    </script>
 </head>
 
 <body>
@@ -150,7 +162,7 @@
             <p>Feeling low or anxious? Let us take your through what mental health looks like!</p>
             <br />
             <br />
-            <a class="btn" href="./Home/Contact">Learn more &raquo;</a>
+            <a class="btn" href="./Home/KnowYouBetter">Learn more &raquo;</a>
         </div>
     </div>
     <div class="tupian">
@@ -161,7 +173,7 @@
             <p>You can find there are many people facing these issues, it is not a big deal</p>
             <br />
             <br />
-            <a class="btn" href="./Home/About">Learn more &raquo;</a>
+            <a class="btn" href="./Home/NotAlone">Learn more &raquo;</a>
         </div>
     </div>
     <!--<div class="row">
