@@ -14,18 +14,18 @@ namespace ME14.Controllers
             return View();
         }
 
-        //control the About page
-        public ActionResult About()
+        //control the NotAlone page
+        public ActionResult NotAlone()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Your are not alone page.";
 
             return View();
         }
 
         //control the Contact page
-        public ActionResult Contact()
+        public ActionResult KnowYouBetter()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Know You Better page.";
 
             return View();
         }
