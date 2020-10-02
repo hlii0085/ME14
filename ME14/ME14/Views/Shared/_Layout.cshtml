@@ -47,6 +47,7 @@
             width: 400px;
             height: 500px;
             margin: 6px;
+            display: none;
         }
 
 
@@ -102,7 +103,7 @@
         </div>
     </div>
     <div id="chatbot">
-        <iframe id="chat" style="visibility:hidden" src='https://webchat.botframework.com/embed/cald-bot?s=u786YXznv4U.aiMr8yOFirfdhr-hWSNZvNq77x6FXot7SxezJygww_w'></iframe>
+        <iframe id="chat" src='https://webchat.botframework.com/embed/cald-bot?s=u786YXznv4U.aiMr8yOFirfdhr-hWSNZvNq77x6FXot7SxezJygww_w'></iframe>
         <button id="chatBotTitle">
             <h4 style="color:#6495ED; font-weight:bold">CALDBOT</h4>
             <img id="jiexianyuan" src="~/Resources/jiexianyuan.PNG" />
@@ -140,10 +141,10 @@
         var dk = false;
         btnC.onclick = function () {
             if (dk) {
-                document.getElementById('chat').style.visibility = "hidden";
+                document.getElementById('chat').style.display = "none";
                 dk = false;
             } else {
-                document.getElementById('chat').style.visibility = "visible";
+                document.getElementById('chat').style.display = "inline";
                 dk = true;
             }
         }
