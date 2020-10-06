@@ -32,7 +32,6 @@
             bottom: 0;
             height: 100%;
         }
-
         .text {
             color: white;
             font-size: 20px;
@@ -43,11 +42,39 @@
             font-size: large;
             background-color: #6495ED;
         }
+
+
+        /*#ggg {
+            width: 500px;
+            border: 1px solid red;
+        }*/
+
+        img {
+            margin: 20px auto;
+        }
+
+        #ex{
+            text-align: center;
+        }
+
+        #ex > p {
+            width: 250px;
+            text-align: center;
+            margin: 0 auto 15px;
+            font-size: 20px;
+        }
+
+        #examine_know_more {
+            color: #6495ED;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
     </style>
 
 </head>
 <body>
-  
+
     <!--about mental health-->
     <h1 style="color: #6495ED;
         text-align: center;">
@@ -63,7 +90,7 @@
             <br />• Mental illness can make you miserable and can cause problems in your daily life. In most cases, symptoms can be managed with a combination of medications and talk therapy (psychotherapy).
         </p>
     </div>
-    
+
     <div class="col-md-5" style="background-image: url(https://i.loli.net/2020/09/14/thMiQjyWz5Lurpw.jpg)">
         <h2 style="text-align:center;line-height:250px;color:white;font-size:35px">Causes</h2>
         <div class="overlay">
@@ -92,28 +119,40 @@
             </div>
         </div>
     </div>
-    <div class="col-md-5" style="        background-image: url(https://i.loli.net/2020/09/14/YQxdgmeyfLWGZnM.jpg)">
-        <h2 style="text-align:center;line-height:250px;color:white;font-size:35px">Preventation</h2>
-        <div class="overlay">
-            <div class="text">
-                There's no sure way to prevent mental illness:
-                <br />• Pay attention to warning signs
-                <br />• Get routine medical care
-                <br />• Get help when you need it
-                <br />• Take good care of yourself
+    <div>
+        <div class="col-md-5" style="        background-image: url(https://i.loli.net/2020/09/14/YQxdgmeyfLWGZnM.jpg)">
+            <h2 style="text-align:center;line-height:250px;color:white;font-size:35px">Preventation</h2>
+            <div class="overlay">
+                <div class="text">
+                    There's no sure way to prevent mental illness:
+                    <br />• Pay attention to warning signs
+                    <br />• Get routine medical care
+                    <br />• Get help when you need it
+                    <br />• Take good care of yourself
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5" style="        background-image: url(https://i.loli.net/2020/09/14/t2v8pLSRCTgIAud.jpg)">
+            <h2 style="text-align:center;line-height:250px;color:white;font-size:35px">See Doctor</h2>
+            <div class="overlay">
+                <div class="text">
+                    If you have any signs or symptoms of a mental illness, see your primary care provider or a mental health professional.
+                    <br />Lifeline ☎️ 22 131114
+                    <br />Contact lifeline for support if you are experiencing a personal crisis or have suicidal thoughts. you can call them 24 hours a day, 7 days a week from anywhere in australia.
+
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-md-5" style="        background-image: url(https://i.loli.net/2020/09/14/t2v8pLSRCTgIAud.jpg)">
-        <h2 style="text-align:center;line-height:250px;color:white;font-size:35px">See Doctor</h2>
-        <div class="overlay">
-            <div class="text">
-                If you have any signs or symptoms of a mental illness, see your primary care provider or a mental health professional.
-                <br />Lifeline ☎️ 22 131114
-                <br />Contact lifeline for support if you are experiencing a personal crisis or have suicidal thoughts. you can call them 24 hours a day, 7 days a week from anywhere in australia.
 
-            </div>
-        </div>
+
+    <div id="ex">
+        @*<h2 id="ggg" style="text-align:center;color:#6495ED;font-weight:bold">Need to learn more about your mental health?</h2>*@
+        <img src="~/Resources/examine.png" />
+        <p>
+            Use our tool to examine your mental health
+        </p>
+        <a id="examine_know_more" href="./KnowYouBetter">Know More &raquo;</a>
     </div>
 
 
@@ -126,17 +165,14 @@
             a mental illness can make you miserable and can cause problems in your daily life. in most cases, symptoms can be managed with a combination of medications and talk therapy (psychotherapy).
         </p>
     -->
+    @*<div class="col-md-12" style="height:30px">
 
-
-
-    <div class="col-md-12" style="height:30px">
-
-    </div>
+        </div>*@
 
     <!--link to you are not alone page-->
-    <p style="text-align:center; margin-top:50px"><a class="btn btn-info" href="./NotAlone">Many people have same issues as you &raquo;</a></p>
-    <br />
+    <!--<p style="text-align:center; margin-top:50px"><a class="btn btn-info" href="./NotAlone">Many people have same issues as you &raquo;</a></p>
+    <br />-->
     <!--link to know you better page-->
-    <p style="text-align:center"><a class="btn btn-info" href="./KnowYouBetter">Do you want to know yourself better? &raquo;</a></p>
+    <!--<p style="text-align:center"><a class="btn btn-info" href="./KnowYouBetter">Do you want to know yourself better? &raquo;</a></p>-->
 </body>
 </html>
