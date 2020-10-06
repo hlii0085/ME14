@@ -178,6 +178,14 @@
     <None Include="Resources\zoya.png" />
     <None Include="Resources\haoxing.png" />
     <None Include="Resources\luyi.png" />
+    <None Include="Resources\accomplish.png" />
+    <None Include="Resources\examine.png" />
+    <None Include="Resources\understand.png" />
+    <None Include="Resources\Zoyaa.png" />
+    <None Include="Resources\SLY.png" />
+    <None Include="Resources\FNY.png" />
+    <None Include="Resources\LHX.png" />
+    <None Include="Resources\SAII.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />

@@ -7,72 +7,169 @@
     <style>
         p{
             font-size:20px;
+            /*color: white;*/
         }
         .col-md-3{
             margin-right:30px;
         }
-        h2{
-            text-align:center;
+        h2 {
+            font-weight: bold;
+            
         }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #6495ED;
+            font-weight: bold;
+        }
+
+        .section1 {
+            background-color: #CACEE8;
+            height: 250px;
+            padding-top: 40px;
+            margin: 50px 0;
+            position: relative;
+        }
+
+        .section1 > p{
+            width: 300px;
+            text-align: right;
+            margin-left: auto;
+        }
+
+        .section2 {
+            position: relative;
+            background-color: #CACEE8;
+            height: 250px;
+            text-align: right;
+            padding-top: 40px;
+            margin: 50px 0;
+        }
+
+        .section2 > p{
+            text-align: left;
+            width: 300px;
+        }
+
+        #mission{
+            width: 650px;
+            text-align: center;
+            /*border: 1px solid red;*/
+            margin:0 auto;
+        }
+
+        img{
+            max-width: 100%;
+        }
+
+        #profile_phote_sly{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #profile_phote_lhx {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #profile_phote_sai {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #profile_phote_zoya {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        #profile_phote_fny {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        
+
       
     </style>
 </head>
 <body>
-
-    <h1 style="text-align:center;margin-bottom:30px;color:#6495ED">About Us (Team Cookie)</h1>
-
-    <div class="row">
-        <div class="col-md-4">
-            <img src="~/Resources/luyi.png" width="300" height="250" />
-        </div>
-        <div class="col-md-8">
-            <h2>Luyi Sun </h2>
-            <p>
-                Project management Master’s degree of BIS in Monash university. Database, R, Python, Java foundation. Good at business analysis, UI&BI design, project management. Several Java programs and system design experiences.Participated in the whole process of system design and implementation, keen sight in product and client service. Rich team project experiences with good communication and collaboration skills.
-            </p>
-        </div>
+    <div>
+        <h1>Our mission</h1>
+        <p id="mission">
+            Our mission is to help Elder people from CALD background about stigma attached with mental health issues by raising awareness about its importance and educate them on how to access mental health services by overcoming English as their barrier.
+        </p>
     </div>
     <br />
     <br />
+    <br />
+    <h1>Meet Us (Team Cookie)</h1>
 
     <div class="row">
-        <div class="col-md-4">
-            <img src="~/Resources/sai.png" width="300" height="350" />
-        </div>
-        <div class="col-md-8">
-            <h2>Sai Teja </h2>
+        @*<div class="col-md-4">
+                <img src="~/Resources/SLY.png" width="300" height="250" />
+            </div>*@
+        <div class="col-md-5 section1">
+            <img id="profile_phote_sly" class="img-responsive" src="~/Resources/SLY.png"  width="185" height="200" />
             <p>
-                Master’s Degree of Data Science in Monash University. Skilled in Python, R programming, Machine learning and artificial intelligence. Soft skills are critical thinking, problem solving, teamwork, decision making, interpersonal communication.
+                Business Analyst
             </p>
+            <p>
+                Database, R, Python, Java foundation. Good at business analysis, UI&BI design, project management.
+                <h2>Luyi Sun </h2>
         </div>
-    </div>
-    <br />
-    <br />
+        <div class="col-md-2"></div>
+        <div class="col-md-5 section2">
 
-    <div class="row">
-        <div class="col-md-4">
-            <img src="~/Resources/zoya.png" width="300" height="300" />
-        </div>
-        <div class="col-md-8">
+            <img id="profile_phote_zoya" src="~/Resources/Zoyaa.png" width="185" height="195" />
+            <p>
+                Business Analyst
+            </p>
+            <p>
+                I am a well presented, enthusiastic, and self-motivated individual who thinks learning is a lifetime experience.
+            </p>
             <h2>Zoya Mashadi </h2>
-            <p>
-                Business Analyst + UI/UX Expert I am a well presented, enthusiastic, and self-motivated individual who thinks learning is a lifetime experience and now, while undergoing my Masters in Business Information Systems degree at Monash I want to use my knowledge and skills in corporate world and learn more about the practical examples of the bookish theories simultaneously, here in Australia too. I am a hardworking individual who is not only a good team player but also has strong leadership skills as applied in many group projects in my current degree, bachelor's degree and during my work experience as well. Meeting deadlines with excellence is the core value.
-            </p>
         </div>
     </div>
+    <br />
+    <br />
+
+
 
     <br />
     <br />
 
+    @*<div class="col-md-4">
+            <img src="~/Resources/LHX.png" width="300" height="350" />
+        </div>*@
     <div class="row">
-        <div class="col-md-4">
-            <img src="~/Resources/haoxing.png" width="300" height="350" />
-        </div>
-        <div class="col-md-8">
+        <div class="col-md-5 section1">
+            <img id="profile_phote_lhx" src="~/Resources/LHX.png" width="185" height="200" />
+            <p>
+                Developer
+            </p>
+            <p>
+                Willingness to learn, ability to follow instructions and work cooperatively within team environments.
+            </p>
             <h2>Haoxing Li </h2>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-5 section2">
+
+            <img id="profile_phote_fny" src="~/Resources/FNY.png" width="185" height="200" />
             <p>
-                Doing Master of Information Technology in Monash University. With the ability to review plans, write reports, research solutions and implement company procedures. Willingness to learn, ability to follow instructions and work cooperatively within team environments.  Familiar with HTML, CSS, JavaScript, ASP.NET and Java.
+                Developer
             </p>
+            <p>
+                Willing to work in a team, and  positively communicate with teammates.
+            </p>
+            <br />
+            <h2>Ningyue Fu</h2>
         </div>
     </div>
 
@@ -80,14 +177,20 @@
     <br />
 
     <div class="row">
-        <div class="col-md-4">
-            <img src="~/Resources/ningyue.png" width="300" height="350" />
-        </div>
-        <div class="col-md-8">
-            <h2>Ningyue Fu</h2>
+        @*<div class="col-md-4">
+                <img src="~/Resources/FNY.png" width="300" height="350" />
+            </div>*@
+        <div class="col-md-4"></div>
+        <div class="col-md-5 section1">
+            <img id="profile_phote_sai" src="~/Resources/SAII.png" width="185" height="200" />
             <p>
-                Master’s degree of IT in Monash university. Good at Java coding, Oracle database and ASP. NET.Having many IT projects before. Learning front-end knowledge now. Willing to work in a team, and  positively communicate with teammates. Try to maximize the benefit of the team.
+                Data Scientist
             </p>
+            <p>
+                Skilled in Python, R programming, Machine learning and artificial intelligence.
+            </p>
+            <br />
+            <h2>Sai Teja </h2>
         </div>
     </div>
 </body>

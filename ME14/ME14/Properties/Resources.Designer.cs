@@ -63,6 +63,36 @@ namespace ME14.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap accomplish {
+            get {
+                object obj = ResourceManager.GetObject("accomplish", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap examine {
+            get {
+                object obj = ResourceManager.GetObject("examine", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FNY {
+            get {
+                object obj = ResourceManager.GetObject("FNY", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap haoxing {
             get {
                 object obj = ResourceManager.GetObject("haoxing", resourceCulture);
@@ -76,6 +106,16 @@ namespace ME14.Properties {
         internal static System.Drawing.Bitmap jiexianyuan {
             get {
                 object obj = ResourceManager.GetObject("jiexianyuan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LHX {
+            get {
+                object obj = ResourceManager.GetObject("LHX", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +153,39 @@ namespace ME14.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap zoya {
+        internal static System.Drawing.Bitmap SAII {
             get {
-                object obj = ResourceManager.GetObject("zoya", resourceCulture);
+                object obj = ResourceManager.GetObject("SAII", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SLY {
+            get {
+                object obj = ResourceManager.GetObject("SLY", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap understand {
+            get {
+                object obj = ResourceManager.GetObject("understand", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Zoyaa {
+            get {
+                object obj = ResourceManager.GetObject("Zoyaa", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

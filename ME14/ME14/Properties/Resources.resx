@@ -118,11 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="accomplish" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\accomplish.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="examine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\examine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FNY" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FNY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="haoxing" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\haoxing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="jiexianyuan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jiexianyuan.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LHX" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LHX.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="luyi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\luyi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,7 +145,16 @@
   <data name="sai" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sai.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="zoya" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zoya.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SAII" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SAII.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SLY" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SLY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="understand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\understand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zoyaa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Zoyaa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
