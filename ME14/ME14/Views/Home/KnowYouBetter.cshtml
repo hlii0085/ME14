@@ -954,28 +954,33 @@
     </div>
 
 
-    <div id="bubble4" style="visibility:hidden;margin-top:30px;background-color:lightgreen;padding-top:20px;padding-left:30px;padding-bottom:10px">
-        <h3 style="color:black">Step 4: Click submit to get result and suggestions</h3>
-        <br />
-        <button class="btn btn-info" id="submit" style="border-color:white">Submit</button>
+    <div id="bubble4" style="visibility:hidden;margin-top:30px;">
+        <h3 style="color:black">Results</h3>
+        <h4 style="font-size:20px">Congratulations! Your symptoms show that you are taking good care of your mental health. Continue to take care of your health and use some of our suggested tips to make sure you stay healthy.</h4>
+
+
+
+        <!--output format of result-->
+        @*
+            <button class="btn btn-info" id="submit" style="border-color:white">Submit</button>
         <button class="btn btn-info" id="clear" style="background-color: saddlebrown;border-color:white">Reset</button>
         <br />
         <br />
-        <!--output format of result-->
-        @*
         <font id="ddd" size="5"></font>
         <br />
         <br />
         <font id="aaa" size="5"></font>
-        *@
-
-
-        <br />
+            <br />
         <br />
         <font id="suggestion" color="darkred" size="6"></font>
         <br />
         <font id="content" size="6"></font>
+        *@
+        <div style="border-color:black">
+            <h4 style="font-size:20px">Click <button id="submit">here</button> to see the suggestions customised for you!</h4>
+        </div>
     </div>
+    
     
 
 </body>
