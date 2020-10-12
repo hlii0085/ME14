@@ -162,8 +162,8 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
-    <None Include="Properties\PublishProfiles\ME-iteration3 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\ME14 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\ME14-iteration3 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\ME14_Iteration2 - Web Deploy.pubxml" />
     <None Include="Resources\barChart.png" />
     <None Include="Resources\Visual 2.JPG" />
@@ -187,6 +187,7 @@
     <None Include="Resources\FNY.png" />
     <None Include="Resources\LHX.png" />
     <None Include="Resources\SAII.png" />
+    <None Include="Resources\close.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -220,6 +221,8 @@
     <Content Include="Views\Home\Suggestion2.cshtml" />
     <Content Include="Views\Home\Suggestion3.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Accomplish.cshtml" />
+    <Content Include="Views\Home\Painting.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

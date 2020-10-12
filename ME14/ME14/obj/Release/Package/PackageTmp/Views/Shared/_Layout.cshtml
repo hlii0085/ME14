@@ -96,6 +96,7 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Not Alone", "NotAlone", "Home")</li>
                     <li>@Html.ActionLink("Know You Better", "KnowYouBetter", "Home")</li>
+                    <li>@Html.ActionLink("Accomplish", "Accomplish", "Home")</li>
                     <li>@Html.ActionLink("About Us", "About", "Home")</li>
                 </ul>
                 <div id="google_translate_element"></div>
@@ -103,12 +104,13 @@
         </div>
     </div>
     <div id="chatbot">
-        <iframe id="chat" src='https://webchat.botframework.com/embed/cald-bot?s=u786YXznv4U.aiMr8yOFirfdhr-hWSNZvNq77x6FXot7SxezJygww_w'></iframe>
-        <button id="chatBotTitle">
+        <iframe id="chat" src='https://webchat.botframework.com/embed/caldbot15f96-bot?s=dKkBKa55FcA.DGc109odBCORDiVD1CUFpMfPERnKJtWxJetXeBgRGWY' @*style='min-width: 400px; width: 100%; min-height: 500px;'*@></iframe>
+        @*button id="chatBotTitle"*@
+        <div id="chatBotTitle">
             <h4 style="color:#6495ED; font-weight:bold">CALDBOT</h4>
-            <img id="jiexianyuan" src="~/Resources/jiexianyuan.PNG" />
-            <h5 style="color:#6495ED; font-weight:bold">Type something after clicking the icon</h5>
-        </button>
+            <img id="jiexianyuan" src="~/Resources/jiexianyuan.PNG" onclick="kaiGuan()" />
+            <h5 style="color:#6495ED; font-weight:bold;text-align:center">Type something after clicking the icon</h5>
+        </div>
     </div>
 
 
@@ -137,17 +139,34 @@
 
     
     <script type="text/javascript">
-        var btnC = document.getElementById('chatBotTitle');
+        //var btnC = document.getElementById('chatBotTitle');
         var dk = false;
-        btnC.onclick = function () {
+        function kaiGuan() {
             if (dk) {
                 document.getElementById('chat').style.display = "none";
+                document.getElementById('jiexianyuan').src = "/Resources/jiexianyuan.PNG";
                 dk = false;
             } else {
                 document.getElementById('chat').style.display = "inline";
+                document.getElementById('jiexianyuan').src = "/Resources/close.png";
                 dk = true;
             }
         }
+
+        //btnC.onclick = function () {
+        //    if (dk) {
+        //        document.getElementById('chat').style.display = "none";
+        //        $("#jiexianyuan").attr('src', 'jiexianyuan.PNG');
+        //        //var image = document.getElementById('jiexianyuan');
+        //        //image.src = "~/Resources/jiexianyuan.PNG";
+        //        dk = false;
+        //    } else {
+        //        document.getElementById('chat').style.display = "inline";
+        //        $("#jiexianyuan").attr('src', 'close.png');
+        //        document.getElementById('jiexianyuan').src = "~/Resources/close.png";
+        //        dk = true;
+        //    }
+        //}
     </script>
 
 

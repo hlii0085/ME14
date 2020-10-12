@@ -70,7 +70,18 @@ namespace ME14.Controllers
             return View();
         }
 
+        public ActionResult Accomplish()
+        {
+            ViewBag.Message = "Accomplish page.";
 
+            return View();
+        }
 
+        public ActionResult Painting()
+        {
+            ViewBag.Message = "Painting game page.";
+
+            return View();
+        }
     }
 }
