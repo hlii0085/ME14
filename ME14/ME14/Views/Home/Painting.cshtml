@@ -3,26 +3,18 @@
     ViewBag.Title = "Painting";
 }
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <style type="text/css">
-
-        * {
-            box-sizing: border-box;
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .col-md-3{
+            height: 800px;
         }
-
-        main {
-            width: 800px;
-            border: 1px solid #e0e0e0;
-            margin: 0 auto;
-            display: flex;
-            flex-grow: 1;
-        }
-
-        .left-block {
-            width: 160px;
-            border-right: 1px solid #e0e0e0;
-        }
-
+        
+        /*color picker style*/
         .colors {
             background-color: #ece8e8;
             text-align: center;
@@ -36,14 +28,11 @@
                 border-radius: 0;
                 outline: none;
                 cursor: pointer;
-                width: 20px;
-                height: 20px;
-                margin-bottom: 5px
+                width: 40px;
+                height: 40px;
+                margin-bottom: 5px;
             }
 
-        #one {
-            background-color: #0000ff;
-        }
                 .colors button:nth-of-type(1) {
                     background-color: #0000ff;
                 }
@@ -164,52 +153,6 @@
                     background-color: #ffffff;
                 }
 
-        .brushes {
-            //background-color: purple;
-            padding-top: 5px
-        }
-
-            .brushes button {
-                display: block;
-                width: 100%;
-                border: 0;
-                border-radius: 0;
-                background-color: #ece8e8;
-                margin-bottom: 5px;
-                padding: 5px;
-                height: 30px;
-                outline: none;
-                position: relative;
-                cursor: pointer;
-            }
-
-                .brushes button:after {
-                    height: 1px;
-                    display: block;
-                    background: #808080;
-                    content: '';
-                }
-
-                .brushes button:nth-of-type(1):after {
-                    height: 1px;
-                }
-
-                .brushes button:nth-of-type(2):after {
-                    height: 2px;
-                }
-
-                .brushes button:nth-of-type(3):after {
-                    height: 3px;
-                }
-
-                .brushes button:nth-of-type(4):after {
-                    height: 4px;
-                }
-
-                .brushes button:nth-of-type(5):after {
-                    height: 5px;
-                }
-
         .buttons {
             height: 80px;
             padding-top: 10px;
@@ -230,23 +173,26 @@
                 font-size: 16px;
             }
 
+        /*right block style*/
         .right-block {
-            width: 640px;
+            height: 800px;
         }
 
+        /*painting board style*/
         #paint-canvas {
             cursor: crosshair;
+            width: 800px;
+            height: 700px;
+            border: 2px solid black;
         }
 
-        .colorbuttons{
-            display: block;
-            margin: 20px 0;
-        }
+        /*eraser box style*/
+        .eraser-box{
+            width:auto;
+            border: 2px solid black;
+            height: 35px;
+            cursor: pointer;
 
-        .colorpicker{
-            background:transparent;
-            height: 40px;
-            width: 100%;
         }
     </style>
 </head>
@@ -254,106 +200,130 @@
     <h1 style="color: #6495ED; text-align: center;">
         Coloring Mandalas
     </h1>
-    <main>
-        <div class="left-block">
-            <div class="colorbuttons">
-                <h3>color</h3>
-                <input type="color" id="colorpicker" value="#6495ed" class="colorpicker" />
-            </div>
-            <div class="colors">
-                <button type="button" value="#0000ff"></button>
-                <button type="button" value="#009fff"></button>
-                <button type="button" value="#0fffff"></button>
-                <button type="button" value="#bfffff"></button>
-                <button type="button" value="#000000"></button>
-                <button type="button" value="#333333"></button>
-                <button type="button" value="#666666"></button>
-                <button type="button" value="#999999"></button>
-                <button type="button" value="#ffcc66"></button>
-                <button type="button" value="#ffcc00"></button>
-                <button type="button" value="#ffff00"></button>
-                <button type="button" value="#ffff99"></button>
-                <button type="button" value="#003300"></button>
-                <button type="button" value="#555000"></button>
-                <button type="button" value="#00ff00"></button>
-                <button type="button" value="#99ff99"></button>
-                <button type="button" value="#f00000"></button>
-                <button type="button" value="#ff6600"></button>
-                <button type="button" value="#ff9933"></button>
-                <button type="button" value="#f5deb3"></button>
-                <button type="button" value="#330000"></button>
-                <button type="button" value="#663300"></button>
-                <button type="button" value="#cc6600"></button>
-                <button type="button" value="#deb887"></button>
-                <button type="button" value="#aa0fff"></button>
-                <button type="button" value="#cc66cc"></button>
-                <button type="button" value="#ff66ff"></button>
-                <button type="button" value="#ff99ff"></button>
-                <button type="button" value="#e8c4e8"></button>
-                <button type="button" value="#ffffff"></button>
-            </div>
-            <select class="form-control brushes">
-                <option type="button" value="1"></option>
-            </select>
-            <div class="brushes">
-                <button type="button" value="1"></button>
-                <button type="button" value="2"></button>
-                <button type="button" value="3"></button>
-                <button type="button" value="4"></button>
-                <button type="button" value="5"></button>
-            </div>
-            @*<div class="buttonSize">
-                <h3>Size (<span id="showSize">5</span>)</h3>
-                <input type="range"
-                       min="1"
-                       max="50"
-                       value="5"
-                       step="1"
-                       id="controlSize" />
-            </div>*@
-            <div class="buttons">
-                <button id="clear" type="button">Clear</button>
-                <button id="save" type="button">Save</button>
-            </div>
+ 
+    <div class="leftSideBar col-md-3">
+        <div class="colors">
+            <button type="button" value="#0000ff"></button>
+            <button type="button" value="#009fff"></button>
+            <button type="button" value="#0fffff"></button>
+            <button type="button" value="#bfffff"></button>
+            <button type="button" value="#000000"></button>
+            <button type="button" value="#333333"></button>
+            <button type="button" value="#666666"></button>
+            <button type="button" value="#999999"></button>
+            <button type="button" value="#ffcc66"></button>
+            <button type="button" value="#ffcc00"></button>
+            <button type="button" value="#ffff00"></button>
+            <button type="button" value="#ffff99"></button>
+            <button type="button" value="#003300"></button>
+            <button type="button" value="#555000"></button>
+            <button type="button" value="#00ff00"></button>
+            <button type="button" value="#99ff99"></button>
+            <button type="button" value="#f00000"></button>
+            <button type="button" value="#ff6600"></button>
+            <button type="button" value="#ff9933"></button>
+            <button type="button" value="#f5deb3"></button>
+            <button type="button" value="#330000"></button>
+            <button type="button" value="#663300"></button>
+            <button type="button" value="#cc6600"></button>
+            <button type="button" value="#deb887"></button>
+            <button type="button" value="#aa0fff"></button>
+            <button type="button" value="#cc66cc"></button>
+            <button type="button" value="#ff66ff"></button>
+            <button type="button" value="#ff99ff"></button>
+            <button type="button" value="#e8c4e8"></button>
+            <button type="button" value="#ffffff"></button>
         </div>
-        <div class="right-block">
-            <canvas id="paint-canvas" width="640" height="400"></canvas>
+        <br />
+        <div class="buttonSize">
+            <h3>Size (<span id="showSizeBrush">5</span>)</h3>
+            <input type="range"
+                   min="1"
+                   max="50"
+                   value="5"
+                   step="1"
+                   id="controlSize" />
         </div>
-    </main>
-        
+        <br />
+        <div class="eraser">
+            <h3>Eraser</h3>
+            <div class="eraser-box" id="xiangpi"></div>
+        </div>
+        <br />
+        @*<div class="buttonSize">
+            <h3>Eraser Size (<span id="showSizeEraser">5</span>)</h3>
+            <input type="range"
+                   min="1"
+                   max="50"
+                   value="5"
+                   step="1"
+                   id="eraserSize" />
+        </div>*@
+        <br />
+        <div class="buttons">
+            <button id="clear" type="button">Clear</button>
+            <br />
+            <button id="save" type="button">Save</button>
+        </div>
+    </div>
 
-    <script type="text/javascript">
+    <div class="col-md-9 right-block">
+        <canvas id="paint-canvas"></canvas>
+    </div>
+
+    <script>
         window.onload = function () {
-
             // Definitions
             var canvas = document.getElementById("paint-canvas");
+            canvas.width = 800;
+            canvas.height = 700;
             var context = canvas.getContext("2d");
             var boundings = canvas.getBoundingClientRect();
+            //currentBrushSize = 5;
+            //currentEraserSize = 5;
+            
 
             // Specifications
+            //var eraserS = document.getElementById("eraserSize");
             var mouseX = 0;
             var mouseY = 0;
-            context.strokeStyle = 'black'; // initial brush color
-            context.lineWidth = 1; // initial brush width
+            context.strokeStyle = "black"; // initial brush color
+            context.lineWidth = 5; // initial brush width
             var isDrawing = false;
+
+            
+
+            // eraser size
+            //eraserS.addEventListener("change", function () {
+            //    currentEraserSize = this.value;
+            //    document.getElementById("showSizeEraser").innerHTML = this.value;
+            //})
+
+            var xiangpi = document.getElementById("xiangpi");
+            xiangpi.addEventListener("click", function (event) {
+                context.strokeStyle = "white";
+            })
 
 
             // Handle Colors
-            var colors = document.getElementsByClassName('colors')[0];
+            var colors = document.getElementsByClassName("colors")[0];
 
-            colors.addEventListener('click', function (event) {
-                context.strokeStyle = event.target.value || 'black';
+            colors.addEventListener("click", function (event) {
+                context.strokeStyle = event.target.value || "black";
             });
 
             // Handle Brushes
-            var brushes = document.getElementsByClassName('brushes')[0];
+            var brushS = document.getElementById("controlSize");
 
-            brushes.addEventListener('click', function (event) {
-                context.lineWidth = event.target.value || 1;
-            });
+            brushS.addEventListener("change", function () {
+                document.getElementById("showSizeBrush").innerHTML = this.value;
+                context.lineWidth = this.value;
+            })
+
 
             // Mouse Down Event
-            canvas.addEventListener('mousedown', function (event) {
+            canvas.addEventListener("mousedown", function (event) {
+
                 setMouseCoordinates(event);
                 isDrawing = true;
 
@@ -363,7 +333,7 @@
             });
 
             // Mouse Move Event
-            canvas.addEventListener('mousemove', function (event) {
+            canvas.addEventListener("mousemove", function (event) {
                 setMouseCoordinates(event);
 
                 if (isDrawing) {
@@ -373,38 +343,41 @@
             });
 
             // Mouse Up Event
-            canvas.addEventListener('mouseup', function (event) {
+            canvas.addEventListener("mouseup", function (event) {
                 setMouseCoordinates(event);
                 isDrawing = false;
             });
 
             // Handle Mouse Coordinates
             function setMouseCoordinates(event) {
+                
                 mouseX = event.clientX - boundings.left;
                 mouseY = event.clientY - boundings.top;
+                //return {
+                //    x: event.clientx - boundings.left,
+                //    y: event.clienty - boundings.top,
+                //};
             }
 
             // Handle Clear Button
-            var clearButton = document.getElementById('clear');
+            var clearButton = document.getElementById("clear");
 
-            clearButton.addEventListener('click', function () {
+            clearButton.addEventListener("click", function () {
                 context.clearRect(0, 0, canvas.width, canvas.height);
             });
 
             // Handle Save Button
-            var saveButton = document.getElementById('save');
+            var saveButton = document.getElementById("save");
 
-            saveButton.addEventListener('click', function () {
-                var imageName = prompt('Please enter image name');
+            saveButton.addEventListener("click", function () {
+                var imageName = prompt("Please enter image name");
                 var canvasDataURL = canvas.toDataURL();
-                var a = document.createElement('a');
+                var a = document.createElement("a");
                 a.href = canvasDataURL;
-                a.download = imageName || 'drawing';
+                a.download = imageName || "drawing";
                 a.click();
             });
         };
-
     </script>
-
 </body>
-
+</html>
