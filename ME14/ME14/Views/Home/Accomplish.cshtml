@@ -3,7 +3,478 @@
     ViewBag.Title = "Accompilsh";
 }
 
-<h2>Accompilsh</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        main {
+            margin: 0 auto;
+            display: flex;
+            flex-grow: 1;
+        }
+
+        .leftSideBar {
+            width: 300px;
+            padding: 30px 20px;
+        }
+
+        /*color picker style*/
+        .colors {
+            background-color: #ece8e8;
+            text-align: center;
+            padding-bottom: 5px;
+            padding-top: 10px;
+        }
+
+            .colors button {
+                display: inline-block;
+                border: 1px solid #00000026;
+                border-radius: 0;
+                outline: none;
+                cursor: pointer;
+                width: 40px;
+                height: 40px;
+                margin-bottom: 5px;
+            }
+
+                .colors button:nth-of-type(1) {
+                    background-color: #0000ff;
+                }
+
+                .colors button:nth-of-type(2) {
+                    background-color: #009fff;
+                }
+
+                .colors button:nth-of-type(3) {
+                    background-color: #0fffff;
+                }
+
+                .colors button:nth-of-type(4) {
+                    background-color: #bfffff;
+                }
+
+                .colors button:nth-of-type(5) {
+                    background-color: #000000;
+                }
+
+                .colors button:nth-of-type(6) {
+                    background-color: #333333;
+                }
+
+                .colors button:nth-of-type(7) {
+                    background-color: #666666;
+                }
+
+                .colors button:nth-of-type(8) {
+                    background-color: #999999;
+                }
+
+                .colors button:nth-of-type(9) {
+                    background-color: #ffcc66;
+                }
+
+                .colors button:nth-of-type(10) {
+                    background-color: #ffcc00;
+                }
+
+                .colors button:nth-of-type(11) {
+                    background-color: #ffff00;
+                }
+
+                .colors button:nth-of-type(12) {
+                    background-color: #ffff99;
+                }
+
+                .colors button:nth-of-type(13) {
+                    background-color: #003300;
+                }
+
+                .colors button:nth-of-type(14) {
+                    background-color: #555000;
+                }
+
+                .colors button:nth-of-type(15) {
+                    background-color: #00ff00;
+                }
+
+                .colors button:nth-of-type(16) {
+                    background-color: #99ff99;
+                }
+
+                .colors button:nth-of-type(17) {
+                    background-color: #f00000;
+                }
+
+                .colors button:nth-of-type(18) {
+                    background-color: #ff6600;
+                }
+
+                .colors button:nth-of-type(19) {
+                    background-color: #ff9933;
+                }
+
+                .colors button:nth-of-type(20) {
+                    background-color: #f5deb3;
+                }
+
+                .colors button:nth-of-type(21) {
+                    background-color: #330000;
+                }
+
+                .colors button:nth-of-type(22) {
+                    background-color: #663300;
+                }
+
+                .colors button:nth-of-type(23) {
+                    background-color: #cc6600;
+                }
+
+                .colors button:nth-of-type(24) {
+                    background-color: #deb887;
+                }
+
+                .colors button:nth-of-type(25) {
+                    background-color: #aa0fff;
+                }
+
+                .colors button:nth-of-type(26) {
+                    background-color: #cc66cc;
+                }
+
+                .colors button:nth-of-type(27) {
+                    background-color: #ff66ff;
+                }
+
+                .colors button:nth-of-type(28) {
+                    background-color: #ff99ff;
+                }
+
+                .colors button:nth-of-type(29) {
+                    background-color: #e8c4e8;
+                }
+
+                .colors button:nth-of-type(30) {
+                    background-color: #ffffff;
+                }
+
+        .buttons {
+            height: 80px;
+            padding-top: 10px;
+        }
+
+            .buttons button {
+                display: block;
+                width: 100%;
+                border: 0;
+                border-radius: 0;
+                background-color: #ece8e8;
+                margin-bottom: 5px;
+                padding: 5px;
+                height: 30px;
+                outline: none;
+                position: relative;
+                cursor: pointer;
+                font-size: 16px;
+            }
+
+
+        /*.right-block {
+            height: 800px;
+        }*/
+
+        /*painting board style*/
+        #paint-canvas {
+            cursor: crosshair;
+            border: 2px solid black;
+        }
+
+        /*eraser box style*/
+        .eraser-box {
+            width: auto;
+            border: 2px solid black;
+            height: 35px;
+            cursor: pointer;
+        }
+
+        /*right block style*/
+        .right-block {
+            margin-top: 20px;
+            margin-left: 30px;
+            width: 650px;
+            z-index: 200;
+        }
+
+        img:hover {
+            height: 250px;
+            width: 250px;
+        }
+    </style>
+</head>
 <body>
-    <a id="understand_know_more" href="./Painting">Know More &raquo;</a>
+    <h1 style="color: #6495ED; text-align: center;">
+        Coloring Mandalas
+    </h1>
+
+    <div>
+        <p style="font-size:20px;text-align:center">
+            One of the best things you can do for yourself is to practice self-care. Self-care helps alleviate anxiety and fear. It also helps you feel nourished and supported. And in uncertain times, it also empowers you because Self-care is something that's completely under your control.
+            <br />
+            <br />
+            Coloring is an excellent activity to help reduce stress, anxiety, and often loneliness. It takes you to a more relaxed state of mind-state.
+            <br />
+            <br />
+            Please enjoy the below self coloring game as a gift from us to you.
+        </p>
+    </div>
+
+    <div id="pictures" class="row" style="text-align:center">
+        <h3 style="color:#6495ED">Select Your Favorite Pattern and Start Painting</h3>
+        <button id="last" class="btn btn-info"><</button>
+        <img id="1" height="200" width="200" />
+        <img id="2" height="200" width="200" />
+        <img id="3" height="200" width="200" />
+        <img id="4" height="200" width="200" />
+        <button id="next" class="btn btn-info">></button>
+    </div>
+
+    <main>
+        <div class="leftSideBar">
+            <div class="colors">
+                <button type="button" value="#0000ff"></button>
+                <button type="button" value="#009fff"></button>
+                <button type="button" value="#0fffff"></button>
+                <button type="button" value="#bfffff"></button>
+                <button type="button" value="#000000"></button>
+                <button type="button" value="#333333"></button>
+                <button type="button" value="#666666"></button>
+                <button type="button" value="#999999"></button>
+                <button type="button" value="#ffcc66"></button>
+                <button type="button" value="#ffcc00"></button>
+                <button type="button" value="#ffff00"></button>
+                <button type="button" value="#ffff99"></button>
+                <button type="button" value="#003300"></button>
+                <button type="button" value="#555000"></button>
+                <button type="button" value="#00ff00"></button>
+                <button type="button" value="#99ff99"></button>
+                <button type="button" value="#f00000"></button>
+                <button type="button" value="#ff6600"></button>
+                <button type="button" value="#ff9933"></button>
+                <button type="button" value="#f5deb3"></button>
+                <button type="button" value="#330000"></button>
+                <button type="button" value="#663300"></button>
+                <button type="button" value="#cc6600"></button>
+                <button type="button" value="#deb887"></button>
+                <button type="button" value="#aa0fff"></button>
+                <button type="button" value="#cc66cc"></button>
+                <button type="button" value="#ff66ff"></button>
+                <button type="button" value="#ff99ff"></button>
+                <button type="button" value="#e8c4e8"></button>
+                <button type="button" value="#ffffff"></button>
+            </div>
+            <br />
+            <div class="buttonSize">
+                <h3>size (<span id="showSizeBrush">5</span>)</h3>
+                <input type="range"
+                       min="1"
+                       max="50"
+                       value="5"
+                       step="1"
+                       id="controlSize" />
+            </div>
+            <br />
+            <div class="eraser">
+                <h3>eraser</h3>
+                <div class="eraser-box" id="xiangpi"></div>
+            </div>
+            <br />
+            <br />
+            <div class="buttons">
+                <button id="clear" type="button">clear</button>
+                <br />
+                <button id="save" type="button">save</button>
+            </div>
+        </div>
+
+        <div class="right-block">
+            <canvas id="paint-canvas" width="650" height="600"></canvas>
+        </div>
+
+    </main>
+    <script>
+        window.onload = function () {
+            // Definitions
+            var canvas = document.getElementById("paint-canvas");
+            var context = canvas.getContext("2d");
+            var boundings = canvas.getBoundingClientRect();
+
+
+            // Specifications
+            var mouseX = 0;
+            var mouseY = 0;
+            context.strokeStyle = "black"; // initial brush color
+            context.lineWidth = 5; // initial brush width
+            var isDrawing = false;
+
+
+
+            var xiangpi = document.getElementById("xiangpi");
+            xiangpi.addEventListener("click", function (event) {
+                context.strokeStyle = "white";
+            })
+
+
+            // Handle Colors
+            var colors = document.getElementsByClassName("colors")[0];
+
+            colors.addEventListener("click", function (event) {
+                context.strokeStyle = event.target.value || "black";
+            });
+
+            // Handle Brushes
+            var brushS = document.getElementById("controlSize");
+
+            brushS.addEventListener("change", function () {
+                document.getElementById("showSizeBrush").innerHTML = this.value;
+                context.lineWidth = this.value;
+            })
+
+
+            // Mouse Down Event
+            canvas.addEventListener("mousedown", function (event) {
+
+                setMouseCoordinates(event);
+                isDrawing = true;
+
+                // Start Drawing
+                context.beginPath();
+                context.moveTo(mouseX, mouseY);
+            });
+
+            // Mouse Move Event
+            canvas.addEventListener("mousemove", function (event) {
+                setMouseCoordinates(event);
+
+                if (isDrawing) {
+                    context.lineTo(mouseX, mouseY);
+                    context.stroke();
+                }
+            });
+
+            // Mouse Up Event
+            canvas.addEventListener("mouseup", function (event) {
+                setMouseCoordinates(event);
+                isDrawing = false;
+            });
+
+            // Handle Mouse Coordinates
+            function setMouseCoordinates(event) {
+
+                mouseX = event.clientX - boundings.left;
+                mouseY = event.clientY - boundings.top;
+                //return {
+                //    x: event.clientx - boundings.left,
+                //    y: event.clienty - boundings.top,
+                //};
+            }
+
+            // Handle Clear Button
+            var clearButton = document.getElementById("clear");
+
+            clearButton.addEventListener("click", function () {
+                context.clearRect(0, 0, canvas.width, canvas.height);
+            });
+
+            // Handle Save Button
+            var saveButton = document.getElementById("save");
+
+            saveButton.addEventListener("click", function () {
+                var imageName = prompt("Please enter image name");
+                var canvasDataURL = canvas.toDataURL();
+                var a = document.createElement("a");
+                a.href = canvasDataURL;
+                a.download = imageName || "drawing";
+                a.click();
+            });
+
+            // choose a picture
+            var picDiv = document.getElementById("pictures");
+            var imgs = picDiv.children;
+            for (var i = 0; i < imgs.length; i++) {
+                imgs[i].onclick = function () {
+                    context.clearRect(0, 0, canvas.width, canvas.height);
+                    console.log(this.getAttribute("src"));
+                    context.drawImage(this, 0, 0,650,600);
+                }
+            }
+
+            // data for list
+            var a = 6;
+            var b = 7;
+            var c = 8;
+            var d = 9;
+            var imgs = ["/Resources/IMG_1.JPG", "/Resources/IMG_2.JPG", "/Resources/IMG_3.JPG", "/Resources/IMG_4.JPG", "/Resources/IMG_5.JPG", "/Resources/IMG_6.JPG", "/Resources/IMG_7.JPG", "/Resources/IMG_8.JPG", "/Resources/IMG_9.JPG", "/Resources/IMG_10.JPG", "/Resources/Butterfly (1).JPG", "/Resources/Dinosaur.JPG", "/Resources/Hippo.JPG", "/Resources/Lion.JPG","/Resources/Dog.JPG"];
+            var last = document.getElementById("last");
+            var next = document.getElementById("next");
+            document.getElementById("1").src = imgs[a];
+            document.getElementById("2").src = imgs[b];
+            document.getElementById("3").src = imgs[c];
+            document.getElementById("4").src = imgs[d];
+
+            last.onclick = function () {
+
+                if (a - 1 < 0) {
+                    alert("There is no picture in front!");
+                    a = 0;
+                    b = 1;
+                    c = 2;
+                    d = 3;
+                } else {
+                    a = a - 1;
+                    b = b - 1;
+                    c = c - 1;
+                    d = d - 1;
+                    document.getElementById("1").src = imgs[a];
+                    document.getElementById("2").src = imgs[b];
+                    document.getElementById("3").src = imgs[c];
+                    document.getElementById("4").src = imgs[d];
+                }
+
+            }
+            next.onclick = function () {
+                console.log(a + 1);
+                console.log(b + 1);
+                console.log(c + 1);
+                console.log(d + 1);
+
+                if (d + 1 >= imgs.length) {
+                    alert("There is no more picture!");
+                    a = imgs.length - 4;
+                    b = imgs.length - 3;
+                    c = imgs.length - 2;
+                    d = imgs.length - 1;
+                } else {
+                    a = a + 1;
+                    b = b + 1;
+                    c = c + 1;
+                    d = d + 1;
+                    document.getElementById("1").src = imgs[a];
+                    document.getElementById("2").src = imgs[b];
+                    document.getElementById("3").src = imgs[c];
+                    document.getElementById("4").src = imgs[d];
+                }
+
+            }
+
+        };
+
+
+    </script>
 </body>
+</html>
