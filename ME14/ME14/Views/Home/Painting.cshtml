@@ -193,6 +193,7 @@
         #paint-canvas {
             cursor: crosshair;
             border: 2px solid black;
+           
         }
 
         /*eraser box style*/
@@ -209,6 +210,12 @@
             margin-top: 20px;
             margin-left: 30px;
             width: 650px;
+            z-index: 200;
+        }
+
+        img:hover{
+            height:250px;
+            width:250px;
         }
     </style>
 </head>
@@ -216,6 +223,15 @@
     <h1 style="color: #6495ED; text-align: center;">
         Coloring Mandalas
     </h1>
+
+    <div class="row" style="text-align:center">
+        <button id="last" class="btn btn-info"><</button>
+        <img id="1" height="200" width="200"/>
+        <img id="2" height="200" width="200" />
+        <img id="3" height="200" width="200"/>
+        <img id="4" height="200" width="200"/>
+        <button id="next" class="btn btn-info">></button>
+    </div>
 
     <main>
         <div class="leftSideBar">
@@ -375,7 +391,68 @@
                 a.download = imageName || "drawing";
                 a.click();
             });
+
+            // data for list
+            var a = 6;
+            var b = 7;
+            var c = 8;
+            var d = 9;
+            var imgs = ["/Resources/IMG_1.JPG", "/Resources/IMG_2.JPG", "/Resources/IMG_3.JPG", "/Resources/IMG_4.JPG", "/Resources/IMG_5.JPG", "/Resources/IMG_6.JPG", "/Resources/IMG_7.JPG", "/Resources/IMG_8.JPG", "/Resources/IMG_9.JPG", "/Resources/IMG_10.JPG", "/Resources/Butterfly (1).JPG", "/Resources/Dinosaur.JPG", "/Resources/Hippo.JPG", "/Resources/Lion.JPG","/Resources/Dog.JPG"];
+            var last = document.getElementById("last");
+            var next = document.getElementById("next");
+            document.getElementById("1").src = imgs[a];
+            document.getElementById("2").src = imgs[b];
+            document.getElementById("3").src = imgs[c];
+            document.getElementById("4").src = imgs[d];
+
+            last.onclick = function () {
+            
+                if (a - 1 < 0) {
+                    alert("There is no picture in front!");
+                    a = 0;
+                    b = 1;
+                    c = 2;
+                    d = 3;
+                } else {
+                    a = a - 1;
+                    b = b - 1;
+                    c = c - 1;
+                    d = d - 1;
+                    document.getElementById("1").src = imgs[a];
+                    document.getElementById("2").src = imgs[b];
+                    document.getElementById("3").src = imgs[c];
+                    document.getElementById("4").src = imgs[d];
+                }
+                
+            }
+            next.onclick = function () {
+                console.log(a + 1);
+                console.log(b + 1);
+                console.log(c + 1);
+                console.log(d + 1);
+                
+                if (d + 1 >= imgs.length) {
+                    alert("There is no more picture!");
+                    a = imgs.length - 4;
+                    b = imgs.length - 3;
+                    c = imgs.length - 2;
+                    d = imgs.length - 1;
+                } else {
+                    a = a + 1;
+                    b = b + 1;
+                    c = c + 1;
+                    d = d + 1;
+                    document.getElementById("1").src = imgs[a];
+                    document.getElementById("2").src = imgs[b];
+                    document.getElementById("3").src = imgs[c];
+                    document.getElementById("4").src = imgs[d];
+                }
+
+            }
+          
         };
+
+
     </script>
 </body>
 </html>
