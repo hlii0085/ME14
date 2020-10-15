@@ -312,7 +312,7 @@
             // Definitions
             var canvas = document.getElementById("paint-canvas");
             var context = canvas.getContext("2d");
-            var boundings = canvas.getBoundingClientRect();
+            
 
 
             // Specifications
@@ -375,10 +375,16 @@
 
             // Handle Mouse Coordinates
             function setMouseCoordinates(event) {
-
+                var boundings = canvas.getBoundingClientRect();
                 mouseX = event.clientX - boundings.left;
                 mouseY = event.clientY - boundings.top;
+                console.log(event.clientX);
+                console.log(event.clientY);
+                console.log(boundings.left);
+                console.log(boundings.top);
+               
                 //return {
+                //
                 //    x: event.clientx - boundings.left,
                 //    y: event.clienty - boundings.top,
                 //};
@@ -407,6 +413,7 @@
             var picDiv = document.getElementById("pictures");
             var imgs = picDiv.children;
             for (var i = 0; i < imgs.length; i++) {
+                
                 imgs[i].onclick = function () {
                     context.clearRect(0, 0, canvas.width, canvas.height);
                     console.log(this.getAttribute("src"));
