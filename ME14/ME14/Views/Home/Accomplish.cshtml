@@ -224,7 +224,13 @@
             z-index: 200;
             position: relative;
         }
-
+        #audio {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            font-size: 10px;
+            z-index: 100;
+        }
         img:hover {
             height: 250px;
             width: 250px;
@@ -236,6 +242,14 @@
     <h1 style="color: #6495ED; text-align: center; font-weight: bold">
         Self Care Coloring Game
     </h1>
+
+    <div id="audio">
+        <audio controls="controls" autoplay="autoplay" height="100" width="100">
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3" />
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.ogg" type="audio/ogg" />
+            <embed height="100" width="100" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" />
+        </audio>
+    </div>
 
     <div>
         <p style="font-size:20px;text-align:left">
@@ -362,10 +376,10 @@
                 contextBackground.clearRect(0, 0, canvasBackground.width, canvasBackground.height);
             })
 
-            
+
 
             // Handle Colors
-            
+
             var colors = document.getElementsByClassName("colors")[0];
 
             colors.addEventListener("click", function (event) {
