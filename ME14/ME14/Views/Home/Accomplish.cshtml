@@ -473,6 +473,7 @@
             var saveButton = document.getElementById("save");
 
             saveButton.addEventListener("click", function () {
+
                 var imageName = prompt("Please enter image name");
                 contextBackground.drawImage(canvas, 0, 0, 650, 600);
                 //var canvasDataURL = canvas.toDataURL();
@@ -499,11 +500,11 @@
             }
 
             // data for list
-            var a = 6;
-            var b = 7;
-            var c = 8;
-            var d = 9;
-            var imgs = ["/Resources/IMG_1.JPG", "/Resources/IMG_2.JPG", "/Resources/IMG_3.JPG", "/Resources/IMG_4.JPG", "/Resources/IMG_5.JPG", "/Resources/IMG_6.JPG", "/Resources/IMG_7.JPG", "/Resources/IMG_8.JPG", "/Resources/IMG_9.JPG", "/Resources/IMG_10.JPG", "/Resources/Butterfly (1).JPG", "/Resources/Dinosaur.JPG", "/Resources/Hippo.JPG", "/Resources/Lion.JPG", "/Resources/Dog.JPG"];
+            var a = 0;
+            var b = 1;
+            var c = 2;
+            var d = 3;
+            var imgs = ["/Resources/1.JPG", "/Resources/2.JPG", "/Resources/3.JPG", "/Resources/4.png", "/Resources/5.JPG", "/Resources/6.JPG", "/Resources/7.JPG", "/Resources/8.JPG", "/Resources/9.JPG", "/Resources/10.JPG", "/Resources/11.JPG", "/Resources/12.JPG", "/Resources/13.JPG", "/Resources/14.JPG", "/Resources/15.JPG"];
             var last = document.getElementById("last");
             var next = document.getElementById("next");
             document.getElementById("1").src = imgs[a];
@@ -531,30 +532,8 @@
                 }
 
             }
-            next.onclick = function () {
-                console.log(a + 1);
-                console.log(b + 1);
-                console.log(c + 1);
-                console.log(d + 1);
-                alert("There is no more picture!");
-                a = imgs.length - 4;
-                b = imgs.length - 3;
 
-                if (d + 1 >= imgs.length) {
-                    c = imgs.length - 2;
-                    d = imgs.length - 1;
-                } else {
-                    a = a + 1;
-                    b = b + 1;
-                    c = c + 1;
-                    d = d + 1;
-                    document.getElementById("1").src = imgs[a];
-                    document.getElementById("2").src = imgs[b];
-                    document.getElementById("3").src = imgs[c];
-                    document.getElementById("4").src = imgs[d];
-                }
-
-            }
+            next.onclick = function () {                console.log(a + 1);                console.log(b + 1);                console.log(c + 1);                console.log(d + 1);                if (d + 1 >= imgs.length) {                    alert("There is no more picture!");                    a = imgs.length - 4;                    b = imgs.length - 3;                    c = imgs.length - 2;                    d = imgs.length - 1;                } else {                    a = a + 1;                    b = b + 1;                    c = c + 1;                    d = d + 1;                    document.getElementById("1").src = imgs[a];                    document.getElementById("2").src = imgs[b];                    document.getElementById("3").src = imgs[c];                    document.getElementById("4").src = imgs[d];                }            }
 
         };
 

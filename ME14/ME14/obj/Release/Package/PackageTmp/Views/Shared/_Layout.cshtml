@@ -24,8 +24,9 @@
 
 
         #jiexianyuan {
-            width: 100px;
-            height: 100px;
+            width: 60px;
+            height: 60px;
+            margin-left:20px;
         }
          #jiexianyuan:hover {
             box-shadow: black 0px 0px 5px;
@@ -50,15 +51,6 @@
             display: none;
         }
 
-
-        #logo {
-            position: absolute;
-            height: 100px;
-            width: 100px;
-            left: 0;
-            top: 0;
-        }
-
         #tiao {
             background-color: white;
             border: none;
@@ -68,6 +60,16 @@
         .navbar-header:hover {
             background-color: #6495ED;
         }
+
+        /*.navbar-inverse .navbar-nav > li > a {
+            color: #6495ED;
+        }
+*/
+
+        .mystyle{
+            border: 2px solid black;
+        }
+
     </style>
     
 
@@ -78,30 +80,30 @@
     
     <div class="navbar navbar-inverse navbar-fixed-top" id="tiao">
         <!--Add project logo on the top of home page-->
-        <img src="https://i.loli.net/2020/09/03/uAaWorV3MI4OdbT.png" id="logo" height="50" width="50" />
-
-
 
         <div class="navbar-inner" style="padding-top: 39px;">
             <div class="container">
                 <div class="navbar-header">
+                    <img src="https://i.loli.net/2020/09/03/uAaWorV3MI4OdbT.png" id="logo" height="50" width="50" />
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    @Html.ActionLink("Happy Thoughts", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    @*@Html.ActionLink("Happy Thoughts", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
                 </div>
+                
                 <div class="navbar-collapse collapse">
-
+                    
                     <!--These are elements of navigation-->
-                    <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li>@Html.ActionLink("Understand", "Info", "Home")</li>
-                        <li>@Html.ActionLink("Relate", "NotAlone", "Home")</li>
-                        <li>@Html.ActionLink("Examine", "KnowYouBetter", "Home")</li>
-                        <li>@Html.ActionLink("Accomplish", "Accomplish", "Home")</li>
-                        <li>@Html.ActionLink("About Us", "About", "Home")</li>
+                    <ul class="nav navbar-nav highlights">
+                        
+                        <li @*class="nav-highlight" id="home"*@>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li @*class="nav-highlight" id="understand"*@>@Html.ActionLink("Understand", "Info", "Home")</li>
+                        <li @*class="nav-highlight" id="relate"*@>@Html.ActionLink("Relate", "NotAlone", "Home")</li>
+                        <li @*class="nav-highlight" id="examine"*@>@Html.ActionLink("Examine", "KnowYouBetter", "Home")</li>
+                        <li @*class="nav-highlight" id="accomplish"*@>@Html.ActionLink("Accomplish", "Accomplish", "Home")</li>
+                        <li @*class="nav-highlight" id="about"*@>@Html.ActionLink("About Us", "About", "Home")</li>
                     </ul>
                     <div id="google_translate_element"></div>
                 </div>
@@ -112,9 +114,9 @@
         <iframe id="chat" src='https://webchat.botframework.com/embed/caldbot15f96-bot?s=dKkBKa55FcA.DGc109odBCORDiVD1CUFpMfPERnKJtWxJetXeBgRGWY' @*style='min-width: 400px; width: 100%; min-height: 500px;'*@></iframe>
         @*button id="chatBotTitle"*@
         <div id="chatBotTitle">
-            <h4 style="color:#6495ED; font-weight:bold">CALDBOT</h4>
-            <img id="jiexianyuan" src="~/Resources/jiexianyuan.PNG" onclick="kaiGuan()" />
-            <h5 style="color:#6495ED; font-weight:bold;text-align:center">Type something after clicking the icon</h5>
+            <h5 style="color:#6495ED; font-weight:bold;text-align:center">CALDBOT</h5>
+            <img id="jiexianyuan" src="~/Resources/jiexianyuan.PNG" onclick="kaiGuan()"/>
+            <h6 style="color:#6495ED; font-weight:bold;text-align:center">Type something after clicking the icon</h6>
         </div>
     </div>
 
@@ -146,6 +148,15 @@
     <script type="text/javascript">
         //var btnC = document.getElementById('chatBotTitle');
         var dk = false;
+
+
+
+        setTimeout(function test() {
+            document.getElementById('chat').style.display = "inline";
+            document.getElementById('jiexianyuan').src = "/Resources/close.png";
+            dk = true;
+        }, 5000);
+
         function kaiGuan() {
             if (dk) {
                 document.getElementById('chat').style.display = "none";
@@ -157,6 +168,14 @@
                 dk = true;
             }
         }
+
+        var biaoti = document.getElementsByClassName("highlights")[0];
+
+        biaoti.addEventListener("click", function () {
+            var id = $(this).attr("id");
+            var element = document.getElementById(id);
+            element.classList.add("mystyle");
+        });
 
             //btnC.onclick = function () {
             //    if (dk) {
