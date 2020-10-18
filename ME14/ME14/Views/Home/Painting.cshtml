@@ -217,19 +217,24 @@
             height:250px;
             width:250px;
         }
+        
+        h1{
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
-    <h1 style="color: #6495ED; text-align: center;">
+    <div class="col-md-12" style="height: 100px;"></div>
+    <h1 style="color: #6495ED; text-align: center; margin-top: 100px">
         Coloring Mandalas
     </h1>
 
     <div class="row" style="text-align:center">
         <button id="last" class="btn btn-info"><</button>
-        <img id="1" height="200" width="200"/>
+        <img id="1" height="200" width="200" />
         <img id="2" height="200" width="200" />
-        <img id="3" height="200" width="200"/>
-        <img id="4" height="200" width="200"/>
+        <img id="3" height="200" width="200" />
+        <img id="4" height="200" width="200" />
         <button id="next" class="btn btn-info">></button>
     </div>
 
@@ -302,7 +307,7 @@
             var canvas = document.getElementById("paint-canvas");
             var context = canvas.getContext("2d");
             var boundings = canvas.getBoundingClientRect();
-            
+
 
             // Specifications
             var mouseX = 0;
@@ -311,7 +316,7 @@
             context.lineWidth = 5; // initial brush width
             var isDrawing = false;
 
-         
+
 
             var xiangpi = document.getElementById("xiangpi");
             xiangpi.addEventListener("click", function (event) {
@@ -364,7 +369,7 @@
 
             // Handle Mouse Coordinates
             function setMouseCoordinates(event) {
-                
+
                 mouseX = event.clientX - boundings.left;
                 mouseY = event.clientY - boundings.top;
                 //return {
@@ -397,7 +402,7 @@
             var b = 7;
             var c = 8;
             var d = 9;
-            var imgs = ["/Resources/IMG_1.JPG", "/Resources/IMG_2.JPG", "/Resources/IMG_3.JPG", "/Resources/IMG_4.JPG", "/Resources/IMG_5.JPG", "/Resources/IMG_6.JPG", "/Resources/IMG_7.JPG", "/Resources/IMG_8.JPG", "/Resources/IMG_9.JPG", "/Resources/IMG_10.JPG", "/Resources/Butterfly (1).JPG", "/Resources/Dinosaur.JPG", "/Resources/Hippo.JPG", "/Resources/Lion.JPG","/Resources/Dog.JPG"];
+            var imgs = ["/Resources/IMG_1.JPG", "/Resources/IMG_2.JPG", "/Resources/IMG_3.JPG", "/Resources/IMG_4.JPG", "/Resources/IMG_5.JPG", "/Resources/IMG_6.JPG", "/Resources/IMG_7.JPG", "/Resources/IMG_8.JPG", "/Resources/IMG_9.JPG", "/Resources/IMG_10.JPG", "/Resources/Butterfly (1).JPG", "/Resources/Dinosaur.JPG", "/Resources/Hippo.JPG", "/Resources/Lion.JPG", "/Resources/Dog.JPG"];
             var last = document.getElementById("last");
             var next = document.getElementById("next");
             document.getElementById("1").src = imgs[a];
@@ -406,7 +411,7 @@
             document.getElementById("4").src = imgs[d];
 
             last.onclick = function () {
-            
+
                 if (a - 1 < 0) {
                     alert("There is no picture in front!");
                     a = 0;
@@ -423,14 +428,14 @@
                     document.getElementById("3").src = imgs[c];
                     document.getElementById("4").src = imgs[d];
                 }
-                
+
             }
             next.onclick = function () {
                 console.log(a + 1);
                 console.log(b + 1);
                 console.log(c + 1);
                 console.log(d + 1);
-                
+
                 if (d + 1 >= imgs.length) {
                     alert("There is no more picture!");
                     a = imgs.length - 4;
@@ -449,7 +454,7 @@
                 }
 
             }
-          
+
         };
 
 

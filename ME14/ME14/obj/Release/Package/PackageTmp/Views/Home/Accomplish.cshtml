@@ -218,7 +218,8 @@
     </style>
 </head>
 <body>
-    <h1 style="color: #6495ED; text-align: center;">
+    <div class="col-md-12" style="height: 40px;"></div>
+    <h1 style="color: #6495ED; text-align: center; font-weight: bold">
         Coloring Mandalas
     </h1>
 
@@ -312,7 +313,7 @@
             // Definitions
             var canvas = document.getElementById("paint-canvas");
             var context = canvas.getContext("2d");
-            var boundings = canvas.getBoundingClientRect();
+
 
 
             // Specifications
@@ -375,10 +376,16 @@
 
             // Handle Mouse Coordinates
             function setMouseCoordinates(event) {
-
+                var boundings = canvas.getBoundingClientRect();
                 mouseX = event.clientX - boundings.left;
                 mouseY = event.clientY - boundings.top;
+                console.log(event.clientX);
+                console.log(event.clientY);
+                console.log(boundings.left);
+                console.log(boundings.top);
+
                 //return {
+                //
                 //    x: event.clientx - boundings.left,
                 //    y: event.clienty - boundings.top,
                 //};
@@ -407,10 +414,11 @@
             var picDiv = document.getElementById("pictures");
             var imgs = picDiv.children;
             for (var i = 0; i < imgs.length; i++) {
+
                 imgs[i].onclick = function () {
                     context.clearRect(0, 0, canvas.width, canvas.height);
                     console.log(this.getAttribute("src"));
-                    context.drawImage(this, 0, 0,650,600);
+                    context.drawImage(this, 0, 0, 650, 600);
                 }
             }
 
@@ -419,7 +427,7 @@
             var b = 7;
             var c = 8;
             var d = 9;
-            var imgs = ["/Resources/IMG_1.JPG", "/Resources/IMG_2.JPG", "/Resources/IMG_3.JPG", "/Resources/IMG_4.JPG", "/Resources/IMG_5.JPG", "/Resources/IMG_6.JPG", "/Resources/IMG_7.JPG", "/Resources/IMG_8.JPG", "/Resources/IMG_9.JPG", "/Resources/IMG_10.JPG", "/Resources/Butterfly (1).JPG", "/Resources/Dinosaur.JPG", "/Resources/Hippo.JPG", "/Resources/Lion.JPG","/Resources/Dog.JPG"];
+            var imgs = ["/Resources/IMG_1.JPG", "/Resources/IMG_2.JPG", "/Resources/IMG_3.JPG", "/Resources/IMG_4.JPG", "/Resources/IMG_5.JPG", "/Resources/IMG_6.JPG", "/Resources/IMG_7.JPG", "/Resources/IMG_8.JPG", "/Resources/IMG_9.JPG", "/Resources/IMG_10.JPG", "/Resources/Butterfly (1).JPG", "/Resources/Dinosaur.JPG", "/Resources/Hippo.JPG", "/Resources/Lion.JPG", "/Resources/Dog.JPG"];
             var last = document.getElementById("last");
             var next = document.getElementById("next");
             document.getElementById("1").src = imgs[a];

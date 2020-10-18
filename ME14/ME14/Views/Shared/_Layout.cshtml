@@ -75,34 +75,36 @@
 
 <!--This file controls the whole layout-->
 <body>
-    <div id="google_translate_element" style="float:right"></div>
+    
     <div class="navbar navbar-inverse navbar-fixed-top" id="tiao">
         <!--Add project logo on the top of home page-->
         <img src="https://i.loli.net/2020/09/03/uAaWorV3MI4OdbT.png" id="logo" height="50" width="50" />
 
 
 
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Happy Thoughts", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
+        <div class="navbar-inner" style="padding-top: 39px;">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Happy Thoughts", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
 
-                <!--These are elements of navigation-->
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Understand", "Info", "Home")</li>
-                    <li>@Html.ActionLink("Relate", "NotAlone", "Home")</li>
-                    <li>@Html.ActionLink("Examine", "KnowYouBetter", "Home")</li>
-                    <li>@Html.ActionLink("Accomplish", "Accomplish", "Home")</li>
-                    <li>@Html.ActionLink("About Us", "About", "Home")</li>
-                </ul>
-
+                    <!--These are elements of navigation-->
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Understand", "Info", "Home")</li>
+                        <li>@Html.ActionLink("Relate", "NotAlone", "Home")</li>
+                        <li>@Html.ActionLink("Examine", "KnowYouBetter", "Home")</li>
+                        <li>@Html.ActionLink("Accomplish", "Accomplish", "Home")</li>
+                        <li>@Html.ActionLink("About Us", "About", "Home")</li>
+                    </ul>
+                    <div id="google_translate_element"></div>
+                </div>
             </div>
         </div>
     </div>
