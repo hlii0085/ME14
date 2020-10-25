@@ -57,8 +57,14 @@
 </head>
 <body>
     <!--Add a semitransparent image-->
+
     <br />
     <br />
+    <h1 style="color: #6495ED;
+        text-align: center;font-weight: bold">
+        Relate
+
+    </h1>
     <div class="row">
         <div class="col-md-5"><p style="color:dodgerblue;font-size:50px;text-align:center">You are Not</p><p style="color:blue;font-size:80px;text-align:center"><strong>ALONE</strong></p></div>
         <div class="col-md-6"><p style="color:darkblue;font-size:20px;margin-top:50px"> Mental health has been seen as a stigma which no one wants to talk about yet is affecting millions of lives.</p></div>
@@ -73,7 +79,7 @@
         <div class="col-md-6"><p style="color:darkblue;font-size:20px;margin-top:130px">1 in every 5 Australians experience mental illness in a given year</p></div>
     </div>
     <div class="row">
-        <div class="col-md-5"><p style="color:blue;font-size:100px;text-align:center"><strong>45%</strong></p></div>
+        <div class="col-md-5"><p style="color:blue;font-size:100px;text-align:center"><strong id="count"></strong></p></div>
         <div class="col-md-6"><p style="color:darkblue;font-size:20px;margin-top:40px">of Australian adults will be affected by mental illness at some point in their life</p></div>
     </div>
     <div class="row">
@@ -125,7 +131,10 @@
 
 
     <script>
+        start(45, "count", 1);
         window.onload = function () {
+
+
             // binding button 1
             var btn1 = document.getElementById("btn1");
             // create onlick event for button 1
@@ -134,6 +143,25 @@
                 document.getElementById('div1').style.height = "auto";
             }
         }
+
+        function roll(total, idname, step) {
+            let n = 0;
+            return function () {
+                n = (n + step) >= total ? total : (n + step);
+                if (n <= total) {
+                    document.getElementById(idname).innerHTML = n + "%";
+                }
+            }
+        }
+
+        function start(index, idname, step, runtime = 2500) {
+            let rolling = roll(index, idname, step)
+            runtime = (runtime >= 300) ? runtime : 1000;
+            for (let i = 0; i < (index / step); i++) {
+                var t = setTimeout(rolling, (runtime / index) * i * step)
+            }
+        }
+
     </script>
 
 

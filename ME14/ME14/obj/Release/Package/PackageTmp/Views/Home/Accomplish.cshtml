@@ -231,7 +231,7 @@
             font-size: 10px;
             z-index: 100;
         }
-        img:hover {
+        #pictures > img:hover {
             height: 250px;
             width: 250px;
         }
@@ -245,9 +245,10 @@
 
     <div id="audio">
         <audio controls="controls" autoplay="autoplay" height="100" width="100">
-            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3" />
-            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.ogg" type="audio/ogg" />
-            <embed height="100" width="100" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" />
+            <source src="~/Resources/serenity.mp3" type="audio/mpeg" />
+            <source src="~/Resources/serenity.mp3" type="audio/mp3" />
+            <source src="~/Resources/serenity.ogg" type="audio/ogg" />
+            <embed height="100" width="100" src="~/Resources/serenity.mp3" />
         </audio>
     </div>
 
@@ -309,7 +310,7 @@
             </div>
             <br />
             <div class="buttonSize">
-                <h3>size (<span id="showSizeBrush">5</span>)</h3>
+                <h3 style="color:#6495ED; font-weight: bold">Brush & Eraser size (<span id="showSizeBrush">5</span>)</h3>
                 <input type="range"
                        min="1"
                        max="50"
@@ -319,19 +320,19 @@
             </div>
             <br />
             <div class="eraser">
-                <h3>eraser</h3>
+                <h3 style="color:#6495ED; font-weight: bold">Eraser</h3>
                 <div class="eraser-box" id="xiangpi"></div>
             </div>
             <br />
             <div class="whiteboard">
-                <h3>whiteboard</h3>
+                <h3 style="color:#6495ED; font-weight: bold">Whiteboard</h3>
                 <div class="whiteboard-box" id="whiteb"></div>
             </div>
             <br />
             <div class="buttons">
-                <button id="clear" type="button">clear</button>
+                <button id="clear" type="button" style="font-weight: bold; font-size: 18px">Clear</button>
                 <br />
-                <button id="save" type="button">save</button>
+                <button id="save" type="button" style="font-weight: bold; font-size: 18px">Save</button>
             </div>
         </div>
 
@@ -493,6 +494,7 @@
                     //context.clearRect(0, 0, canvas.width, canvas.height);
                     //console.log(this.getAttribute("src"));
                     //context.drawImage(this, 0, 0, 650, 600);
+                    context.clearRect(0, 0, canvas.width, canvas.height);
                     contextBackground.clearRect(0, 0, canvasBackground.width, canvasBackground.height);
                     console.log(this.getAttribute("src"));
                     contextBackground.drawImage(this, 0, 0, 650, 600);
@@ -533,7 +535,30 @@
 
             }
 
-            next.onclick = function () {                console.log(a + 1);                console.log(b + 1);                console.log(c + 1);                console.log(d + 1);                if (d + 1 >= imgs.length) {                    alert("There is no more picture!");                    a = imgs.length - 4;                    b = imgs.length - 3;                    c = imgs.length - 2;                    d = imgs.length - 1;                } else {                    a = a + 1;                    b = b + 1;                    c = c + 1;                    d = d + 1;                    document.getElementById("1").src = imgs[a];                    document.getElementById("2").src = imgs[b];                    document.getElementById("3").src = imgs[c];                    document.getElementById("4").src = imgs[d];                }            }
+            next.onclick = function () {
+                console.log(a + 1);
+                console.log(b + 1);
+                console.log(c + 1);
+                console.log(d + 1);
+
+                if (d + 1 >= imgs.length) {
+                    alert("There is no more picture!");
+                    a = imgs.length - 4;
+                    b = imgs.length - 3;
+                    c = imgs.length - 2;
+                    d = imgs.length - 1;
+                } else {
+                    a = a + 1;
+                    b = b + 1;
+                    c = c + 1;
+                    d = d + 1;
+                    document.getElementById("1").src = imgs[a];
+                    document.getElementById("2").src = imgs[b];
+                    document.getElementById("3").src = imgs[c];
+                    document.getElementById("4").src = imgs[d];
+                }
+
+            }
 
         };
 

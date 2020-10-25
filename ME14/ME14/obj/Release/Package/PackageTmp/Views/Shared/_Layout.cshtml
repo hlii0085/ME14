@@ -65,6 +65,10 @@
             color: #6495ED;
         }
 */
+        li{
+            font-weight: bold;
+            font-size: 15px;
+        }
 
         .mystyle{
             border: 2px solid black;
@@ -146,17 +150,7 @@
 
 
     <script type="text/javascript">
-        //var btnC = document.getElementById('chatBotTitle');
         var dk = false;
-
-
-
-        setTimeout(function test() {
-            document.getElementById('chat').style.display = "inline";
-            document.getElementById('jiexianyuan').src = "/Resources/close.png";
-            dk = true;
-        }, 5000);
-
         function kaiGuan() {
             if (dk) {
                 document.getElementById('chat').style.display = "none";
@@ -169,28 +163,38 @@
             }
         }
 
-        var biaoti = document.getElementsByClassName("highlights")[0];
+        //var titles = document.getElementsByClassName("nav-highlight");
 
-        biaoti.addEventListener("click", function () {
-            var id = $(this).attr("id");
-            var element = document.getElementById(id);
-            element.classList.add("mystyle");
-        });
+        //titles[3].onclick = function () {
+        //    var element = document.getElementById(this.id);
+        //    element.style.backgroundColor = "red";
+        //}
 
-            //btnC.onclick = function () {
-            //    if (dk) {
-            //        document.getElementById('chat').style.display = "none";
-            //        $("#jiexianyuan").attr('src', 'jiexianyuan.PNG');
-            //        //var image = document.getElementById('jiexianyuan');
-            //        //image.src = "~/Resources/jiexianyuan.PNG";
-            //        dk = false;
-            //    } else {
-            //        document.getElementById('chat').style.display = "inline";
-            //        $("#jiexianyuan").attr('src', 'close.png');
-            //        document.getElementById('jiexianyuan').src = "~/Resources/close.png";
-            //        dk = true;
-            //    }
-            //}
+
+        //window.onload = function () {
+        //    var dk = false;
+        //    function kaiGuan() {
+        //        if (dk) {
+        //            document.getElementById('chat').style.display = "none";
+        //            document.getElementById('jiexianyuan').src = "/Resources/jiexianyuan.PNG";
+        //            dk = false;
+        //        } else {
+        //            document.getElementById('chat').style.display = "inline";
+        //            document.getElementById('jiexianyuan').src = "/Resources/close.png";
+        //            dk = true;
+        //        }
+        //    }
+
+        //    var biaoti = document.getElementsByClassName("highlights")[0];
+
+
+        //    biaoti.addEventListener("click", function (event) {
+        //        console.log("hhh");
+        //        var id = $(this).attr("id");
+        //        var element = document.getElementById(id);
+        //        element.classList.add("mystyle");
+        //    });
+        //}
     </script>
 
 

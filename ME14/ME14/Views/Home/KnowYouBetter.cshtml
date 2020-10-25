@@ -40,7 +40,22 @@
             background-color: yellowgreen;
         }
         */
+        #know_more {
+            color: #6495ED;
+            font-weight: bold;
+            font-size: 20px;
+        }
 
+        .des {
+            margin: 0 auto;
+            width: 300px;
+            text-align: center;
+            line-height: 23px;
+        }
+
+        #know {
+            text-align: center;
+        }
 
     </style>
 
@@ -111,12 +126,17 @@
                 max = scorea;
             }
 
+            var a = document.getElementById("submit");
+
             if (max < 30) {
-                window.location.href = './Suggestion1';
-            } else if (30 <= max <= 60) {
-                window.location.href = './Suggestion2';
+                document.getElementById("result").innerHTML = "Congratulations! Your symptoms show that you are taking good care of your mental health. Continue to take care of your health and use some of our suggested tips to make sure you stay healthy.";
+                a.href = './Suggestion1';
+            } else if (30 <= max && max <= 60) {
+                document.getElementById("result").innerHTML = "We are happy you take your mental health seriously! Thanks for taking one step further to take care of yourself.";
+                a.href = './Suggestion2';
             } else {
-                window.location.href = './Suggestion3';
+                document.getElementById("result").innerHTML = "Acknowledging the problem is first step towards improvement. Book an appointment with your counsellor now or call lifeline for more support.";
+                a.href = './Suggestion3';
             }
 
             @*
@@ -188,19 +208,19 @@
             console.log(next1);
 
             var btnc = document.getElementById('clear');
-            var btnS = document.getElementById('submit');
 
 
             next1.onclick = function () {
-                document.getElementById('bubble2').style.visibility ="visible";
+                document.getElementById('bubble2').style.display = "block";
             }
 
             next2.onclick = function () {
-                document.getElementById('bubble3').style.visibility = "visible";
+                document.getElementById('bubble3').style.display = "block";
             }
 
             next3.onclick = function () {
-                document.getElementById('bubble4').style.visibility = "visible";
+                paopao(array);
+                document.getElementById('bubble4').style.display = "block";
             }
 
             var panduan = new Array();
@@ -873,9 +893,9 @@
             }
 
             //Reset button, refresh when click reset
-            btnc.onclick = function () {
-                window.location.reload();
-            }
+            //btnc.onclick = function () {
+            //    window.location.reload();
+            //}
         }
 
     </script>
@@ -909,8 +929,8 @@
 
     </div>
 
-    <div id="bubble2" style="visibility:hidden;margin-top:30px;background-color:lightseagreen;padding-top:20px;padding-left:30px;padding-bottom:30px">
-        <h3>Step 2: Choose the feelings you have</h3>
+    <div id="bubble2" style="display:none;margin-top:30px;background-color:lightseagreen;padding-top:20px;padding-left:30px;padding-bottom:30px">
+        <h3>Step 2: Choose the emotions you have</h3>
         <button id="overwhelmed" style="font-size: large">overwhelmed</button>
         <button id="guilty" style="font-size: large">guilty</button>
         <button id="irritable" style="font-size: large">irritable</button>
@@ -931,8 +951,8 @@
         <br />
     </div>
 
-    
-    <div id="bubble3" style="visibility:hidden;margin-top:30px;background-color:darkorange;padding-top:20px;padding-left:30px;padding-bottom:30px">
+
+    <div id="bubble3" style="display: none; margin-top: 30px; background-color: darkorange; padding-top: 20px; padding-left: 30px; padding-bottom: 30px">
         <h3>Step 3: Choose the physical issues you have</h3>
         <button id="tired all the time" style="font-size: large">tired all the time</button>
         <button id="sick and run down" style="font-size: large">sick and run down</button>
@@ -954,34 +974,47 @@
     </div>
 
 
-    <div id="bubble4" style="visibility:hidden;margin-top:30px;margin-left:20px;margin-right:20px">
+    <div id="bubble4" style="display: none; margin-top: 30px; margin-left: 20px; margin-right: 20px">
         <h3 style="color:black;">Results</h3>
-        <p style="font-size:20px">Congratulations! Your symptoms show that you are taking good care of your mental health. Continue to take care of your health and use some of our suggested tips to make sure you stay healthy.</p>
+        <p style="font-size:20px" id="result"></p>
 
 
 
         <!--output format of result-->
         @*
-            <button class="btn btn-info" id="submit" style="border-color:white">Submit</button>
-        <button class="btn btn-info" id="clear" style="background-color: saddlebrown;border-color:white">Reset</button>
-        <br />
-        <br />
-        <font id="ddd" size="5"></font>
-        <br />
-        <br />
-        <font id="aaa" size="5"></font>
+                <button class="btn btn-info" id="submit" style="border-color:white">Submit</button>
+            <button class="btn btn-info" id="clear" style="background-color: saddlebrown;border-color:white">Reset</button>
             <br />
-        <br />
-        <font id="suggestion" color="darkred" size="6"></font>
-        <br />
-        <font id="content" size="6"></font>
+            <br />
+            <font id="ddd" size="5"></font>
+            <br />
+            <br />
+            <font id="aaa" size="5"></font>
+                <br />
+            <br />
+            <font id="suggestion" color="darkred" size="6"></font>
+            <br />
+            <font id="content" size="6"></font>
         *@
         <div style="border-color:black">
-            <h4 style="font-size:20px">Click <button id="submit">here</button> to see the suggestions customised for you!</h4>
+            <h4 style="font-size:20px">Click <a id="submit" href="">here</a> to see the suggestions customised for you!</h4>
         </div>
     </div>
-    
-    
+
+    <div id="know">
+        <h2 style="text-align:center;color:#6495ED;font-weight:bold">Indulge yourself in Arts</h2>
+        <p style="font-size:20px" class="des_bottom">
+            Click below to access painting activity we brought to keep you engaged and to fuel those happy thoughts!
+        </p>
+        <img class="img_result" src="~/Resources/accomplish.png" />
+        <p style="font-size:20px" class="des">
+            Indulge yourself in fun activities to keep your happy thoughts alive
+        </p>
+        <br />
+        <a id="know_more" href="./Accomplish">Know More &raquo;</a>
+    </div>
+
+
 
 </body>
 </html>
