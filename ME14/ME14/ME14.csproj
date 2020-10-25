@@ -204,10 +204,12 @@
     <Content Include="Resources\8.jpg" />
     <Content Include="Resources\9.jpg" />
     <Content Include="Resources\Butterfly %281%29.jpg" />
+    <Content Include="Resources\cursor.jpg" />
     <Content Include="Resources\Dinosaur.jpg" />
     <Content Include="Resources\Dog.jpg" />
     <Content Include="Resources\head.png" />
     <Content Include="Resources\Hippo.jpg" />
+    <Content Include="Resources\key_services.PNG" />
     <Content Include="Resources\Lion.jpg" />
     <Content Include="Resources\relate.png" />
     <Content Include="Resources\serenity.mp3" />

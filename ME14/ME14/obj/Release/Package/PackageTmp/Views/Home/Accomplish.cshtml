@@ -220,7 +220,7 @@
         .right-block {
             margin-top: 20px;
             margin-left: 30px;
-            width: 650px;
+            width: 670px;
             z-index: 200;
             position: relative;
         }
@@ -235,12 +235,35 @@
             height: 250px;
             width: 250px;
         }
+
+        .pattern {
+            border: 4px solid #6495ED;
+        }
+
+        #step1 {
+            float: left;
+            color: #6495ED;
+            font-weight: bold;
+            visibility: hidden;
+        }
+
+        #step2 {
+            color: #6495ED;
+            font-weight: bold;
+            display: none;
+        }
+
+        #step3 {
+            color: #6495ED;
+            font-weight: bold;
+            display: none;
+        }
     </style>
 </head>
 <body>
     <div class="col-md-12" style="height: 40px;"></div>
     <h1 style="color: #6495ED; text-align: center; font-weight: bold">
-        Self Care Coloring Game
+        Accomplish
     </h1>
 
     <div id="audio">
@@ -263,20 +286,33 @@
             Please enjoy the below self coloring game as a gift from us to you.
         </p>
     </div>
-
     <div id="pictures" class="row" style="text-align:center">
+        <h3 id="step1">Step 1</h3>
         <h3 style="color:#6495ED">Select Your Favorite Pattern Background and Start Painting</h3>
         <button id="last" class="btn btn-info"><</button>
         <img id="1" height="200" width="200" />
         <img id="2" height="200" width="200" />
         <img id="3" height="200" width="200" />
         <img id="4" height="200" width="200" />
+        <img src="~/Resources/5.jpg" style="display:none" height="200" width="200" />
+        <img src="~/Resources/6.JPG" style="display:none" height="200" width="200" />
+        <img src="~/Resources/7.jpg" style="display:none" height="200" width="200" />
+        <img src="~/Resources/8.jpg" style="display:none" height="200" width="200" />
+        <img src="~/Resources/9.jpg" style="display:none" height="200" width="200" />
+        <img src="~/Resources/10.jpg" style="display:none" height="200" width="200" />
+        <img src="~/Resources/11.JPG" style="display:none" height="200" width="200" />
+        <img src="~/Resources/12.JPG" style="display:none" height="200" width="200" />
+        <img src="~/Resources/13.JPG" style="display:none" height="200" width="200" />
+        <img src="~/Resources/14.JPG" style="display:none" height="200" width="200" />
+        <img src="~/Resources/15.JPG" style="display:none" height="200" width="200" />
         <button id="next" class="btn btn-info">></button>
     </div>
 
     <main>
-        <div class="leftSideBar">
+        <div class="leftSideBar" id="leftSideBar">
+            <h3 id="step2">Step 2: Choose a color here</h3>
             <div class="colors">
+
                 <button type="button" value="#0000ff"></button>
                 <button type="button" value="#009fff"></button>
                 <button type="button" value="#0fffff"></button>
@@ -336,7 +372,8 @@
             </div>
         </div>
 
-        <div class="right-block">
+        <div class="right-block" id="right-block">
+            <h3 id="step3">Step 3: Make your work of art here!!!</h3>
             @*layer contains background*@
             <canvas id="paint-canvas1" width="650" height="600"></canvas>
             @*layer used to draw*@
@@ -346,6 +383,47 @@
     </main>
     <script>
         window.onload = function () {
+            var pictures = document.getElementById("pictures");
+            var step1 = document.getElementById("step1");
+            var leftSideBar = document.getElementById("leftSideBar");
+            var step2 = document.getElementById("step2");
+            var rightBlock = document.getElementById("right-block");
+            var step3 = document.getElementById("step3");
+
+            setTimeout(function () {
+                pictures.classList.add("pattern");
+                step1.style.visibility = "visible";
+            }, 2000);
+
+            setTimeout(function () {
+                pictures.classList.remove("pattern");
+                step1.style.visibility = "hidden";
+            }, 6000);
+
+            setTimeout(function () {
+                leftSideBar.classList.add("pattern");
+                step2.style.display = "block";
+            }, 7000);
+
+            setTimeout(function () {
+                leftSideBar.classList.remove("pattern");
+                step2.style.display = "none";
+            }, 11000);
+
+            setTimeout(function () {
+                rightBlock.classList.add("pattern");
+                step3.style.display = "block";
+            }, 12000);
+
+            setTimeout(function () {
+                rightBlock.classList.remove("pattern");
+                step3.style.display = "none";
+            }, 16000);
+
+
+
+
+
             // Definitions
             var canvas = document.getElementById("paint-canvas");
             var context = canvas.getContext("2d");

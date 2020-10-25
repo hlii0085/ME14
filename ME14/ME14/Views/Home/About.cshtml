@@ -9,8 +9,7 @@
             margin-right:30px;
         }
         h2 {
-            font-weight: bold;
-            
+            text-align: center;
         }
 
         h1 {
@@ -50,7 +49,7 @@
             font-size:20px;
         }
 
-        #mission {
+        .mission {
             width: 650px;
             text-align: center;
             /*border: 1px solid red;*/
@@ -92,8 +91,16 @@
             right: 0;
         }
 
-        
+        #productVideo{
+            margin: 0 auto;
+            display: block;
+        }
 
+        .ppp {
+            text-align: center;
+            /*border: 1px solid red;*/
+            font-size: 20px;
+        }
       
     </style>
 </head>
@@ -101,20 +108,36 @@
     <div class="col-md-12" style="height: 40px;"></div>
     <div>
         <h1>Our mission</h1>
-        <p id="mission">
+        <p class="mission">
             Our mission is to help Elder people from CALD background about stigma attached with mental health issues by raising awareness about its importance and educate them on how to access mental health services by overcoming English as their barrier.
         </p>
     </div>
     <br />
     <br />
     <br />
-    <h1>Meet Us (Team Cookie)</h1>
 
     <div class="row">
-        @*<div class="col-md-4">
-                <img src="~/Resources/SLY.png" width="300" height="250" />
-            </div>*@
-        <div class="col-md-5 section1">
+        <div class="col-md-4">
+            <h1>Product Video</h1>
+            <p class="ppp">Learn more about our product through this video</p>
+
+        </div>
+        <div class="col-md-8">
+            <iframe id="productVideo" width="600" height="350" src="https://www.youtube.com/embed/jcMdNAfOiyk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <img src="~/Resources/key_services.PNG" />
+    <!--<h1>Meet Us (Team Cookie)</h1>
+
+    <div class="row">-->
+    @*<div class="col-md-4">
+            <img src="~/Resources/SLY.png" width="300" height="250" />
+        </div>*@
+    <!--<div class="col-md-5 section1">
             <img id="profile_phote_sly" class="img-responsive" src="~/Resources/SLY.png" width="185 " height="200" />
             <p>
                 <strong>Business Analyst</strong>
@@ -142,12 +165,11 @@
 
 
     <br />
-    <br />
-
+    <br />-->
     @*<div class="col-md-4">
             <img src="~/Resources/LHX.png" width="300" height="350" />
         </div>*@
-    <div class="row">
+    <!--<div class="row">
         <div class="col-md-5 section1">
             <img id="profile_phote_lhx" src="~/Resources/LHX.png" width="185" height="200" />
             <p>
@@ -176,11 +198,11 @@
     <br />
     <br />
 
-    <div class="row">
-        @*<div class="col-md-4">
-                <img src="~/Resources/FNY.png" width="300" height="350" />
-            </div>*@
-        <div class="col-md-4"></div>
+    <div class="row">-->
+    @*<div class="col-md-4">
+            <img src="~/Resources/FNY.png" width="300" height="350" />
+        </div>*@
+    <!--<div class="col-md-4"></div>
         <div class="col-md-5 section1">
             <img id="profile_phote_sai" src="~/Resources/SAII.png" width="185" height="200" />
             <p>
@@ -192,7 +214,7 @@
             <br />
             <h2>Sai Teja </h2>
         </div>
-    </div>
+    </div>-->
 </body>
 </html>
 
