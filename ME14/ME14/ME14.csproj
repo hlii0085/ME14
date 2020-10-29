@@ -212,6 +212,7 @@
     <Content Include="Resources\Hippo.jpg" />
     <Content Include="Resources\key_services.PNG" />
     <Content Include="Resources\Lion.jpg" />
+    <Content Include="Resources\notalone.png" />
     <Content Include="Resources\relate.png" />
     <Content Include="Resources\serenity.mp3" />
     <Content Include="Resources\tou.png" />
