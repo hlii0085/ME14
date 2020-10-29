@@ -44,6 +44,28 @@
                 margin-bottom: 5px;
             }
 
+                .colors button:hover {
+                    display: inline-block;
+                    border: 3px solid #6495ED;
+                    border-radius: 0;
+                    outline: none;
+                    cursor: pointer;
+                    width: 40px;
+                    height: 40px;
+                    margin-bottom: 5px;
+                }
+
+                .colors button:focus {
+                    display: inline-block;
+                    border: 3px solid #6495ED;
+                    border-radius: 0;
+                    outline: none;
+                    cursor: pointer;
+                    width: 40px;
+                    height: 40px;
+                    margin-bottom: 5px;
+                }
+
                 .colors button:nth-of-type(1) {
                     background-color: #0000ff;
                 }
@@ -223,6 +245,7 @@
             width: 670px;
             z-index: 200;
             position: relative;
+            height: 680px;
         }
         #audio {
             position: fixed;
@@ -241,6 +264,7 @@
         }
 
         #step1 {
+            margin-left: 10px;
             float: left;
             color: #6495ED;
             font-weight: bold;
@@ -258,6 +282,28 @@
             font-weight: bold;
             display: none;
         }
+
+        .btn {
+            font-size: large;
+            background-color: #6495ED;
+        }
+/**/
+        #bao {
+            display: flex;
+        }
+
+        .baoli {
+            flex: 1;
+            margin: 0 12px;
+        }
+        .test {
+            
+            width: auto;
+            border: 2px solid black;
+            height: 35px;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <body>
@@ -286,9 +332,12 @@
             Please enjoy the below self coloring game as a gift from us to you.
         </p>
     </div>
+    <button class="btn btn-info" id="help" style="border-color:white; float:right" onclick="help()">How to start?</button>
+    <br />
+    <br />
     <div id="pictures" class="row" style="text-align:center">
         <h3 id="step1">Step 1</h3>
-        <h3 style="color:#6495ED">Select Your Favorite Pattern Background and Start Painting</h3>
+        <h3 style="color:#6495ED; font-weight: bold">Select Your Favorite Pattern Background and Start Painting</h3>
         <button id="last" class="btn btn-info"><</button>
         <img id="1" height="200" width="200" />
         <img id="2" height="200" width="200" />
@@ -344,6 +393,25 @@
                 <button type="button" value="#e8c4e8"></button>
                 <button type="button" value="#ffffff"></button>
             </div>
+
+            @*<div id="bao">
+                <div class="baoli">
+                    <h4 style="color:#6495ED; font-weight: bold; text-align:center">Selected color</h4>
+                    <div class="test" id="colorSelected"></div>
+                </div>
+                <div class="baoli">
+                    <h4 style="color:#6495ED; font-weight: bold">Eraser</h4>
+                    <div class="test" id="xiangpi"></div>
+                </div>
+                <div class="baoli">
+                    <h4 style="color:#6495ED; font-weight: bold">Whiteboard</h4>
+                    <div class="test" id="whiteb"></div>
+                </div>
+            </div>*@
+            <div class="colorSelected">
+                <h3 style="color:#6495ED; font-weight: bold; text-align:center">Selected color</h3>
+                <div class="whiteboard-box" id="colorSelected"></div>
+            </div>
             <br />
             <div class="buttonSize">
                 <h3 style="color:#6495ED; font-weight: bold">Brush & Eraser size (<span id="showSizeBrush">5</span>)</h3>
@@ -355,7 +423,18 @@
                        id="controlSize" />
             </div>
             <br />
-            <div class="eraser">
+            <div id="bao">
+                <div class="baoli">
+                    <h4 style="color:#6495ED; font-weight: bold;text-align:center">Eraser</h4>
+                    <div class="test" id="xiangpi"></div>
+                </div>
+                <br />
+                <div class="baoli">
+                    <h4 style="color:#6495ED; font-weight: bold; text-align:center">Whiteboard</h4>
+                    <div class="test" id="whiteb"></div>
+                </div>
+            </div>
+            @*<div class="eraser">
                 <h3 style="color:#6495ED; font-weight: bold">Eraser</h3>
                 <div class="eraser-box" id="xiangpi"></div>
             </div>
@@ -363,7 +442,7 @@
             <div class="whiteboard">
                 <h3 style="color:#6495ED; font-weight: bold">Whiteboard</h3>
                 <div class="whiteboard-box" id="whiteb"></div>
-            </div>
+            </div>*@
             <br />
             <div class="buttons">
                 <button id="clear" type="button" style="font-weight: bold; font-size: 18px">Clear</button>
@@ -382,6 +461,45 @@
 
     </main>
     <script>
+        function help() {
+            var pictures = document.getElementById("pictures");
+            var step1 = document.getElementById("step1");
+            var leftSideBar = document.getElementById("leftSideBar");
+            var step2 = document.getElementById("step2");
+            var rightBlock = document.getElementById("right-block");
+            var step3 = document.getElementById("step3");
+
+            setTimeout(function () {
+                pictures.classList.add("pattern");
+                step1.style.visibility = "visible";
+            }, 1000);
+
+            setTimeout(function () {
+                pictures.classList.remove("pattern");
+                step1.style.visibility = "hidden";
+            }, 5000);
+
+            setTimeout(function () {
+                leftSideBar.classList.add("pattern");
+                step2.style.display = "block";
+            }, 5000);
+
+            setTimeout(function () {
+                leftSideBar.classList.remove("pattern");
+                step2.style.display = "none";
+            }, 9000);
+
+            setTimeout(function () {
+                rightBlock.classList.add("pattern");
+                step3.style.display = "block";
+            }, 9000);
+
+            setTimeout(function () {
+                rightBlock.classList.remove("pattern");
+                step3.style.display = "none";
+            }, 13000);
+        }
+
         window.onload = function () {
             var pictures = document.getElementById("pictures");
             var step1 = document.getElementById("step1");
@@ -403,7 +521,7 @@
             setTimeout(function () {
                 leftSideBar.classList.add("pattern");
                 step2.style.display = "block";
-            }, 7000);
+            }, 6000);
 
             setTimeout(function () {
                 leftSideBar.classList.remove("pattern");
@@ -413,14 +531,12 @@
             setTimeout(function () {
                 rightBlock.classList.add("pattern");
                 step3.style.display = "block";
-            }, 12000);
+            }, 11000);
 
             setTimeout(function () {
                 rightBlock.classList.remove("pattern");
                 step3.style.display = "none";
-            }, 16000);
-
-
+            }, 15000);
 
 
 
@@ -446,6 +562,7 @@
             xiangpi.addEventListener("click", function (event) {
                 eraserEnabled = true;
                 brushEnabled = false;
+                colorSelected.style.backgroundColor = "white";
             });
 
             // whiteboard
@@ -458,13 +575,14 @@
 
 
             // Handle Colors
-
+            var colorSelected = document.getElementById("colorSelected");
             var colors = document.getElementsByClassName("colors")[0];
 
             colors.addEventListener("click", function (event) {
 
                 brushEnabled = true;
                 eraserEnabled = false;
+                colorSelected.style.backgroundColor = event.target.value;
                 context.strokeStyle = event.target.value || "black";
             });
 

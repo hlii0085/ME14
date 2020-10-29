@@ -248,6 +248,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Accomplish.cshtml" />
     <Content Include="Views\Home\Painting.cshtml" />
+    <Content Include="Views\Home\Main.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,237 @@
+﻿
+@{
+    ViewBag.Title = "Main";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <style type="text/css">
+        #background {
+            background-image: url(https://www.helpguide.org/wp-content/uploads/older-women-playing-1536.jpg);
+            height: 600px;
+            opacity: 0.8;
+            background-size: 100% 100%;
+            position: relative;
+        }
+
+        .navPlace {
+            position: absolute;
+            bottom: 0;
+            left: 0px;
+            z-index: 100;
+        }
+
+            .navPlace > a {
+                width: 220px;
+                height: 50px;
+                text-align: center;
+                background-color: #6495ED;
+                line-height: 50px;
+                font-size: 18px;
+                display: block;
+                opacity: 0.8;
+                padding: 5px;
+                margin: 5px;
+                color: white;
+                font-weight: bold;
+            }
+
+        #daohang {
+            font-size: 20px;
+            text-align: center;
+            background-color: darkred;
+            opacity: 0.8;
+            color: white;
+            margin: 1px;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        .tupian img {
+            height: 570px;
+            width: 1100px;
+            filter: brightness(60%);
+            margin: 10px;
+            z-index: -1;
+        }
+
+        .tupian {
+            position: relative;
+        }
+
+            .tupian:hover {
+                /*transform: translateY(-50px);*/
+                filter: brightness(110%);
+                opacity: 0.85;
+            }
+
+        /*.btn {
+            font-size: large;
+            padding: 12px 14px;
+            background-color: #6495ED;
+            border-radius: 40%;
+            color: white;
+        }*/
+
+        .btn {
+            font-size: large;
+            background-color: #6495ED;
+        }
+
+        .wenzi {
+            text-align: left;
+            width: 400px;
+            position: absolute;
+            top: 300px;
+            left: 70px;
+            color: white;
+            z-index: 1;
+        }
+
+        div > p {
+            font-size: 20px;
+            text-align: left;
+        }
+
+        .h2 {
+            color: #6495ED;
+            font-weight: bold;
+        }
+
+        #understand {
+            width: 250px;
+            text-align: center;
+            margin: 0 auto 15px;
+        }
+
+
+        #understand_know_more {
+            color: #6495ED;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    </ br>
+    <!--Add a semitransparent image-->
+    <div id="background" class="row">
+        @*<div class="navPlace">
+                <a href="#dyk">Did you know?</a>
+                <a href="#about">About Mental Health</a>
+                <a href="#know">We Know You Better</a>
+                <a href="#notAlone">You Are Not Alone</a>
+            </div>*@
+    </div>
+
+    <!--Create a row div to show message and video-->
+    <div class="row" style=" margin-bottom:30px;margin-top:30px">
+        <div class="col-md-6">
+            <h2 id="dyk" name="dyk" class="h2">Did you know?</h2>
+            <p style="color:black; font-size:20px;margin-top:20px">
+                1.34 million Australians aged over 50 were born overseas in a non English speaking country. Older people from Culturally and linguistically diverse (CALD) backgrounds with chronic diseases have a higher risk of mental health issues than those born in Australia.
+            </p>
+            @*<button id="btn1" class="btn btn-info">
+                    Show More
+                </button>*@
+            <h2 id="h2" class="h2"></h2>
+            <p style="color:black; font-size:20px;" id="p1">
+
+            </p>
+        </div>
+        <div class="col-md-5" style="margin:30px 10px 30px 10px">
+            <!--Add a video-->
+            <iframe width="500" height="315" src="https://www.youtube.com/embed/Tx-2DKXbV90" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        </div>
+    </div>
+    <div>
+        <h2 style="text-align:center;color:#6495ED;font-weight:bold">Start taking care of your mental health</h2>
+        <img src="~/Resources/understand.png" />
+        <p style="color:black; font-size:20px;" id="understand">
+            Know more about mental health, its causes and dynamics in Australia
+        </p>
+        <a id="understand_know_more" href="./Info">Know More &raquo;</a>
+    </div>
+
+
+
+    <!--<h2 style="text-align:center;color:#6495ED;font-weight:bold">What We Offer</h2>-->
+    <!-- Create three equivalent div. Each div has an image,and refer to a new page -->
+    <!--<div class="tupian">
+        <img id="about" name="about" src="https://www.headsup.org.au/sfimages/default-source/default-album/disclosure.jpg?sfvrsn=ad96504d_0">
+        <div class="wenzi">
+            <h2>About Mental Health</h2>
+            <br />
+            <p>You can learn more detailed information about mental health</p>
+            <br />
+            <br />
+            <a class="btn btn-info" href="./Home/Info">Learn more &raquo;</a>
+        </div>
+    </div>
+    <div class="tupian">
+        <img id="know" name="know" src="https://www1.racgp.org.au/getattachment/ede38ee3-11fe-4674-9981-d291ca6a96be/attachment.aspx" />
+        <div class="wenzi">
+            <h2>We Know You Better</h2>
+            <br />
+            <p>Feeling low or anxious? Let us take your through what mental health looks like!</p>
+            <br />
+            <br />
+            <a class="btn btn-info" href="./Home/KnowYouBetter">Learn more &raquo;</a>
+        </div>
+    </div>
+    <div class="tupian">
+        <img id="notAlone" name="notAlone" src="https://www.lifehacker.com.au/content/uploads/sites/4/2018/10/GettyImages-758309735.jpg" />
+        <div class="wenzi">
+            <h2>You Are Not Alone</h2>
+            <br />
+            <p>You can find there are many people facing these issues, it is not a big deal</p>
+            <br />
+            <br />
+            <a class="btn btn-info" href="./Home/NotAlone">Learn more &raquo;</a>
+        </div>
+    </div>-->
+    <!--<div class="row">
+        <div class="col-md-4" style="background-color:burlywood; margin:20px 10px 30px 25px; padding-top:20px; text-align: center; height:400px">
+            <img src="https://social-tv.co.za/wp-content/uploads/2019/10/b438ca80294986a80c960c712fb06434.jpg" height="200" width="250" />
+            <h2 style="color:white">About mental health</h2>
+            <p style="color:white">You can learn more detailed information about mental health</p>
+            <p><a class="btn btn-primary" href="./Home/Info">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4" style="background-color:burlywood; margin:20px 10px 30px 10px; padding-top:20px;text-align: center;height:400px">
+            <img src="https://betteryouknow.org/sites/default/files/2016-05/better_you_know_logo.jpg" height="200" width="200" />
+            <h2 style="color:white">We know you better</h2>
+            <p style="color:white">Feeling low or anxious? Let us take your through what mental health looks like!</p>
+            <p><a class="btn btn-primary" href="./Home/Contact">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-3" style="background-color:burlywood; margin:20px 10px 30px 10px; padding-top:20px;text-align: center;height:400px">
+            <img src="https://www.bariatriccookery.com/wp-content/uploads/2016/12/you-are-not-alone.png" height="200" width="200" />
+            <h2 style="color:white">You are not alone</h2>
+            <p style="color:white">You can find there are many people facing these issues, it is not a big deal</p>
+            <p><a class="btn btn-primary" href="./Home/About">Learn more &raquo;</a></p>
+        </div>
+    </div>-->
+
+    <script>
+        window.onload = function () {
+            // binding button 1
+            var btn1 = document.getElementById("btn1");
+            // create onlick event for button 1
+            btn1.onclick = function () {
+                document.getElementById('h2').innerHTML = "Our Mission";
+                document.getElementById('p1').style.color = "black";
+                document.getElementById('p1').style.fontSize = "20px";
+                document.getElementById('p1').style.marginTop = "20px";
+                // change the innerhtml
+                document.getElementById('p1').innerHTML = "Our Mission is to help Elder people from CALD background about the stigma attached with mental health issues by raising awareness about its importance and educate them on how to access mental heath services by overcoming English as their barrier.";
+                // hide button after clicking
+                document.getElementById('btn1').style.visibility = "hidden";
+            }
+        }
+
+
+    </script>
+
+</body>

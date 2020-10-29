@@ -83,5 +83,12 @@ namespace ME14.Controllers
 
             return View();
         }
+
+        public ActionResult Main()
+        {
+            ViewBag.Message = " Home page.";
+
+            return View();
+        }
     }
 }
