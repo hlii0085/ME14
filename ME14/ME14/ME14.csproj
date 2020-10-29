@@ -188,6 +188,7 @@
     <None Include="Resources\LHX.png" />
     <None Include="Resources\SAII.png" />
     <None Include="Resources\close.png" />
+    <Content Include="Resources\1-5.png" />
     <Content Include="Resources\1.jpg" />
     <Content Include="Resources\10.jpg" />
     <Content Include="Resources\11.JPG" />
@@ -213,6 +214,7 @@
     <Content Include="Resources\Lion.jpg" />
     <Content Include="Resources\relate.png" />
     <Content Include="Resources\serenity.mp3" />
+    <Content Include="Resources\tou.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
