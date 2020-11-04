@@ -1,0 +1,19 @@
+Set up code base to start working 
+The first time we open Visual Studio, and some basic code will be generated automatically. By running the code, a simple website will be shown. 
+Then we added some view file when we need to implement functions. The below shows the relationship between view file in Visual Studio and web page.
+View file	-- Web page
+About -- About us
+KnowYourBetter --	Examine (bubble game)
+Index -- Home page
+Info -- Understand 
+NotAlone	-- Relate 
+Accomplish	-- Accomplish (Coloring Mandalas)
+Suggestion 1	-- Keep your Mental Health in check
+Suggestion 2	-- Take Care of Your Mental Health
+Suggestion 3	-- Take Your Mental Health Seriously
+Layout --	Control the style of all pages and navigation bar
+
+Fonts contain the font file which the website used.
+Image contains all the images used in the website.
+Models contains the model file of MVC.
+Scripts contains all the scripts used in the website.
